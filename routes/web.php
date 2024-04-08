@@ -19,3 +19,6 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('user/index2');
 });
+Route::get('/open-letter', function () {
+    return view('open-letter');
+});
