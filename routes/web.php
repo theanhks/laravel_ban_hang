@@ -21,7 +21,7 @@ Route::get('/test', function () {
 });
 
 Route::get('/open-letter', function () {
-    return view('open-letter');
+    return view('user/open-letter');
 });
 
 Route::get('/admin1', function () {

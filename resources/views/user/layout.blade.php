@@ -9,4 +9,5 @@
         </section>
     </div>
 </main>
+@stack('css')
 @include('user.partials.footer')
