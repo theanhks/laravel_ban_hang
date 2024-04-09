@@ -19,3 +19,7 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('user/index2');
 });
+
+
+require __DIR__.'/auth.php';
+require __DIR__.'/admin.php';
