@@ -19,6 +19,11 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('user/index2');
 });
+
+Route::get('/open-letter', function () {
+    return view('user/open-letter');
+});
+
 Route::get('/admin1', function () {
     return view('admin/index');
 });
