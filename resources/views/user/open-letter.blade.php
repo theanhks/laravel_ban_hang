@@ -33,25 +33,3 @@
 		<p>We wish our customers good health and success!</p>
 	</div>
 @endsection
-
-@push('css')
-<style type="text/css">
-	.caption {
-		color: red;
-		font-size: 35px;
-	}
-	.caption_en {
-		color: red;
-		font-size: 30px;
-		text-decoration: underline;
-		text-underline-offset: 20px;
-		margin-bottom: 20px
-	}
-	.m-t-40 {
-		margin-top: 40px;
-	}
-	p {
-        margin-bottom: 10px;
-    }
-</style>
-@endpush

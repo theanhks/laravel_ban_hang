@@ -24,6 +24,14 @@ Route::get('/open-letter', function () {
     return view('user/open-letter');
 });
 
+Route::get('/open-letter', function () {
+    return view('user/open-letter');
+});
+
+Route::get('/about-us', function () {
+    return view('user/about-us');
+});
+
 Route::get('/admin1', function () {
     return view('admin/index');
 });

@@ -1,0 +1,29 @@
+.caption {
+	color: #c80c3b;
+	font-size: 35px;
+}
+.caption_en {
+	color: #c80c3b;
+	font-size: 30px;
+	text-decoration: underline;
+	text-underline-offset: 20px;
+	margin-bottom: 20px
+}
+.m-t-40 {
+	margin-top: 40px;
+}
+.m-t-20 {
+	margin-top: 20px;
+}
+p {
+    margin-bottom: 10px;
+}
+.box-text {
+    color: white;
+    padding: 20px;
+    background-color: #c80c3b;
+    width: 80%;
+}
+.box-contact {
+	display: flex
+}
