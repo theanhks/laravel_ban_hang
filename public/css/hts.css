@@ -25,5 +25,10 @@ p {
     width: 80%;
 }
 .box-contact {
-	display: flex
+	display: flex;
+}
+.box-images {
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
 }
