@@ -36,6 +36,10 @@ Route::get('/distribution-brand', function () {
     return view('user/distribution-brand');
 });
 
+Route::get('/company-infomation', function () {
+    return view('user/company-info');
+});
+
 Route::get('/admin1', function () {
     return view('admin/index');
 });
