@@ -2,8 +2,8 @@
 
 @section('content')
 	<div id="right_ok">
-		<div class="caption">THÔNG TIN CÔNG TY</div>
-		<div class="caption_en">Company infomation</div>
+		<div class="caption white-color">THÔNG TIN CÔNG TY</div>
+		<div class="caption_en white-color">Company infomation</div>
 		
 		{{-- <div class="m-t-40"></div>
 
