@@ -20,6 +20,30 @@ Route::get('/test', function () {
     return view('user/index2');
 });
 
+Route::get('/open-letter', function () {
+    return view('user/open-letter');
+});
+
+Route::get('/open-letter', function () {
+    return view('user/open-letter');
+});
+
+Route::get('/about-us', function () {
+    return view('user/about-us');
+});
+
+Route::get('/distribution-brand', function () {
+    return view('user/distribution-brand');
+});
+
+Route::get('/company-infomation', function () {
+    return view('user/company-info');
+});
+
+Route::get('/admin1', function () {
+    return view('admin/index');
+});
+
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';

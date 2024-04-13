@@ -60,6 +60,7 @@ phụ kiện ngành hàn
     <link rel="stylesheet" type="text/css" href="{{ asset('js/ddsmoothmenu-v.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('js/ddsmoothmenu.css')}}"/>
     <link rel="stylesheet" href="{{ asset('css/muangay.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/hts.css')}}">
     <link rel="stylesheet" href="{{ asset('js/bootstrap/bootstrap.css')}}">
 
     <link rel="stylesheet" type="text/css" href="{{ asset('js/owl_carousel/assets/owl.carousel.css')}}" />
