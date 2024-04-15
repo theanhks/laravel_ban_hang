@@ -12,12 +12,21 @@
 */
 
 use App\Http\Controllers\Admin\IndexController;
+use App\Http\Controllers\Admin\ProductController;
 
 
 
 Route::prefix('manage')->middleware('auth')->group(function () {
     Route::get('/', [IndexController::class, 'index'])
         ->name('admin.index');
+
+    Route::get('/product/', [ProductController::class, 'index'])
+        ->name('admin.product');
+    Route::get('/product/create', [ProductController::class, 'create'])
+        ->name('admin.product.create');
+    Route::post('/product/create', [ProductController::class, 'store'])
+        ->name('admin.product.store');
+
 });
 //Route::get('/forgot-password', [PasswordResetLinkController::class, 'create'])->name('auth.reset.password');
 //Route::post('/forgot-password', [PasswordResetLinkController::class, 'store'])->name('auth.send.reset.password');
