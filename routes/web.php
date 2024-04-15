@@ -39,3 +39,7 @@ Route::get('/company-infomation', function () {
 Route::get('/admin1', function () {
     return view('admin/index');
 });
+
+
+require __DIR__.'/auth.php';
+require __DIR__.'/admin.php';
