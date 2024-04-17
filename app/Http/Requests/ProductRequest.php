@@ -27,8 +27,8 @@ class ProductRequest extends FormRequest
     public function rules(): array
     {
         return [
-//            'email' => ['required', 'string', 'email'],
-//            'password' => ['required', 'string'],
+          //  'category_id' => ['required', 'string', 'email'],
+          //  'password' => ['required', 'string'],
         ];
     }
 
