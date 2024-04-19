@@ -34,10 +34,12 @@ class ProductController extends Controller
     {
         $data = $request->except('_token');
         $data['image'] = $this->upload($request);
-        $this->productService->insert($data);
-        dd($request->all());
-        echo 1;
-        die;
+        $data = $this->productService->insert($data);
+        if($data){
+            return redirect()->route('admin.product')->with('success', __('Bạn đã thêm sản phẩm thành công'));
+        }else{
+            return redirect()->route('admin.product')->with('errors', __('Có lỗi hệ thống vui lòng nhập lại sản phẩm'));
+        }
     }
 
     public function upload($request)

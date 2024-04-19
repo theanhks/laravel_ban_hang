@@ -27,7 +27,7 @@ class ProductRequest extends FormRequest
     public function rules(): array
     {
         return [
-          //  'category_id' => ['required', 'string', 'email'],
+            'category_id' => ['required', 'integer'],
           //  'password' => ['required', 'string'],
         ];
     }
@@ -35,8 +35,8 @@ class ProductRequest extends FormRequest
     public function messages()
     {
         return [
-            'email.required' => __('Invalid email'),
-            'email.string' => __('Invalid Email'),
+            'category_id.required' => __('Vui lòng chọn Category'),
+            'category_id.integer' => __('Vui lòng chọn Category'),
             'email.email' => __('Invalid Email'),
             'password.required' => __('Invalid password'),
         ];

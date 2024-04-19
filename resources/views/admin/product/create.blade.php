@@ -15,6 +15,15 @@
     <div class="row">
         <form action="" method="POST" enctype="multipart/form-data">
             @csrf
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header align-items-center d-flex">

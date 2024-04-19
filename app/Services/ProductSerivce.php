@@ -32,7 +32,12 @@ class ProductSerivce
 
     public function insert($data)
     {
-        return $this->productRepository->insert($data);
+        try {
+            return $this->productRepository->insert($data);
+        } catch (\Exception $ex) {
+            return false;
+        }
+
     }
 
 }
