@@ -28,7 +28,9 @@ class ProductRequest extends FormRequest
     {
         return [
             'category_id' => ['required', 'integer'],
-          //  'password' => ['required', 'string'],
+            'name' => ['required'],
+            'price' => ['integer'],
+            'quantity' => ['integer'],
         ];
     }
 
@@ -37,8 +39,9 @@ class ProductRequest extends FormRequest
         return [
             'category_id.required' => __('Vui lòng chọn Category'),
             'category_id.integer' => __('Vui lòng chọn Category'),
-            'email.email' => __('Invalid Email'),
-            'password.required' => __('Invalid password'),
+            'name.required' => __('Vui lòng nhập tên sản phẩm'),
+            'price.integer' => __('Vui lòng nhập tiền là số nguyên'),
+            'quantity.integer' => __('Vui lòng nhập số lượng là số nguyên'),
         ];
     }
 }

@@ -40,4 +40,22 @@ class ProductSerivce
 
     }
 
+    public function getAllPaging(array $filter = [])
+    {
+        return $this->productRepository->getAllPaging($filter);
+    }
+
+    public function getById($id = 0)
+    {
+        return $this->productRepository->getById($id);
+    }
+
+    public function update($id = 0 , $data = [])
+    {
+        try {
+            return $this->productRepository->update($id,$data);
+        } catch (\Exception $ex) {
+            return false;
+        }
+    }
 }

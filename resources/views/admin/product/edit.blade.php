@@ -8,7 +8,7 @@
             Forms
         @endslot
         @slot('title')
-           Product Create
+            Product Create
         @endslot
     @endcomponent
 
@@ -44,29 +44,29 @@
                                         name="category_id">
                                     <option selected>Category</option>
                                     @foreach($productCategoryData as $productCategory)
-                                        <option {{old('category_id') == $productCategory['category_id'] ? 'selected' : ''}}
-                                            value="{{$productCategory['category_id']}}">{{$productCategory['category_name']}}</option>
+                                        <option {{$product->category_id == $productCategory['category_id'] ? 'selected' : ''}}
+                                                value="{{$productCategory['category_id']}}">{{$productCategory['category_name']}}</option>
                                     @endforeach
 
                                 </select>
                             </div>
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <label for="name" class="form-label">Product Name</label>
-                                <input type="text" class="form-control mb-3" id="name" name="name" value="{{old('name')}}">
+                                <input type="text" class="form-control mb-3" id="name" name="name" value="{{old('name') ? $product->name : ''}}">
                             </div>
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <label for="product_code" class="form-label">Product Code</label>
-                                <input type="text" class="form-control mb-3" id="product_code" name="product_code" value="{{old('product_code')}}">
+                                <input type="text" class="form-control mb-3" id="product_code" name="product_code" value="{{old('product_code') ? $product->product_code : ''}}">
                             </div>
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <label for="price" class="form-label">Price</label>
-                                <input type="text" class="form-control mb-3" id="price" name="price" value="{{old('price') ?? 0}}">
+                                <input type="text" class="form-control mb-3" id="price" name="price" value="{{old('price') ? $product->price : ''}}">
                             </div>
 
                             <div class="col-xxl-6 col-md-6 mx-auto mt-3 mb-3">
                                 <div class="form-check form-switch">
                                     <input class="form-check-input mb-3" type="checkbox" role="switch" value="1"
-                                           id="is_show" checked name="is_show">
+                                           id="is_show" {{$product->is_show ? 'checked' : ''}} name="is_show">
                                     <label class="form-check-label" for="is_show">Is Show Product</label>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <div>
                                     <label for="quantity" class="form-label">Quantity</label>
-                                    <input type="text" class="form-control mb-3" id="quantity" name="quantity" value="{{old('quantity') ?? 0}}">
+                                    <input type="text" class="form-control mb-3" id="quantity" name="quantity" value="{{old('quantity') ? $product->quantity : ''}}">
                                 </div>
 
                                 <div>
@@ -88,10 +88,9 @@
                                 <div>
                                     <div>
                                         <label for="description" class="form-label">Description</label>
-                                        <input type="hidden" name="description" id="description">
+                                        <input type="hidden" name="description" id="description" value="{{old('description') ? $product->description : ''}}">
                                         <div class="snow-editor mb-3" style="height: 300px;" id="for_description">
-
-
+                                            {{old('description') ? $product->description : ''}}
                                         </div> <!-- end Snow-editor-->
                                     </div>
                                 </div>
@@ -99,9 +98,9 @@
                                 <div>
                                     <div>
                                         <label for="content" class="form-label">Content</label>
-                                        <input type="hidden" name="content" id="content">
+                                        <input type="hidden" name="content" id="content" value="{{old('content') ? $product->content : ''}}">
                                         <div class="snow-editor mb-3" style="height: 300px;" id="for_content">
-
+                                            {{old('content') ? $product->content : ''}}
                                         </div> <!-- end Snow-editor-->
                                     </div>
                                 </div>
@@ -132,5 +131,5 @@
     <script src="{{ asset('/admin/assets/js/product.js') }}"></script>
 @endsection
 @section('css')
-<link href="{{ URL::asset('assets/libs/quill/quill.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ URL::asset('assets/libs/quill/quill.min.css') }}" rel="stylesheet" type="text/css" />
 @endsection

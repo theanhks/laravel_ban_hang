@@ -36,4 +36,22 @@ class ProductRepository extends BaseRepository
         $newProduct = $this->model->create($data);
         return $newProduct;
     }
+
+    public function getAllPaging($filter = [])
+    {
+        $product = $this->model->latest();
+        if (!empty($filter['category_id'])) {
+            $category_id = trim($filter['name']);
+            $product->where('category_id', $category_id);
+
+        }
+        if (!empty($filter['name'])) {
+            $name = trim($filter['name']);
+            $product->where('name', 'like', '%' . $name . '%');
+
+        }
+
+        return $product;
+    }
+
 }
