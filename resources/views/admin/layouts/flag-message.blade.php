@@ -3,7 +3,7 @@
         <div class="alert alert-danger">
            <span class="message" role="alert">
                 <div><strong>{{$errors}}</strong></div>
-        </span>
+            </span>
         </div>
     @else
         @if(!empty($errors) && is_array($errors->all()) && count($errors)>0)

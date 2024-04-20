@@ -3,7 +3,8 @@
     @lang('translation.list-js')
 @endsection
 @section('css')
-    <link href="{{asset('/admin/assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('/admin/assets/libs/sweetalert2/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
+
 @endsection
 @section('content')
     @component('admin.components.breadcrumb')
@@ -101,18 +102,28 @@
                             </div>
                             @endif
                         </div>
-
-                        <div class="d-flex justify-content-end">
-                            <div class="pagination-wrap hstack gap-2">
-                                <a class="page-item pagination-prev disabled" href="#">
-                                    Previous
-                                </a>
-                                <ul class="pagination listjs-pagination mb-0"></ul>
-                                <a class="page-item pagination-next" href="#">
-                                    Next
-                                </a>
+                        @if (count($productData) >0)
+                            <div class="row g-0 text-center text-sm-start align-items-center mb-4">
+                                <div class="col-sm-6">
+                                    {!! $productData->appends(request()->query())->links('admin.pagination/infor'); !!}
+                                </div>
+                                <!-- end col -->
+                                <div class="col-sm-6">
+                                    {!! $productData->appends(request()->query())->links('admin.pagination/custom'); !!}
+                                </div><!-- end col -->
                             </div>
-                        </div>
+                        @endif
+{{--                        <div class="d-flex justify-content-end">--}}
+{{--                            <div class="pagination-wrap hstack gap-2">--}}
+{{--                                <a class="page-item pagination-prev disabled" href="#">--}}
+{{--                                    Previous--}}
+{{--                                </a>--}}
+{{--                                <ul class="pagination listjs-pagination mb-0"></ul>--}}
+{{--                                <a class="page-item pagination-next" href="#">--}}
+{{--                                    Next--}}
+{{--                                </a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                     </div>
                 </div><!-- end card -->
             </div>
