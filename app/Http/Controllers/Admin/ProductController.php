@@ -4,14 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Services\ProductCategoryService;
-
-;
-
+use Illuminate\Http\Request;
 use App\Services\ProductSerivce;
-
-;
-
 use App\Http\Requests\ProductRequest;
+
 
 class ProductController extends Controller
 {
@@ -24,6 +20,15 @@ class ProductController extends Controller
         $this->productService = $productService;
     }
 
+    public function index(Request $request)
+    {
+        $productCategoryData = $this->productCategoryService->getAll()->toArray();
+        $productData = $this->productService->getAllPaging($request->all())->paginate(2);
+        return view('admin.product.index',[
+            'productCategoryData' => $productCategoryData,
+            'productData' => $productData
+        ]);
+    }
     public function create()
     {
         $productCategoryData = $this->productCategoryService->getAll()->toArray();
@@ -34,10 +39,13 @@ class ProductController extends Controller
     {
         $data = $request->except('_token');
         $data['image'] = $this->upload($request);
-        $this->productService->insert($data);
-        dd($request->all());
-        echo 1;
-        die;
+        $data['is_show'] = !empty($data['is_show']) ? 1 : 0;
+        $data = $this->productService->insert($data);
+        if($data){
+            return redirect()->route('admin.product')->with('success', __('Bạn đã thêm sản phẩm thành công'));
+        }else{
+            return redirect()->route('admin.product')->with('errors', __('Có lỗi hệ thống vui lòng nhập lại sản phẩm'));
+        }
     }
 
     public function upload($request)
@@ -53,5 +61,31 @@ class ProductController extends Controller
             // Bây giờ bạn có thể lưu URL vào cơ sở dữ liệu hoặc thực hiện các thao tác khác với nó
         }
         return '';
+    }
+
+    public function edit($id)
+    {
+        $product = $this->productService->getById($id);
+        if(!$product){
+            return redirect()->route('admin.product')->with('errors', __('Không tìm thấy sản phẩm'));
+        }
+        $productCategoryData = $this->productCategoryService->getAll()->toArray();
+        return view('admin.product.edit',['product'=>$product,'productCategoryData' => $productCategoryData]);
+    }
+
+    public function update(ProductRequest $request, $id =0)
+    {
+        $data = $request->except('_token');
+        $data['image'] = $this->upload($request);
+        if(!$data['image']){
+            unset($data['image']);
+        }
+        $data['is_show'] = !empty($data['is_show']) ? 1 : 0;
+        $data = $this->productService->update($id,$data);
+        if($data){
+            return redirect()->route('admin.product')->with('success', __('Bạn đã thêm sản phẩm thành công'));
+        }else{
+            return redirect()->route('admin.product')->with('errors', __('Có lỗi hệ thống vui lòng nhập lại sản phẩm'));
+        }
     }
 }

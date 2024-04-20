@@ -8,13 +8,22 @@
             Forms
         @endslot
         @slot('title')
-            Basic Elements
+           Product Create
         @endslot
     @endcomponent
 
     <div class="row">
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="" method="POST" enctype="multipart/form-data" id="form-product">
             @csrf
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header align-items-center d-flex">
@@ -35,7 +44,7 @@
                                         name="category_id">
                                     <option selected>Category</option>
                                     @foreach($productCategoryData as $productCategory)
-                                        <option
+                                        <option {{old('category_id') == $productCategory['category_id'] ? 'selected' : ''}}
                                             value="{{$productCategory['category_id']}}">{{$productCategory['category_name']}}</option>
                                     @endforeach
 
@@ -43,22 +52,31 @@
                             </div>
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <label for="name" class="form-label">Product Name</label>
-                                <input type="text" class="form-control mb-3" id="name" name="name">
+                                <input type="text" class="form-control mb-3" id="name" name="name" value="{{old('name')}}">
                             </div>
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <label for="product_code" class="form-label">Product Code</label>
-                                <input type="text" class="form-control mb-3" id="product_code" name="product_code">
+                                <input type="text" class="form-control mb-3" id="product_code" name="product_code" value="{{old('product_code')}}">
                             </div>
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <label for="price" class="form-label">Price</label>
-                                <input type="text" class="form-control mb-3" id="price" name="price">
+                                <input type="text" class="form-control mb-3" id="price" name="price" value="{{old('price') ?? 0}}">
                             </div>
+
+                            <div class="col-xxl-6 col-md-6 mx-auto mt-3 mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input mb-3" type="checkbox" role="switch" value="1"
+                                           id="is_show" checked name="is_show">
+                                    <label class="form-check-label" for="is_show">Is Show Product</label>
+                                </div>
+                            </div>
+
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <div>
                                     <label for="quantity" class="form-label">Quantity</label>
-                                    <input type="text" class="form-control mb-3" id="quantity" name="quantity">
+                                    <input type="text" class="form-control mb-3" id="quantity" name="quantity" value="{{old('quantity') ?? 0}}">
                                 </div>
-                                
+
                                 <div>
                                     <div>
                                         <label for="image" class="form-label">Image Upload</label>
@@ -70,14 +88,21 @@
                                 <div>
                                     <div>
                                         <label for="description" class="form-label">Description</label>
-                                        <input type="text" class="form-control mb-3" id="description" name="description">
+                                        <input type="hidden" name="description" id="description">
+                                        <div class="snow-editor mb-3" style="height: 300px;" id="for_description">
+
+
+                                        </div> <!-- end Snow-editor-->
                                     </div>
                                 </div>
 
                                 <div>
                                     <div>
                                         <label for="content" class="form-label">Content</label>
-                                        <input type="text" class="form-control" id="content" name="content">
+                                        <input type="hidden" name="content" id="content">
+                                        <div class="snow-editor mb-3" style="height: 300px;" id="for_content">
+
+                                        </div> <!-- end Snow-editor-->
                                     </div>
                                 </div>
 
@@ -95,6 +120,7 @@
             <!--end row-->
         </form>
     </div>
+
 @endsection
 @section('script')
     <script src="{{ asset('/admin/assets/libs/prismjs/prismjs.min.js') }}"></script>
@@ -103,4 +129,8 @@
     <script src="{{ asset('/admin/assets/libs/quill/quill.min.js') }}"></script>
     <script src="{{ asset('/admin/assets/js/pages/form-editor.init.js') }}"></script>
     <script src="{{ asset('/admin/assets/js/app.min.js') }}"></script>
+    <script src="{{ asset('/admin/assets/js/product.js') }}"></script>
+@endsection
+@section('css')
+<link href="{{ URL::asset('assets/libs/quill/quill.min.css') }}" rel="stylesheet" type="text/css" />
 @endsection

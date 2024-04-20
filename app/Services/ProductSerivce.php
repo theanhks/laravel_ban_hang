@@ -32,7 +32,30 @@ class ProductSerivce
 
     public function insert($data)
     {
-        return $this->productRepository->insert($data);
+        try {
+            return $this->productRepository->insert($data);
+        } catch (\Exception $ex) {
+            return false;
+        }
+
     }
 
+    public function getAllPaging(array $filter = [])
+    {
+        return $this->productRepository->getAllPaging($filter);
+    }
+
+    public function getById($id = 0)
+    {
+        return $this->productRepository->getById($id);
+    }
+
+    public function update($id = 0 , $data = [])
+    {
+        try {
+            return $this->productRepository->update($id,$data);
+        } catch (\Exception $ex) {
+            return false;
+        }
+    }
 }

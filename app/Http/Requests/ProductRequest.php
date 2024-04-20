@@ -27,18 +27,21 @@ class ProductRequest extends FormRequest
     public function rules(): array
     {
         return [
-//            'email' => ['required', 'string', 'email'],
-//            'password' => ['required', 'string'],
+            'category_id' => ['required', 'integer'],
+            'name' => ['required'],
+            'price' => ['integer'],
+            'quantity' => ['integer'],
         ];
     }
 
     public function messages()
     {
         return [
-            'email.required' => __('Invalid email'),
-            'email.string' => __('Invalid Email'),
-            'email.email' => __('Invalid Email'),
-            'password.required' => __('Invalid password'),
+            'category_id.required' => __('Vui lòng chọn Category'),
+            'category_id.integer' => __('Vui lòng chọn Category'),
+            'name.required' => __('Vui lòng nhập tên sản phẩm'),
+            'price.integer' => __('Vui lòng nhập tiền là số nguyên'),
+            'quantity.integer' => __('Vui lòng nhập số lượng là số nguyên'),
         ];
     }
 }
