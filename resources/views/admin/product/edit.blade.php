@@ -52,15 +52,15 @@
                             </div>
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <label for="name" class="form-label">Product Name</label>
-                                <input type="text" class="form-control mb-3" id="name" name="name" value="{{old('name') ? $product->name : ''}}">
+                                <input type="text" class="form-control mb-3" id="name" name="name" value="{{ $product->name }}">
                             </div>
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <label for="product_code" class="form-label">Product Code</label>
-                                <input type="text" class="form-control mb-3" id="product_code" name="product_code" value="{{old('product_code') ? $product->product_code : ''}}">
+                                <input type="text" class="form-control mb-3" id="product_code" name="product_code" value="{{$product->product_code}}">
                             </div>
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <label for="price" class="form-label">Price</label>
-                                <input type="text" class="form-control mb-3" id="price" name="price" value="{{old('price') ? $product->price : ''}}">
+                                <input type="text" class="form-control mb-3" id="price" name="price" value="{{$product->price}}">
                             </div>
 
                             <div class="col-xxl-6 col-md-6 mx-auto mt-3 mb-3">
@@ -74,7 +74,7 @@
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <div>
                                     <label for="quantity" class="form-label">Quantity</label>
-                                    <input type="text" class="form-control mb-3" id="quantity" name="quantity" value="{{old('quantity') ? $product->quantity : ''}}">
+                                    <input type="text" class="form-control mb-3" id="quantity" name="quantity" value="{{$product->quantity}}">
                                 </div>
 
                                 <div>
@@ -88,7 +88,7 @@
                                 <div>
                                     <div>
                                         <label for="description" class="form-label">Description</label>
-                                        <input type="hidden" name="description" id="description" value="{{old('description') ? $product->description : ''}}">
+                                        <input type="hidden" name="description" id="description" value="{{$product->description}}">
                                         <div class="snow-editor mb-3" style="height: 300px;" id="for_description">
                                             {{old('description') ? $product->description : ''}}
                                         </div> <!-- end Snow-editor-->
@@ -98,7 +98,7 @@
                                 <div>
                                     <div>
                                         <label for="content" class="form-label">Content</label>
-                                        <input type="hidden" name="content" id="content" value="{{old('content') ? $product->content : ''}}">
+                                        <input type="hidden" name="content" id="content" value="{{$product->content}}">
                                         <div class="snow-editor mb-3" style="height: 300px;" id="for_content">
                                             {{old('content') ? $product->content : ''}}
                                         </div> <!-- end Snow-editor-->
