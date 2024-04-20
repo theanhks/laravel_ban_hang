@@ -13,7 +13,7 @@ class Product extends Model
         'name',
         'price',
         'product_code',
-        'is_new',
+        'is_show',
         'quantity',
         'description',
         'content',
