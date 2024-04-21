@@ -7,6 +7,7 @@ use App\Services\ProductCategoryService;
 use Illuminate\Http\Request;
 use App\Services\ProductSerivce;
 use App\Http\Requests\ProductRequest;
+use Illuminate\Support\Facades\Storage;
 
 
 class ProductController extends Controller
@@ -54,7 +55,10 @@ class ProductController extends Controller
         // Kiểm tra xem có tệp tin được tải lên không
         if ($request->hasFile('image')) {
             // Lưu trữ tệp tin trong thư mục public/images và lấy đường dẫn của nó
-            $path = $request->file('image')->store('images', 'public');
+            $file = $request->file('image');
+            $name = $file->getClientOriginalName();
+            $path = $file->storeAs('images', $name, 'public');
+            
             // Lấy URL của hình ảnh
             return asset('storage/' . $path);
 
