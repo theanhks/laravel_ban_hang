@@ -7,8 +7,6 @@ use App\Services\ProductCategoryService;
 use Illuminate\Http\Request;
 use App\Services\ProductSerivce;
 use App\Http\Requests\ProductRequest;
-use Illuminate\Support\Facades\Storage;
-
 
 class ProductController extends Controller
 {
