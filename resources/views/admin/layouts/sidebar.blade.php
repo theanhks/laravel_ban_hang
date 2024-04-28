@@ -129,6 +129,25 @@
                     </div>
                 </li> <!-- end Product -->
                 <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarProductCategories" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProductCategories">
+                        <i class="mdi mdi-speedometer"></i> <span>@lang('category')
+                        </span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarProductCategories">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="{{route('admin.category')}}" class="nav-link">@lang('list')
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('admin.category.create')}}" class="nav-link">@lang('create')
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li> <!-- end Product -->
+                <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarDashboards" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
                         <i class="mdi mdi-speedometer"></i> <span>@lang('page')
                         </span>

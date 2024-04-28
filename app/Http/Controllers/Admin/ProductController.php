@@ -90,4 +90,9 @@ class ProductController extends Controller
             return redirect()->route('admin.product')->with('errors', __('Có lỗi hệ thống vui lòng nhập lại sản phẩm'));
         }
     }
+
+    public function destroy($id)
+    {
+        dd($id);
+    }
 }
