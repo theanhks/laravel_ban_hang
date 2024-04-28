@@ -87,27 +87,27 @@
 
                                 <div>
                                     <div>
-                                        {{-- <label for="description" class="form-label">Description</label>
+                                        <label for="description" class="form-label">Description</label>
                                         <input type="hidden" name="description" id="description" value="{{$product->description}}">
                                         <div class="snow-editor mb-3" style="height: 300px;" id="for_description">
                                             {{old('description') ? $product->description : ''}}
-                                        </div> --}}
+                                        </div>
                                         <!-- end Snow-editor-->
-                                        <label class="form-label" for="des-info-description-input">Description</label>
-                                        <textarea name="description" class="form-control" placeholder="Enter Description" id="des-info-description-input" rows="3">{{ $product->description }}</textarea>
+                                        {{-- <label class="form-label" for="des-info-description-input">Description</label>
+                                        <textarea name="description" class="form-control" placeholder="Enter Description" id="des-info-description-input" rows="3">{{ $product->description }}</textarea> --}}
                                     </div>
                                 </div>
 
                                 <div>
                                     <div>
-                                        {{-- <label for="content" class="form-label">Content</label>
+                                        <label for="content" class="form-label">Content</label>
                                         <input type="hidden" name="content" id="content" value="{{$product->content}}">
                                         <div class="snow-editor mb-3" style="height: 300px;" id="for_content">
                                             {{old('content') ? $product->content : ''}}
-                                        </div> --}}
+                                        </div>
                                         <!-- end Snow-editor-->
-                                        <label class="form-label" for="des-info-content-input">Content</label>
-                                        <textarea name="content" class="form-control" placeholder="Enter Description" id="des-info-content-input" rows="3">{{ $product->content }}</textarea>
+                                        {{-- <label class="form-label" for="des-info-content-input">Content</label>
+                                        <textarea name="content" class="form-control" placeholder="Enter Description" id="des-info-content-input" rows="3">{{ $product->content }}</textarea> --}}
                                     </div>
                                 </div>
 
