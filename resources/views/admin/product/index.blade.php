@@ -81,7 +81,7 @@
                                                         <a class="btn btn-sm btn-success edit-item-btn" href="{{route('admin.product.edit',['id'=>$product->id])}}">Edit</a>
                                                     </div>
                                                     <div class="remove">
-                                                        <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                        <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-item-id="{{ $product->id }}" data-bs-target="#deleteRecordModal">Remove</button>
                                                     </div>
                                                 </div>
                                             </td>
@@ -145,4 +145,12 @@
 
     <script src="{{asset('/admin/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
     <script src="{{asset('/admin//assets/js/app.min.js') }}"></script>
+    <script>
+        $(".remove-item-btn").click(function() {
+            // alert($(this).data('item-id'));
+            // $.ajax({url: "demo_test.txt", success: function(result){
+            //     $("#div1").html(result);
+            // }});
+        });
+    </script>
 @endsection
