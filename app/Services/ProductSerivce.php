@@ -58,4 +58,9 @@ class ProductSerivce
             return false;
         }
     }
+
+    public function destroy($id =0)
+    {
+
+    }
 }

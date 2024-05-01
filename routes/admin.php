@@ -30,6 +30,7 @@ Route::prefix('manage')->middleware('auth')->group(function () {
         ->name('admin.product.edit');
     Route::post('/product/edit/{id}', [ProductController::class, 'update'])
         ->name('admin.product.update');
+    Route::post('product/destroy/{id}', [ProductController::class, 'destroy'])->name('admin.product.destroy');
 
 });
 //Route::get('/forgot-password', [PasswordResetLinkController::class, 'create'])->name('auth.reset.password');

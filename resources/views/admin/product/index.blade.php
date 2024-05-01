@@ -44,7 +44,7 @@
                         <div class="table-responsive table-card mt-3 mb-1">
                             @include('admin.layouts.flag-message')
                             @if(count($productData) > 0)
-                            <table class="table align-middle table-nowrap" id="customerTable">
+                            <table class="table align-middle table-nowrap" id="customerTables">
                                 <thead class="table-light">
                                 <tr>
                                     <th scope="col" style="width: 50px;">

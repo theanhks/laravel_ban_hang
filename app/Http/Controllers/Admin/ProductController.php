@@ -88,4 +88,17 @@ class ProductController extends Controller
             return redirect()->route('admin.product')->with('errors', __('Có lỗi hệ thống vui lòng nhập lại sản phẩm'));
         }
     }
+
+    public function destroy(int $id = 0)
+    {
+        $product = $this->productService->getById($id);
+        if(!$product){
+            return redirect()->route('admin.product')->with('errors', __('Không tìm thấy sản phẩm'));
+        }
+        $navi = $this->productService->destroy($id);
+        if ($navi) {
+            return redirect()->route('navi.index')->with('success', __('cms::message.data deleted successfully'));
+        }
+        return redirect()->route('navi.index')->with('errors', __('cms::message.data deleted fail'));
+    }
 }
