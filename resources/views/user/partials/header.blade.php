@@ -594,9 +594,9 @@
         <div id="banner">
             <div class="margin_auto">
                 <div id="logo">
-                    <a href=""> <img src="upload/hinhanh/thiet-ke-chua-co-ten-2367.jpg" width='100%' alt="Banner"> </a>
+                    <a href=""> <img src="upload/hinhanh/logo_banner.jpg" width='100%' alt="Banner"> </a>
                 </div>
-                <div class="banner"> <img src="upload/hinhanh/banner-779_435x99.29347826087.png" alt="Banner"> </div>
+                <div class="banner"> <img src="upload/hinhanh/company_nam_banner.png" alt="Banner"> </div>
                 <div class="banner_right">
 
                     <div class="lienket">
@@ -644,8 +644,8 @@
                     </div>
                     <div class="hotline_top">
                         <p>Hotline:</p>
-                        <p> <span>07 74 74 74 33</span> </p>
-                        <p> <span>0908 064 315</span> </p>
+{{--                        <p> <span>07 74 74 74 33</span> </p>--}}
+                        <p> <span>0976 400 078</span> </p>
                     </div>
                 </div>
             </div>
