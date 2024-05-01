@@ -14,8 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('product_categories', function (Blueprint $table) {
-            $table->id();
+            // $table->id();
+            $table->integer('category_id')->nullable();
+            $table->string('category_name')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

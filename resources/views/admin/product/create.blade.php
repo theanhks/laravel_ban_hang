@@ -90,9 +90,10 @@
                                         <label for="description" class="form-label">Description</label>
                                         <input type="hidden" name="description" id="description">
                                         <div class="snow-editor mb-3" style="height: 300px;" id="for_description">
-
-
-                                        </div> <!-- end Snow-editor-->
+                                        </div>
+                                        <!-- end Snow-editor-->
+                                        {{-- <label class="form-label" for="des-info-description-input">Description</label>
+                                        <textarea name="description" class="form-control" placeholder="Enter Description" id="des-info-description-input" rows="3"></textarea> --}}
                                     </div>
                                 </div>
 
@@ -101,8 +102,10 @@
                                         <label for="content" class="form-label">Content</label>
                                         <input type="hidden" name="content" id="content">
                                         <div class="snow-editor mb-3" style="height: 300px;" id="for_content">
-
-                                        </div> <!-- end Snow-editor-->
+                                        </div> 
+                                        <!-- end Snow-editor-->
+                                        {{-- <label class="form-label" for="des-info-content-input">Content</label>
+                                        <textarea name="content" class="form-control" placeholder="Enter Description" id="des-info-content-input" rows="3"></textarea> --}}
                                     </div>
                                 </div>
 
