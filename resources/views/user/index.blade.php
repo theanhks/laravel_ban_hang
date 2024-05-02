@@ -741,6 +741,16 @@
 
             });
         </script>
+        <style>
+            .product_img {
+                display: flex;
+                height: 220px;
+                align-items: center;
+            }
+            .list_img {
+                height: 150px;
+            }
+        </style>
     </div>
     <!-- main -->
 @endsection
