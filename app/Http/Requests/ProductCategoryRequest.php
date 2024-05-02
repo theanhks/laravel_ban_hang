@@ -13,7 +13,7 @@ class ProductCategoryRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,14 @@ class ProductCategoryRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'category_name' => ['required'],
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'category_name.required' => __('Vui lòng nhập tên danh mục'),
         ];
     }
 }

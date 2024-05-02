@@ -30,4 +30,17 @@ class ProductCategoryService
         return $this->productCategoryRepository->getAll($filter, $paginate);
     }
 
+    public function getAllPaging(array $filter = [])
+    {
+        return $this->productCategoryRepository->getAllPaging($filter);
+    }
+
+    public function insert($data = [])
+    {
+        try {
+            return $this->productCategoryRepository->insert($data);
+        } catch (\Exception $ex) {
+            return false;
+        }
+    }
 }

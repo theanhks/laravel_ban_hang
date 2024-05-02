@@ -27,7 +27,7 @@
                         <div class="row g-4 mb-3">
                             <div class="col-sm-auto">
                                 <div>
-                                    <button type="button" onclick=" window.location.href = '{{route('admin.product.create')}}';" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal"><i class="ri-add-line align-bottom me-1"></i> Add</button>
+                                    <button type="button" onclick=" window.location.href = '{{route('admin.category.create')}}';" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal"><i class="ri-add-line align-bottom me-1"></i> Add</button>
                                     <button class="btn btn-soft-danger" onClick="deleteMultiple()"><i class="ri-delete-bin-2-line"></i></button>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@
 
                         <div class="table-responsive table-card mt-3 mb-1">
                             @include('admin.layouts.flag-message')
-                            @if(count($productData) > 0)
+                            @if(count($categoryData) > 0)
                             <table class="table align-middle table-nowrap" id="customerTables">
                                 <thead class="table-light">
                                 <tr>
@@ -54,15 +54,15 @@
                                     </th>
                                     <th>Category</th>
                                     <th>Product Name</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Status</th>
+{{--                                    <th>Price</th>--}}
+{{--                                    <th>Quantity</th>--}}
+                                    <th>Image</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
                                 <tbody class="list form-check-all">
 
-                                    @foreach($productData as $product)
+                                    @foreach($categoryData as $category)
                                         <tr>
                                             <th scope="row">
                                                 <div class="form-check">
@@ -70,26 +70,24 @@
                                                 </div>
                                             </th>
                                             <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
-                                            <td class="customer_name">{{$product->category_id}}</td>
-                                            <td class="email">{{$product->name}}</td>
-                                            <td class="phone">{{$product->price}}</td>
-                                            <td class="date">{{$product->quantiry}}</td>
-                                            <td class="status"><span class="badge badge-soft-success text-uppercase">{{$product->is_show ? 'Show' : 'Hidden'}}</span></td>
+                                            <td class="customer_name">{{$category->category_id}}</td>
+                                            <td class="email">{{$category->category_name}}</td>
+                                            <td class="phone">{{$category->image}}</td>
                                             <td>
                                                 <div class="d-flex gap-2">
                                                     <div class="edit">
-                                                        <a class="btn btn-sm btn-success edit-item-btn" href="{{route('admin.product.edit',['id'=>$product->id])}}">Edit</a>
+                                                        <a class="btn btn-sm btn-success edit-item-btn" href="{{route('admin.category.edit',['id'=>$category->category_id])}}">Edit</a>
                                                     </div>
                                                     <div class="remove">
                                                         <form
-                                                            action="{{route('admin.product.destroy',['id'=>$product->id])}}"
+                                                            action="{{route('admin.category.destroy',['id'=>$category->category_id])}}"
                                                             method="POST">
                                                             @csrf
                                                             @method('DELETE')
                                                             <button class="btn btn-sm btn-danger remove-item-btn btn-delete"
                                                                     type="button"
                                                                     data-bs-toggle="modal"
-                                                                    data-item-id="{{ $product->id }}"
+                                                                    data-item-id="{{ $category->category_id }}"
                                                                     data-bs-target="#deleteRecordModal">Remove
                                                             </button>
                                                         </form>
@@ -113,14 +111,14 @@
                             </div>
                             @endif
                         </div>
-                        @if (count($productData) >0)
+                        @if (count($categoryData) >0)
                             <div class="row g-0 text-center text-sm-start align-items-center mb-4">
                                 <div class="col-sm-6">
-                                    {!! $productData->appends(request()->query())->links('admin.pagination/infor'); !!}
+                                    {!! $categoryData->appends(request()->query())->links('admin.pagination/infor'); !!}
                                 </div>
                                 <!-- end col -->
                                 <div class="col-sm-6">
-                                    {!! $productData->appends(request()->query())->links('admin.pagination/custom'); !!}
+                                    {!! $categoryData->appends(request()->query())->links('admin.pagination/custom'); !!}
                                 </div><!-- end col -->
                             </div>
                         @endif

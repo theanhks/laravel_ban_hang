@@ -22,7 +22,7 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         $productCategoryData = $this->productCategoryService->getAll()->toArray();
-        $productData = $this->productService->getAllPaging($request->all())->paginate(2);
+        $productData = $this->productService->getAllPaging($request->all())->paginate(10);
         return view('admin.product.index',[
             'productCategoryData' => $productCategoryData,
             'productData' => $productData
@@ -97,10 +97,10 @@ class ProductController extends Controller
         if(!$product){
             return redirect()->route('admin.product')->with('errors', __('Không tìm thấy sản phẩm'));
         }
-        $navi = $this->productService->destroy($id);
-        if ($navi) {
-            return redirect()->route('navi.index')->with('success', __('cms::message.data deleted successfully'));
+        $product = $this->productService->destroy($id);
+        if ($product) {
+            return redirect()->route('admin.product')->with('success', __('Xóa sản phẩm thành công'));
         }
-        return redirect()->route('navi.index')->with('errors', __('cms::message.data deleted fail'));
+        return redirect()->route('admin.product')->with('errors', __('Xóa sản phẩm thất bại'));
     }
 }
