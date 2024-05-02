@@ -82,7 +82,7 @@ a {
 #top {
     width     : 100%;
     float     : left;
-    background: url(images/gocphai.png) no-repeat right top;
+    background: url(../images/gocphai.png) no-repeat right top;
 }
 
 #header {
@@ -105,7 +105,7 @@ a {
 .header_top {
     width     : 100%;
     float     : left;
-    background: url(images/bg_top.png) no-repeat;
+    background: url(../images/bg_top.png) no-repeat;
     height    : 229px;
 }
 
@@ -230,7 +230,7 @@ a {
     content     : '';
     width       : 56px;
     height      : 40px;
-    background  : url(images/icon.jpg) no-repeat;
+    background  : url(../images/icon.jpg) no-repeat;
     float       : left;
     margin-right: 20px;
 }
@@ -278,7 +278,7 @@ a {
 
 .noidung_load h2:before {
     content     : '';
-    background  : url(images/icon.jpg) no-repeat;
+    background  : url(../images/icon.jpg) no-repeat;
     width       : 56px;
     height      : 40px;
     float       : left;
@@ -361,7 +361,7 @@ a {
     max-width : 1366px;
     position  : relative;
     display   : block;
-    background: url(images/bg_banner.png) no-repeat top center;
+    background: url(../images/bg_banner.png) no-repeat top center;
 }
 
 #banner_mobile {
@@ -398,7 +398,7 @@ a {
 }
 
 .content_menu_list .title_danhmuc {
-    background      : url(images/icon_list.png) no-repeat left 18px center, url(images/icon1.png) no-repeat right 10px center;
+    background      : url(../images/icon_list.png) no-repeat left 18px center, url(../images/icon1.png) no-repeat right 10px center;
     background-color: #17a400;
     height          : 50px;
     font-size       : 18px;
@@ -439,7 +439,7 @@ a {
 
 .menu_ft ul.box_menu_ft {
     width     : 69.35%;
-    background: url(images/menu_ft.png) no-repeat top left;
+    background: url(../images/menu_ft.png) no-repeat top left;
     position  : relative;
     height    : 37px;
     display   : inline-table;
@@ -551,7 +551,7 @@ a {
 
 .thanh_dm {
     width         : 100%;
-    background    : url(images/thanh.png) no-repeat;
+    background    : url(../images/thanh.png) no-repeat;
     text-transform: uppercase;
     font-family   : 'SFUEurostileCondensed';
     color         : #fefefe;
@@ -689,7 +689,7 @@ a {
 
 .center .title-center {
     text-align   : left;
-    background   : url(images/title_tin.png) repeat-x left bottom;
+    background   : url(../images/title_tin.png) repeat-x left bottom;
     margin-bottom: 15px;
 }
 
@@ -851,7 +851,7 @@ a {
 .bong_tren {
     width     : 100%;
     float     : left;
-    background: url(images/bongtren.png) no-repeat;
+    background: url(../images/bongtren.png) no-repeat;
     height    : 17px;
     margin    : 20px 0px 0px 0px;
 }
@@ -859,7 +859,7 @@ a {
 .bong_duoi {
     width     : 100%;
     float     : left;
-    background: url(images/bongduoi.png) no-repeat;
+    background: url(../images/bongduoi.png) no-repeat;
     height    : 40px;
     margin    : 0px 0px 0px 0px;
 }
@@ -871,7 +871,7 @@ a {
 
 #video_load {
     margin    : 0px 0px 0px 0px;
-    background: url(images/bg_pro.png) repeat;
+    background: url(../images/bg_pro.png) repeat;
     width     : 100%;
     float     : left
 }
@@ -952,7 +952,7 @@ ul {
 }
 
 #icon {
-    background: url(images/gach_menu.png) no-repeat right;
+    background: url(../images/gach_menu.png) no-repeat right;
 }
 
 #timkiem {
@@ -989,7 +989,7 @@ ul {
     position     : absolute;
     top          : 0;
     right        : 0;
-    background   : url(images/nut-s.png) no-repeat center;
+    background   : url(../images/nut-s.png) no-repeat center;
     color        : #fff;
 }
 
@@ -1008,7 +1008,7 @@ ul {
 .giohang_top {
     width         : 130px;
     float         : right;
-    background    : #2ba600 url(images/giohang.png) no-repeat left 5px center;
+    background    : #2ba600 url(../images/giohang.png) no-repeat left 5px center;
     height        : 50px;
     text-align    : left;
     padding-left  : 50px;
@@ -1109,20 +1109,20 @@ ul {
 }
 
 .giaohang_tq {
-    background: url(images/giaohang.png) no-repeat 0px 3px
+    background: url(../images/giaohang.png) no-repeat 0px 3px
 }
 
 .giaohang_nt {
-    background: url(images/nhantien.png) no-repeat 0px 3px
+    background: url(../images/nhantien.png) no-repeat 0px 3px
 }
 
 .giaohang_dt {
-    background: url(images/doitra.png) no-repeat 0px 3px
+    background: url(../images/doitra.png) no-repeat 0px 3px
 }
 
 .giaohang_lh {
     width     : 350px !important;
-    background: url(images/lienhe.png) no-repeat 0px 3px
+    background: url(../images/lienhe.png) no-repeat 0px 3px
 }
 
 .giaohang_lh span {
@@ -1295,7 +1295,7 @@ div.dmsp ul li ul li:hover ul {
 .tinhtrang li a {
     display   : block;
     padding   : 5px 0px 5px 20px;
-    background: url(images/muiten.png) no-repeat 10px 13px;
+    background: url(../images/muiten.png) no-repeat 10px 13px;
     color     : #1F589F
 }
 
@@ -1307,7 +1307,7 @@ div.dmsp ul li ul li:hover ul {
 }
 
 .thanh {
-    background    : #19b400 url(images/icon_title.png) no-repeat left 10px center;
+    background    : #19b400 url(../images/icon_title.png) no-repeat left 10px center;
     color         : #fff;
     font-family   : 'RobotoBold';
     text-transform: uppercase;
@@ -1339,7 +1339,7 @@ div.dmsp ul li ul li:hover ul {
 }
 
 .hotline_l {
-    background   : url(images/bg_hotro.png) left center no-repeat;
+    background   : url(../images/bg_hotro.png) left center no-repeat;
     height       : 97px;
     padding-top  : 66px;
     color        : #fff;
@@ -1454,7 +1454,7 @@ div.left_video iframe {
     width          : 100%;
     float          : left;
     padding        : 5px 0px 5px 25px;
-    background     : url(images/muiten_detail.png) no-repeat 5px 10px;
+    background     : url(../images/muiten_detail.png) no-repeat 5px 10px;
     text-decoration: none;
     color          : #333;
     font-size      : 12px;
@@ -1472,17 +1472,17 @@ div.left_video iframe {
 
 .menu_left li ul a {
     padding-left: 30px;
-    background  : url(images/pagination.png) no-repeat 15px 12px;
+    background  : url(../images/pagination.png) no-repeat 15px 12px;
 }
 
 .menu_left li ul li ul a {
     padding-left: 40px;
-    background  : url(images/muiten_trong.png) no-repeat 30px 10px;
+    background  : url(../images/muiten_trong.png) no-repeat 30px 10px;
 }
 
 .yahoo_top {
     text-align: center;
-    background: url(images/bg_hotrotructuyen.png) no-repeat top left;
+    background: url(../images/bg_hotrotructuyen.png) no-repeat top left;
     height    : 125px;
 }
 
@@ -1527,7 +1527,7 @@ div.left_video iframe {
     float     : left;
     color     : #333;
     padding   : 5px 0px 5px 50px;
-    background: url(images/dienthoai_h.png) no-repeat 20px 10px;
+    background: url(../images/dienthoai_h.png) no-repeat 20px 10px;
     text-align: left;
 }
 
@@ -1536,7 +1536,7 @@ div.left_video iframe {
     float     : left;
     color     : #333;
     padding   : 5px 0px 5px 50px;
-    background: url(images/email.png) no-repeat 20px 10px;
+    background: url(../images/email.png) no-repeat 20px 10px;
     text-align: left;
 }
 
@@ -1651,7 +1651,7 @@ div.left_video iframe {
     float     : left;
     padding   : 2px 0px 2px 30px;
     color     : #333;
-    background: url(images/sao.png) no-repeat 10px 7px;
+    background: url(../images/sao.png) no-repeat 10px 7px;
 }
 
 .tinkhac li a:hover {
@@ -1662,7 +1662,7 @@ div.left_video iframe {
     width     : 193px;
     float     : left;
     border    : 1px solid #FF8A00;
-    background: url(images/left_cham.png) repeat-y;
+    background: url(../images/left_cham.png) repeat-y;
 }
 
 ul.pagination {
@@ -1800,7 +1800,7 @@ ul.pagination a.current {
 }
 
 .online {
-    background: url(images/muiten.png) no-repeat 10px 12px;
+    background: url(../images/muiten.png) no-repeat 10px 12px;
     color     : #FFF;
 }
 
@@ -1813,7 +1813,7 @@ ul.pagination a.current {
 .menu_danhmuc {
     width     : 100%;
     float     : left;
-    background: url(images/thanh_sp.jpg) repeat-x;
+    background: url(../images/thanh_sp.jpg) repeat-x;
     height    : 45px;
 }
 
@@ -1836,7 +1836,7 @@ ul.pagination a.current {
 .menu_danhmuc li.active a:before {
     content     : '';
     width       : 7px;
-    background  : url(images/truoc.png) no-repeat;
+    background  : url(../images/truoc.png) no-repeat;
     height      : 45px;
     float       : left;
     margin-left : -30px;
@@ -1848,7 +1848,7 @@ ul.pagination a.current {
 .menu_danhmuc li.active a:after {
     content     : '';
     width       : 19px;
-    background  : url(images/sau.png) no-repeat;
+    background  : url(../images/sau.png) no-repeat;
     height      : 45px;
     float       : right;
     margin-right: -37px;
@@ -1871,7 +1871,7 @@ ul.pagination a.current {
 .callto {
     width          : 30px;
     height         : 30px;
-    background     : url(images/phone.png) no-repeat top center;
+    background     : url(../images/phone.png) no-repeat top center;
     background-size: 100% 100%;
     position       : fixed;
     top            : 2px;
@@ -1911,7 +1911,7 @@ ul.pagination a.current {
     right     : -33px;
     height    : 63px;
     width     : 34px;
-    background: url(images/mui_hotline.png)no-repeat;
+    background: url(../images/mui_hotline.png)no-repeat;
     top       : 0;
 }
 
@@ -1931,7 +1931,7 @@ ul.pagination a.current {
     font-weight: bold;
     padding    : 20px 0px 22px 20px;
     font-size  : 14px;
-    background : url(images/bg_tt.jpg) repeat-x bottom;
+    background : url(../images/bg_tt.jpg) repeat-x bottom;
 }
 
 .thongtin li {
@@ -2092,7 +2092,7 @@ ul.pagination a.current {
 .hotro_tructuyen {
     width     : 100%;
     float     : left;
-    background: url(images/hotro.png) no-repeat;
+    background: url(../images/hotro.png) no-repeat;
     height    : 220px;
     position  : relative;
     border    : 1px solid #eee;
@@ -2199,7 +2199,7 @@ ul.pagination a.current {
 .xemtiep {
     float     : right;
     font-size : 14px;
-    background: url(images/xemm.png) no-repeat 80px 12px;
+    background: url(../images/xemm.png) no-repeat 80px 12px;
     transition: 0.5s;
     text-align: center;
 }
@@ -2280,7 +2280,7 @@ ul.pagination a.current {
     margin        : 0;
     display       : inline-block;
     text-align    : left;
-    background    : #19b400 url(images/icon_title.png) no-repeat left 10px center;
+    background    : #19b400 url(../images/icon_title.png) no-repeat left 10px center;
     color         : #ffffff;
     font-size     : 18px;
     text-transform: capitalize;
@@ -2291,7 +2291,7 @@ ul.pagination a.current {
 .thanh_title h2:after {
     position  : absolute;
     content   : '';
-    background: url(images/title_after.png) no-repeat;
+    background: url(../images/title_after.png) no-repeat;
     top       : 0;
     right     : -42px;
     height    : 48px;
@@ -2307,7 +2307,7 @@ ul.pagination a.current {
 }
 
 .bg_center {
-    background: url(images/title-dichvu.png) repeat-x;
+    background: url(../images/title-dichvu.png) repeat-x;
     height    : 40px;
 }
 
@@ -2324,7 +2324,7 @@ ul.pagination a.current {
 .gioithieu:before {
     position  : absolute;
     content   : '';
-    background: url(images/bg_gioithieu.png) no-repeat top center;
+    background: url(../images/bg_gioithieu.png) no-repeat top center;
     width     : 100%;
     top       : -55px;
     left      : 0;
@@ -2351,7 +2351,7 @@ ul.pagination a.current {
 .gioithieu .title_gioithieu h2:before {
     position  : absolute;
     content   : '';
-    background: url(images/gt_before.png) no-repeat left center;
+    background: url(../images/gt_before.png) no-repeat left center;
     width     : 49px;
     left      : -9px;
     top       : 5px;
@@ -2361,7 +2361,7 @@ ul.pagination a.current {
 .gioithieu .title_gioithieu h2:after {
     position  : absolute;
     content   : '';
-    background: url(images/gt_after.png) no-repeat left center;
+    background: url(../images/gt_after.png) no-repeat left center;
     width     : 49px;
     right     : -12px;
     top       : 5px;
@@ -2373,7 +2373,7 @@ ul.pagination a.current {
     float        : left;
     width        : 41%;
     padding      : 5px;
-    background   : url(images/bg1_gt.png) no-repeat top left, url(images/bg2_gt_05.png) no-repeat bottom right;
+    background   : url(../images/bg1_gt.png) no-repeat top left, url(../images/bg2_gt_05.png) no-repeat bottom right;
     margin       : 10px 0;
     border-radius: 10px;
     overflow     : hidden;
@@ -2528,7 +2528,7 @@ ul.pagination a.current {
 .dathang_detail .muangay {
     width         : 177px;
     float         : left;
-    background    : url(images/thanhtoan.png) no-repeat;
+    background    : url(../images/thanhtoan.png) no-repeat;
     height        : 46px;
     font-weight   : bold;
     text-transform: uppercase;
@@ -2556,7 +2556,7 @@ ul.pagination a.current {
     width     : 100%;
     float     : left;
     padding   : 5px 0px 10px 30px;
-    background: url(images/giohang_ico.jpg) no-repeat 5px 8px;
+    background: url(../images/giohang_ico.jpg) no-repeat 5px 8px;
     color     : #fff;
     font-style: italic;
 }
@@ -2703,7 +2703,7 @@ ul.pagination a.current {
     color     : #333;
     padding   : 0px 10px 0px 5px;
     float     : left;
-    background: url(images/muiten_trong.png) no-repeat right;
+    background: url(../images/muiten_trong.png) no-repeat right;
 }
 
 .dieuhuong a:hover {
@@ -2728,7 +2728,7 @@ ul.pagination a.current {
 
 .thanhsp h2:before {
     content   : "";
-    background: url(images/after.png) no-repeat;
+    background: url(../images/after.png) no-repeat;
     height    : 18px;
     float     : left;
     width     : 139px;
@@ -2737,7 +2737,7 @@ ul.pagination a.current {
 
 .thanhsp h2:after {
     content   : "";
-    background: url(images/after.png) no-repeat;
+    background: url(../images/after.png) no-repeat;
     height    : 18px;
     float     : right;
     width     : 139px;
@@ -2801,7 +2801,7 @@ ul.pagination a.current {
 
 .tin_tuc h2 {
     display        : inline-block;
-    background     : url(images/thanhsp.png) no-repeat;
+    background     : url(../images/thanhsp.png) no-repeat;
     height         : 64px;
     background-size: 100% 100%;
     padding        : 10px 80px 0px 80px;
@@ -3163,7 +3163,7 @@ ul.pagination a.current {
     font-size : 14px;
     color     : #373737;
     transition: 0.5s;
-    background: url(images/xemthem.png) no-repeat left center;
+    background: url(../images/xemthem.png) no-repeat left center;
     margin    : 10px 10px 0 0px;
 }
 
@@ -3174,7 +3174,7 @@ a.xemthem:hover {
 .giohang {
     text-align  : center;
     line-height : 31px;
-    background  : url(images/icon_gh.png) no-repeat right center;
+    background  : url(../images/icon_gh.png) no-repeat right center;
     color       : #ffffff;
     font-size   : 14px;
     padding-left: 10px;
@@ -3217,7 +3217,7 @@ a.xemthem:hover {
 
 .dathang {
     border-radius: 5px;
-    background   : #e30000 url(images/gh.png) no-repeat left 5px center;
+    background   : #e30000 url(../images/gh.png) no-repeat left 5px center;
     text-align   : center;
     line-height  : 1;
     cursor       : pointer;
@@ -3252,7 +3252,7 @@ a.xemthem:hover {
 
 #footer {
     width      : 100%;
-    background : url(images/footer.png) no-repeat top center;
+    background : url(../images/footer.png) no-repeat top center;
     padding-top: 40px;
 }
 
@@ -3299,7 +3299,7 @@ a.xemthem:hover {
 #copy {
     width     : 100%;
     float     : left;
-    background: url(images/copy.png) repeat-x;
+    background: url(../images/copy.png) repeat-x;
     height    : 49px;
     text-align: center;
     padding   : 5px 0px 5px 0px;
@@ -3622,7 +3622,7 @@ a.xemthem:hover {
     text-align: left;
     font-size : 12px;
     color     : #ffffff;
-    background: url(images/copy.png) repeat;
+    background: url(../images/copy.png) repeat;
 }
 
 .copy ul {
@@ -3648,7 +3648,7 @@ a.xemthem:hover {
 
 .hotline_top {
     float         : right;
-    background    : url(images/hotline.png) no-repeat left center;
+    background    : url(../images/hotline.png) no-repeat left center;
     font-family   : 'RobotoBold';
     padding-left  : 42px;
     text-transform: uppercase;
@@ -3670,7 +3670,7 @@ a.xemthem:hover {
 .hotro_top {
     width      : 100%;
     float      : left;
-    background : url(images/top_b.jpg) repeat-x;
+    background : url(../images/top_b.jpg) repeat-x;
     height     : 38px;
     line-height: 38px;
 }
@@ -3704,7 +3704,7 @@ a.xemthem:hover {
 .tienich {
     width     : 214px;
     float     : left;
-    background: url(images/tienich.png) no-repeat 15px 15px;
+    background: url(../images/tienich.png) no-repeat 15px 15px;
     height    : 140px;
 }
 
@@ -3887,7 +3887,7 @@ div#container_product #tabs li a {
     position      : relative;
     float         : left;
     width         : 35px;
-    background    : url(images/httt.png) no-repeat scroll left top transparent;
+    background    : url(../images/httt.png) no-repeat scroll left top transparent;
     height        : 205px;
     padding       : 2px 0px 0px 0px;
     font-weight   : 100;
@@ -3941,7 +3941,7 @@ div#container_product #tabs li a {
 .hotline_r {
     width        : 100%;
     float        : left;
-    background   : url(images/hotline.png) no-repeat 0px 0px;
+    background   : url(../images/hotline.png) no-repeat 0px 0px;
     border-bottom: 1px solid #ccc;
     padding      : 10px 0px 10px 80px;
     font-size    : 20px;
@@ -3979,7 +3979,7 @@ div#container_product #tabs li a {
     float     : left;
     color     : #333;
     padding   : 5px 0px 5px 50px;
-    background: url(images/dienthoai_h.png) no-repeat 20px 10px;
+    background: url(../images/dienthoai_h.png) no-repeat 20px 10px;
 }
 
 .yahoo_right .email {
@@ -3987,7 +3987,7 @@ div#container_product #tabs li a {
     float     : left;
     color     : #333;
     padding   : 5px 0px 5px 50px;
-    background: url(images/email.png) no-repeat 20px 10px;
+    background: url(../images/email.png) no-repeat 20px 10px;
 }
 
 .namehotro {
@@ -3997,13 +3997,13 @@ div#container_product #tabs li a {
     padding-left: 30px;
     color       : #696969;
     font-size   : 14px;
-    background  : url(images/advisory.png) no-repeat left top;
+    background  : url(../images/advisory.png) no-repeat left top;
     padding     : 0px 0px 5px 30px;
 }
 
 .dthotro {
     width        : 100%;
-    background   : url(images/call.png) no-repeat top 0px left 5px;
+    background   : url(../images/call.png) no-repeat top 0px left 5px;
     padding-left : 30px;
     line-height  : 20px;
     margin-bottom: 8px;
@@ -4012,7 +4012,7 @@ div#container_product #tabs li a {
 .emailhotro {
     width         : 100%;
     line-height   : 13px;
-    background    : url(images/mail.png) no-repeat top 0px left 5px;
+    background    : url(../images/mail.png) no-repeat top 0px left 5px;
     padding-left  : 30px;
     padding-bottom: 20px;
 }
@@ -4061,7 +4061,7 @@ div#container_product #tabs li a {
     float     : left;
     margin    : 0px 0px 20px 0px;
     text-align: center;
-    background: url(images/thanh_bt.png) no-repeat top center;
+    background: url(../images/thanh_bt.png) no-repeat top center;
     margin-top: -5px;
 }
 
@@ -4090,7 +4090,7 @@ div#container_product #tabs li a {
     float     : left;
     color     : #fff;
     padding   : 0px 0px 0px 20px;
-    background: url(images/4cham.png) no-repeat 5px 7px;
+    background: url(../images/4cham.png) no-repeat 5px 7px;
 }
 
 .content_new ul li a:hover {
@@ -4328,14 +4328,14 @@ div#container_product #tabs li a {
     width     : 100%;
     float     : left;
     height    : 40px;
-    background: url(images/menu.png) repeat-x;
+    background: url(../images/menu.png) repeat-x;
     text-align: center;
     margin-top: 30px;
 }
 
 .menu_hinhanh li {
     display      : inline-block;
-    background   : url(images/gach_menu.png) no-repeat right;
+    background   : url(../images/gach_menu.png) no-repeat right;
     padding-right: 5px;
 }
 
@@ -4584,7 +4584,7 @@ div#container_product #tabs li a {
 
 #popub .popub .close_popup {
     position          : absolute;
-    background        : url(images/icon/close.png) center center no-repeat;
+    background        : url(../images/icon/close.png) center center no-repeat;
     width             : 60px;
     height            : 60px;
     right             : -33px;
@@ -5252,7 +5252,7 @@ div#container_product #tabs li a {
             position: absolute;
             top: 0;
             right: 0;
-            background: url(images/giohang.png) no-repeat left center;
+            background: url(../images/giohang.png) no-repeat left center;
             padding-left: 60px;
         }
         .giohang_mb a {
