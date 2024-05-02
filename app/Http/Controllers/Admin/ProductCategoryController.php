@@ -21,6 +21,7 @@ class ProductCategoryController extends Controller
         // $productCategoryData = $this->productCategoryService->getAll()->toArray();
         // $productData = $this->productService->getAllPaging($request->all())->paginate(2);
         // return view('admin.product.index',[
+
         //     'productCategoryData' => $productCategoryData,
         //     'productData' => $productData
         // ]);
@@ -53,7 +54,7 @@ class ProductCategoryController extends Controller
             $file = $request->file('image');
             $name = $file->getClientOriginalName();
             $path = $file->storeAs('images', $name, 'public');
-            
+
             // Lấy URL của hình ảnh
             return asset('storage/' . $path);
 

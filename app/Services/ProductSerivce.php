@@ -61,6 +61,6 @@ class ProductSerivce
 
     public function destroy($id =0)
     {
-
+        return $this->productRepository->destroy($id);
     }
 }

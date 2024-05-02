@@ -81,7 +81,18 @@
                                                         <a class="btn btn-sm btn-success edit-item-btn" href="{{route('admin.product.edit',['id'=>$product->id])}}">Edit</a>
                                                     </div>
                                                     <div class="remove">
-                                                        <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-item-id="{{ $product->id }}" data-bs-target="#deleteRecordModal">Remove</button>
+                                                        <form
+                                                            action="{{route('admin.product.destroy',['id'=>$product->id])}}"
+                                                            method="POST">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button class="btn btn-sm btn-danger remove-item-btn btn-delete"
+                                                                    type="button"
+                                                                    data-bs-toggle="modal"
+                                                                    data-item-id="{{ $product->id }}"
+                                                                    data-bs-target="#deleteRecordModal">Remove
+                                                            </button>
+                                                        </form>
                                                     </div>
                                                 </div>
                                             </td>
