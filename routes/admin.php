@@ -47,6 +47,8 @@ Route::prefix('manage')->middleware('auth')->group(function () {
             ->name('admin.category.edit');
         Route::post('/edit/{id}', [ProductCategoryController::class, 'update'])
             ->name('admin.category.update');
+        Route::delete('/delete/{id}', [ProductCategoryController::class, 'destroy'])
+            ->name('admin.category.destroy');
     });
 
 });
