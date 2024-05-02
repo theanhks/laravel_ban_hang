@@ -16,11 +16,15 @@ class ProductCategorySeeder extends Seeder
     public function run()
     {
         DB::table('product_categories')->insert([
-            ['category_id' => 1, 'category_name' => 'Bo Mạch Máy Laser', 'created_at' => now(), 'updated_at' => now()],
-            ['category_id' => 2, 'category_name' => 'Bo Mạch Máy Hàn', 'created_at' => now(), 'updated_at' => now()],
-            ['category_id' => 3, 'category_name' => 'Quạt', 'created_at' => now(), 'updated_at' => now()],
-            ['category_id' => 4, 'category_name' => 'Công Tắc', 'created_at' => now(), 'updated_at' => now()],
-            ['category_id' => 5, 'category_name' => 'Linh Kiện Dán', 'created_at' => now(), 'updated_at' => now()],
+            ['category_id' => 1, 'category_name' => 'Đá mài, đá cắt', 'created_at' => now(), 'updated_at' => now()],
+            ['category_id' => 2, 'category_name' => 'Đá xếp', 'created_at' => now(), 'updated_at' => now()],
+            ['category_id' => 3, 'category_name' => 'Que hàn', 'created_at' => now(), 'updated_at' => now()],
+            ['category_id' => 4, 'category_name' => 'Dây hàn', 'created_at' => now(), 'updated_at' => now()],
+            ['category_id' => 5, 'category_name' => 'Phụ kiện máy hàn', 'created_at' => now(), 'updated_at' => now()],
+            ['category_id' => 5, 'category_name' => 'Máy hàn', 'created_at' => now(), 'updated_at' => now()],
+            ['category_id' => 5, 'category_name' => 'Máy cắt mài', 'created_at' => now(), 'updated_at' => now()],
+            ['category_id' => 5, 'category_name' => 'Cuộn PE', 'created_at' => now(), 'updated_at' => now()],
+            ['category_id' => 5, 'category_name' => 'Cuộn băng keo', 'created_at' => now(), 'updated_at' => now()],
         ]);
     }
 }
