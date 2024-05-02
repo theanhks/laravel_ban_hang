@@ -112,8 +112,8 @@
                     <ul>
                         <li> <img src="{{ asset('images/tt1.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Địa chỉ : Vĩnh Lộc A, H. Bình Chánh, TP.HCM</li>
                         <li> <img src="{{ asset('images/tt2.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Hotline : 07 74 74 74 33 - 0908 064 315</li>
-                        <li> <img src="{{ asset('images/tt3.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Email : linhkienmayhan@gmail.com</li>
-                        <li> <img src="{{ asset('images/tt4.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Website : www.linhkienmayhan.vn</li>
+                        <li> <img src="{{ asset('images/tt3.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Email : hoa@htsvn.com.vn</li>
+                        <li> <img src="{{ asset('images/tt4.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Website : htsvn.com.vn</li>
                     </ul>
                 </div>
 
@@ -228,7 +228,7 @@
 
             <div class="box_hotro_left">
                 <div class="boxnamecall">
-                    <p class="namehotro">Mr Khương</p>
+                    <p class="namehotro">Mr Nhân Viên 1</p>
                     <p class="dthotro">0908 064 315</p>
                 </div>
                 <div class="boxiconsuppo">
@@ -237,13 +237,13 @@
                 </div>
                 <div class="clear"></div>
                 <div class="emailhotro">
-                    <p class="">linhkienmayhan@gmail.com</p>
+                    <p class="">htsvn.com.vn</p>
                 </div>
 
             </div>
             <div class="box_hotro_left">
                 <div class="boxnamecall">
-                    <p class="namehotro">Mr Khương</p>
+                    <p class="namehotro">Nhân viên kinh doanh 1</p>
                     <p class="dthotro">0908 064 315</p>
                 </div>
                 <div class="boxiconsuppo">
@@ -252,7 +252,7 @@
                 </div>
                 <div class="clear"></div>
                 <div class="emailhotro">
-                    <p class="">linhkienmayhan@gmail.com</p>
+                    <p class="">htsvn.com.vn</p>
                 </div>
 
             </div>

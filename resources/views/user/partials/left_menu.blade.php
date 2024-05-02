@@ -240,13 +240,13 @@
                 <div class="hotline_l">07 74 74 74 33</div>
                 <div class="item_ht">
                     <p class="phong">Nhân Viên Kinh Doanh</p>
-                    <p><i class="fas fa-phone-volume"></i>0908 064 315(Mr Khương)</p>
-                    <p><i class="fas fa-envelope"></i>linhkienmayhan@gmail.com</p>
+                    <p><i class="fas fa-phone-volume"></i>0976 400 078(Nhân viên kinh doanh 1)</p>
+                    <p><i class="fas fa-envelope"></i>htsvn.com.vn</p>
                 </div>
                 <div class="item_ht">
                     <p class="phong">Nhân Viên Kĩ Thuật</p>
-                    <p><i class="fas fa-phone-volume"></i>0908 064 315(Mr Khương)</p>
-                    <p><i class="fas fa-envelope"></i>linhkienmayhan@gmail.com</p>
+                    <p><i class="fas fa-phone-volume"></i>0976 400 078(Mr Kĩ Thuật 1)</p>
+                    <p><i class="fas fa-envelope"></i>htsvn.com.vn</p>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -281,6 +281,7 @@
                     height: 250px;
                 }
             </style>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d466.1896023538358!2d106.96455950379558!3d10.865645265884668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1svi!2s!4v1714573913373!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
     <div class="danhmuc">

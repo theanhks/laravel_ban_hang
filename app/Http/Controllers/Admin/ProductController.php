@@ -56,7 +56,7 @@ class ProductController extends Controller
             $file = $request->file('image');
             $name = $file->getClientOriginalName();
             $path = $file->storeAs('images', $name, 'public');
-            
+
             // Lấy URL của hình ảnh
             return asset('storage/' . $path);
 
@@ -91,8 +91,16 @@ class ProductController extends Controller
         }
     }
 
-    public function destroy($id)
+    public function destroy(int $id = 0)
     {
-        dd($id);
+        $product = $this->productService->getById($id);
+        if(!$product){
+            return redirect()->route('admin.product')->with('errors', __('Không tìm thấy sản phẩm'));
+        }
+        $navi = $this->productService->destroy($id);
+        if ($navi) {
+            return redirect()->route('navi.index')->with('success', __('cms::message.data deleted successfully'));
+        }
+        return redirect()->route('navi.index')->with('errors', __('cms::message.data deleted fail'));
     }
 }
