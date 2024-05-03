@@ -1,6 +1,8 @@
 $(document).ready(function(){
     $('.btn-delete').click(function (){
-        if (confirm("Bạn có chắc chắn muốn xóa sản phẩm") == true) {
+        var title = $(this).data('title');
+        title = typeof(title) != 'undefined' ? title : 'Bạn có chắc chắn muốn xóa';
+        if (confirm(title) == true) {
             $(this).closest('form').submit();
         } else {
            return false;

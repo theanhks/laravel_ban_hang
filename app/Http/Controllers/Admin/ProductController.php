@@ -58,7 +58,7 @@ class ProductController extends Controller
             $path = $file->storeAs('images', $name, 'public');
 
             // Lấy URL của hình ảnh
-            return asset('storage/' . $path);
+            return ('/storage/' . $path);
 
             // Bây giờ bạn có thể lưu URL vào cơ sở dữ liệu hoặc thực hiện các thao tác khác với nó
         }
@@ -85,7 +85,7 @@ class ProductController extends Controller
         $data['is_show'] = !empty($data['is_show']) ? 1 : 0;
         $data = $this->productService->update($id,$data);
         if($data){
-            return redirect()->route('admin.product')->with('success', __('Bạn đã thêm sản phẩm thành công'));
+            return redirect()->route('admin.product')->with('success', __('Bạn đã cập nhật sản phẩm thành công'));
         }else{
             return redirect()->route('admin.product')->with('errors', __('Có lỗi hệ thống vui lòng nhập lại sản phẩm'));
         }
