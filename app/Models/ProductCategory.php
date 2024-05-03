@@ -15,5 +15,6 @@ class ProductCategory extends Model
         'category_id',
         'category_name',
         'image',
+        'is_show'
     ];
 }

@@ -16,7 +16,7 @@ class ProductCategoryRepository extends BaseRepository
 
     public function getById(int $id = 0)
     {
-        return $this->model->where('id', $id)->get()->first();
+        return $this->model->where('category_id', $id)->get()->first();
     }
 
     public function getAll(array $filter = [])
@@ -45,5 +45,10 @@ class ProductCategoryRepository extends BaseRepository
     {
         $newCategory = $this->model->create($data);
         return $newCategory;
+    }
+
+    public function update($id,$data = [])
+    {
+        return $this->model->where('category_id', $id)->update($data);
     }
 }

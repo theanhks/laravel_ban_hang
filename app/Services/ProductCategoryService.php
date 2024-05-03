@@ -43,4 +43,19 @@ class ProductCategoryService
             return false;
         }
     }
+
+    public function getById($id = 0)
+    {
+        return $this->productCategoryRepository->getById($id);
+    }
+
+    public function update($id = 0 , $data = [])
+    {
+        try {
+            return $this->productCategoryRepository->update($id,$data);
+        } catch (\Exception $ex) {
+            dd($ex->getMessage());
+            return false;
+        }
+    }
 }

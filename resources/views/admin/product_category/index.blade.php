@@ -87,6 +87,7 @@
                                                             <button class="btn btn-sm btn-danger remove-item-btn btn-delete"
                                                                     type="button"
                                                                     data-bs-toggle="modal"
+                                                                    data-title="bạn có chắc chắn muốn xóa: {{$category->category_name}}"
                                                                     data-item-id="{{ $category->category_id }}"
                                                                     data-bs-target="#deleteRecordModal">Remove
                                                             </button>
