@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('product_categories', function (Blueprint $table) {
             // $table->id();
-            $table->integer('category_id')->nullable();
+            $table->bigIncrements('category_id');
             $table->string('category_name')->nullable();
             $table->string('image')->nullable();
+            $table->boolean('is_show')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
