@@ -666,4 +666,4 @@
             });
         </script>        </header>
     <div class="clear"></div>
-    @include('user.partials.menu')
+    @include('frontend.partials.menu')

@@ -42,7 +42,7 @@
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" class="form-control mb-3" id="name" name="category_name" value="{{old('category_name')}}">
                             </div>
-                            <div>
+                            <div class="col-xxl-6 col-md-6 mx-auto">
                                 <label for="position" class="form-label">Position</label>
                                 <input type="text" class="form-control mb-3" id="position" name="position" value="{{old('position') ?? 0}}">
                             </div>
