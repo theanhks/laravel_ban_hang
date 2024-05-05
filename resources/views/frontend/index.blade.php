@@ -1,4 +1,4 @@
-@extends('user.layout')
+@extends('frontend.layout')
 @section('title', 'Trang chủ')
 @section('content')
     <style>
@@ -122,6 +122,41 @@
             });
 
         </script>
+        @foreach($categoryData as $category)
+            @if(isset($productGroupCategory[$category['category_id']]) && count($productGroupCategory[$category['category_id']]) >0)
+                <div class="sanpham_nb">
+                    <div class="margin_auto">
+                        <div class="list_carousel_4">
+                            <div class="thanh_title"><h2>{{$category['category_name']}}</h2></div>
+
+                            <div class="responsive">
+                                @foreach($productGroupCategory[$category['category_id']] as $product)
+                                    <div>
+                                        <div class="item ">
+                                            <div class="list_img">
+                                                <a href="/product/{{$product['id']}}">
+                                                    <img src="{{$product['image']}}">
+                                                </a>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <a href="/product/{{$product['id']}}">
+                                                <h3>Đá mài, đá cắt</h3>
+                                            </a>
+                                            <p class="giaban">
+                                                <b>Giá :</b> <span>{{$product['price'] > 0 ? $product['price'] : 'Liên hệ'}}</span>
+                                            </p>
+                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart({{$product['id']}});"
+                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            @endif
+        @endforeach
         <div class="sanpham_nb">
             <div class="margin_auto">
                 <div class="list_carousel_4">

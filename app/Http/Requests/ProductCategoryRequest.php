@@ -25,6 +25,7 @@ class ProductCategoryRequest extends FormRequest
     {
         return [
             'category_name' => ['required'],
+            'position' => ['integer'],
         ];
     }
 
@@ -32,6 +33,7 @@ class ProductCategoryRequest extends FormRequest
     {
         return [
             'category_name.required' => __('Vui lòng nhập tên danh mục'),
+            'position.integer' => __('Vui lòng nhập vị trí là số nguyên'),
         ];
     }
 }

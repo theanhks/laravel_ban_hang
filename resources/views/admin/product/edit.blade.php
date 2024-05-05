@@ -76,6 +76,10 @@
                                     <label for="quantity" class="form-label">Quantity</label>
                                     <input type="text" class="form-control mb-3" id="quantity" name="quantity" value="{{$product->quantity}}">
                                 </div>
+                                <div>
+                                    <label for="position" class="form-label">Position</label>
+                                    <input type="text" class="form-control mb-3" id="position" name="position" value="{{$product->position}}">
+                                </div>
 
                                 <div>
                                     <div>

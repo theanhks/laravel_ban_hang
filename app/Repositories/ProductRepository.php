@@ -25,10 +25,7 @@ class ProductRepository extends BaseRepository
 
     public function getAll(array $filter = [])
     {
-        $date = $filter['date'];
-        return $this->model->when(!empty($date), function ($query) use ($date) {
-            return $query->where(DB::raw('DATE_FORMAT(date,"%Y-%m")'), $date);
-        })->get()->keyBy('date');
+        return $this->model->all();
     }
 
     public function insert($data = [])

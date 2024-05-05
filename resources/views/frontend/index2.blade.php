@@ -1,4 +1,4 @@
-@extends('user.layout')
+@extends('frontend.layout')
 @section('title', 'Trang chủ')
 @section('content')
     <div id="right_ok">

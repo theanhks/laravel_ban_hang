@@ -1,10 +1,10 @@
-@extends('user.layout')
+@extends('frontend.layout')
 
 @section('content')
 	<div id="right_ok">
 		<div class="caption">THƯ NGỎ</div>
 		<div class="caption_en">Open letter</div>
-		
+
 		<div class="m-t-40"></div>
 
 		<p>Lời đầu tiên, <strong>CÔNG TY TNHH XUẤT NHẬP KHẨU & TM HTS</strong> xin gửi tới Quý khách hàng lời chúc sức khoẻ và lời chào trân trọng !</p>
@@ -22,10 +22,10 @@
 		our customers best wishes for health and respectful greetings!</p>
 		<p>Dear customer,</p>
 		<p>Our HTS company isa supplier of materials and equipment rental in the mechanical field.</p>
-		<p>We continuously update information from our partners to select reputable suppliers to provide 
+		<p>We continuously update information from our partners to select reputable suppliers to provide
 		quality products with professional customers.</p>
 		<p>Our selection criteria "Quality products, reasonable prices, best sales service"</p>
-		<p>We have a team of professional employees with many years of business in the mechanical field. To <br> 
+		<p>We have a team of professional employees with many years of business in the mechanical field. To <br>
 		facilitate your research and selection, we would like to send you a Competency Profile with complete <br>
 		basic information about our business. HTS IMPORT EXPORT & TRADING COMPANY LIMITED is <br>
 		pleased to cooperate to contribute to the continuous business development of our customers.</p>

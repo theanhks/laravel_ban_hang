@@ -12,28 +12,30 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('user/index');
-});
+use App\Http\Controllers\IndexController;
+//Route::get('/', function () {
+//    return view('frontend/index');
+//});
+Route::get('/', [IndexController::class, 'index'])
+    ->name('admin.index');
 Route::get('/test', function () {
-    return view('user/index2');
+    return view('frontend/index2');
 });
 
 Route::get('/open-letter', function () {
-    return view('user/open-letter');
+    return view('frontend/open-letter');
 });
 
 Route::get('/about-us', function () {
-    return view('user/about-us');
+    return view('frontend/about-us');
 });
 
 Route::get('/distribution-brand', function () {
-    return view('user/distribution-brand');
+    return view('frontend/distribution-brand');
 });
 
 Route::get('/company-infomation', function () {
-    return view('user/company-info');
+    return view('frontend/company-info');
 });
 
 Route::get('/admin1', function () {

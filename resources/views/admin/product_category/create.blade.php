@@ -42,6 +42,10 @@
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" class="form-control mb-3" id="name" name="category_name" value="{{old('category_name')}}">
                             </div>
+                            <div class="col-xxl-6 col-md-6 mx-auto">
+                                <label for="position" class="form-label">Position</label>
+                                <input type="text" class="form-control mb-3" id="position" name="position" value="{{old('position') ?? 0}}">
+                            </div>
                             <div class="col-xxl-6 col-md-6 mx-auto mt-3 mb-3">
                                 <div class="form-check form-switch">
                                     <input class="form-check-input mb-3" type="checkbox" role="switch" value="1"
