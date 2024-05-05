@@ -78,6 +78,11 @@
                                 </div>
 
                                 <div>
+                                    <label for="position" class="form-label">Position</label>
+                                    <input type="text" class="form-control mb-3" id="position" name="position" value="{{old('position') ?? 0}}">
+                                </div>
+
+                                <div>
                                     <div>
                                         <label for="image" class="form-label">Image Upload</label>
                                         <input class="form-control form-control-sm mb-3" id="image" type="file"
@@ -102,7 +107,7 @@
                                         <label for="content" class="form-label">Content</label>
                                         <input type="hidden" name="content" id="content">
                                         <div class="snow-editor mb-3" style="height: 300px;" id="for_content">
-                                        </div> 
+                                        </div>
                                         <!-- end Snow-editor-->
                                         {{-- <label class="form-label" for="des-info-content-input">Content</label>
                                         <textarea name="content" class="form-control" placeholder="Enter Description" id="des-info-content-input" rows="3"></textarea> --}}

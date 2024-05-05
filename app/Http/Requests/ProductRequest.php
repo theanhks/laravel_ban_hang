@@ -31,6 +31,7 @@ class ProductRequest extends FormRequest
             'name' => ['required'],
             'price' => ['integer'],
             'quantity' => ['integer'],
+            'position' => ['integer'],
         ];
     }
 
@@ -42,6 +43,7 @@ class ProductRequest extends FormRequest
             'name.required' => __('Vui lòng nhập tên sản phẩm'),
             'price.integer' => __('Vui lòng nhập tiền là số nguyên'),
             'quantity.integer' => __('Vui lòng nhập số lượng là số nguyên'),
+            'position.integer' => __('Vui lòng nhập vị trí là số nguyên'),
         ];
     }
 }
