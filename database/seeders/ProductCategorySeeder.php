@@ -16,15 +16,60 @@ class ProductCategorySeeder extends Seeder
     public function run()
     {
         DB::table('product_categories')->insert([
-            ['category_id' => 1, 'category_name' => 'Đá mài, đá cắt', 'created_at' => now(), 'updated_at' => now()],
-            ['category_id' => 2, 'category_name' => 'Đá xếp', 'created_at' => now(), 'updated_at' => now()],
-            ['category_id' => 3, 'category_name' => 'Que hàn', 'created_at' => now(), 'updated_at' => now()],
-            ['category_id' => 4, 'category_name' => 'Dây hàn', 'created_at' => now(), 'updated_at' => now()],
-            ['category_id' => 5, 'category_name' => 'Phụ kiện máy hàn', 'created_at' => now(), 'updated_at' => now()],
-            ['category_id' => 6, 'category_name' => 'Máy hàn', 'created_at' => now(), 'updated_at' => now()],
-            ['category_id' => 7, 'category_name' => 'Máy cắt mài', 'created_at' => now(), 'updated_at' => now()],
-            ['category_id' => 8, 'category_name' => 'Cuộn PE', 'created_at' => now(), 'updated_at' => now()],
-            ['category_id' => 9, 'category_name' => 'Cuộn băng keo', 'created_at' => now(), 'updated_at' => now()],
+            [
+                'category_name' => 'Đá mài, đá cắt', 
+                'is_show' => 1,
+                'created_at' => now(), 
+                'updated_at' => now(),
+            ],
+            [
+                'category_name' => 'Đá xếp', 
+                'is_show' => 1,
+                'created_at' => now(), 
+                'updated_at' => now(),
+            ],
+            [
+                'category_name' => 'Que hàn', 
+                'is_show' => 1,
+                'created_at' => now(), 
+                'updated_at' => now(),
+            ],
+            [
+                'category_name' => 'Dây hàn', 
+                'is_show' => 1,
+                'created_at' => now(), 
+                'updated_at' => now(),
+            ],
+            [
+                'category_name' => 'Phụ kiện máy hàn', 
+                'is_show' => 1,
+                'created_at' => now(), 
+                'updated_at' => now(),
+            ],
+            [
+                'category_name' => 'Máy hàn', 
+                'is_show' => 1,
+                'created_at' => now(), 
+                'updated_at' => now(),
+            ],
+            [
+                'category_name' => 'Máy cắt mài', 
+                'is_show' => 1,
+                'created_at' => now(), 
+                'updated_at' => now(),
+            ],
+            [
+                'category_name' => 'Cuộn PE', 
+                'is_show' => 1,
+                'created_at' => now(), 
+                'updated_at' => now(),
+            ],
+            [
+                'category_name' => 'Cuộn băng keo', 
+                'is_show' => 1,
+                'created_at' => now(), 
+                'updated_at' => now(),
+            ],
         ]);
     }
 }
