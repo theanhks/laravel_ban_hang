@@ -21,5 +21,6 @@ class Product extends Model
         'description',
         'content',
         'image',
+        'position',
     ];
 }

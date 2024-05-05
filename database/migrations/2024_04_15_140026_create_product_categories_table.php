@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('category_name')->nullable();
             $table->string('image')->nullable();
             $table->boolean('is_show')->nullable();
+            $table->integer('position')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
