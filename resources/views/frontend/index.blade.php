@@ -8,7 +8,7 @@
         /*}*/
     </style>
     <div id="right_ok">
-        <h1 class="visit_hidden">CÔNG TY TNHH XNK MẶT TRỜI VIỆT</h1>
+        <h1 class="visit_hidden">CÔNG TY TNHH XUẤT NHẬP KHẨU TM HTS</h1>
 
         <script language="javascript">
             function addtocart(pid) {
@@ -22,7 +22,9 @@
             <input type="hidden" name="command"/>
         </form>
 
-
+        @php
+        /* Tạm ẩn
+        @endphp
         <div id="slide_show">
             <style>
                 .jssorb05 div {
@@ -108,6 +110,7 @@
             </div>
             <div class="clear"></div>
         </div>
+        @php */ @endphp
         <script type="text/javascript">
             $().ready(function () {
                 $('.responsive').slick({
@@ -122,25 +125,25 @@
             });
 
         </script>
-        @foreach($categoryData as $category)
-            @if(isset($productGroupCategory[$category['category_id']]) && count($productGroupCategory[$category['category_id']]) >0)
-                <div class="sanpham_nb">
-                    <div class="margin_auto">
-                        <div class="list_carousel_4">
-                            <div class="thanh_title"><h2>{{$category['category_name']}}</h2></div>
+        <div class="sanpham_nb">
+            <div class="margin_auto">
+                <div class="list_carousel_4">
+                    <div class="thanh_title"><h2>Sản phẩm nổi bật</h2></div>
 
-                            <div class="responsive">
+                    <div class="responsive">
+                        @foreach($categoryData as $category)
+                            @if(isset($productGroupCategory[$category['category_id']]) && count($productGroupCategory[$category['category_id']]) >0)
                                 @foreach($productGroupCategory[$category['category_id']] as $product)
                                     <div>
                                         <div class="item ">
                                             <div class="list_img">
-                                                <a href="/product/{{$product['id']}}">
+                                                <a href="#">
                                                     <img src="{{$product['image']}}">
                                                 </a>
                                             </div>
                                             <div class="clear"></div>
                                             <a href="/product/{{$product['id']}}">
-                                                <h3>Đá mài, đá cắt</h3>
+                                                <h3>{{$product['name']}}</h3>
                                             </a>
                                             <p class="giaban">
                                                 <b>Giá :</b> <span>{{$product['price'] > 0 ? $product['price'] : 'Liên hệ'}}</span>
@@ -150,621 +153,59 @@
                                         </div>
                                     </div>
                                 @endforeach
+                            @endif
+                        @endforeach
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div id="info">
+            <div id="sanpham">
+                @foreach($categoryData as $category)
+                    @if(isset($productGroupCategory[$category['category_id']]) && count($productGroupCategory[$category['category_id']]) >0)
+                        <div class="khung">
+                            <div class="thanh_title"><a href="san-pham/bo-tao-xung-may-han" title="">
+                                    <h2>{{$category['category_name']}}</h2>
+                                </a></div>
+
+                            <div class="content_main">
+                                <div class="owl-demo">
+                                    @foreach($productGroupCategory[$category['category_id']] as $product)
+                                        <div>
+                                            <div class="item">
+                                                <div class="product_img">
+                                                    <a href="#">
+                                                        <img
+                                                            src="{{$product['image']}}"
+                                                            alt="{{$product['name']}}"/>
+                                                    </a>
+                                                </div>
+                                                <div class="product_info">
+                                                    <a href="#">
+                                                        <h3>{{$product['name']}}</h3>
+                                                    </a>
+                                                    <div class="boxchitiet">
+                                                        <p class="giaban">
+                                                            <b>Giá :</b> <span>{{$product['price'] > 0 ? $product['price'] : 'Liên hệ'}}</span>
+                                                        </p>
+                                                        <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(193);"
+                                                                                title="Giỏ Hàng">Đặt hàng</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
                             </div>
+
                             <div class="clear"></div>
-                        </div>
-                    </div>
-                </div>
-            @endif
-        @endforeach
-        <div class="sanpham_nb">
-            <div class="margin_auto">
-                <div class="list_carousel_4">
-                    <div class="thanh_title"><h2>Sản phẩm nổi bật</h2></div>
-
-                    <div class="responsive">
-                        <div>
-                            <div class="item ">
-                                <div class="list_img">
-                                    <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                        <img src="upload/product/damai_dacat.png">
-                                    </a>
-                                </div>
-                                <div class="clear"></div>
-                                <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                    <h3>Đá mài, đá cắt</h3>
-                                </a>
-                                <p class="giaban">
-                                    <b>Giá :</b> <span>Liên hệ</span>
-                                </p>
-                                <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(193);"
-                                                        title="Giỏ Hàng">Đặt hàng</a></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="item ">
-                                <div class="list_img">
-                                    <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                        <img src="upload/product/damai_dacat2.png">
-                                    </a>
-                                </div>
-                                <div class="clear"></div>
-                                <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                    <h3>Đá mài, đá cắt 2</h3>
-                                </a>
-                                <p class="giaban">
-                                    <b>Giá :</b> <span>Liên hệ</span>
-                                </p>
-                                <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(193);"
-                                                        title="Giỏ Hàng">Đặt hàng</a></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="item ">
-                                <div class="list_img">
-                                    <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                        <img src="upload/product/da_xep.png">
-                                    </a>
-                                </div>
-                                <div class="clear"></div>
-                                <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                    <h3>Đá xếp</h3>
-                                </a>
-                                <p class="giaban">
-                                    <b>Giá :</b> <span>Liên hệ</span>
-                                </p>
-                                <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(193);"
-                                                        title="Giỏ Hàng">Đặt hàng</a></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="item ">
-                                <div class="list_img">
-                                    <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                        <img src="upload/product/quehan_chosun.png">
-                                    </a>
-                                </div>
-                                <div class="clear"></div>
-                                <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                    <h3>Que hàn Chosun</h3>
-                                </a>
-                                <p class="giaban">
-                                    <b>Giá :</b> <span>Liên hệ</span>
-                                </p>
-                                <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(193);"
-                                                        title="Giỏ Hàng">Đặt hàng</a></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="item ">
-                                <div class="list_img">
-                                    <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                        <img src="upload/product/dayhan_chosun.png">
-                                    </a>
-                                </div>
-                                <div class="clear"></div>
-                                <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                    <h3>Dây hàn chosun</h3>
-                                </a>
-                                <p class="giaban">
-                                    <b>Giá :</b> <span>Liên hệ</span>
-                                </p>
-                                <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(193);"
-                                                        title="Giỏ Hàng">Đặt hàng</a></div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="info">
-            <div id="sanpham">
-                <div class="khung">
-                    <div class="thanh_title"><a href="san-pham/bo-tao-xung-may-han" title="">
-                            <h2>BO TẠO XUNG MÁY HÀN</h2>
-                        </a></div>
-
-                    <div class="content_main">
-
-                        <div class="owl-demo">
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                            <img
-                                                src="/upload/product/dayhan_tig_kiswel.png"
-                                                alt="Bo 3525 có biến trở chỉnh"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                            <h3>Dây hàn Tig Kiswel</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(193);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                            <img
-                                                src="/upload/product/quehandien_kiswel.png"
-                                                alt="Bo 3525 có biến trở chỉnh"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                            <h3>Que hàn điện Kiswel</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(193);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                            <img
-                                                src="/upload/product/que_han_tig_kiswel.png"
-                                                alt="Bo 3525 có biến trở chỉnh"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                            <h3>Que hàn Tig Kiswel</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(193);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                            <img
-                                                src="/upload/product/day_han_huyndai.png"
-                                                alt="Bo 3525 có biến trở chỉnh"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                            <h3>Dây hàn Huyndai</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(193);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                            <img
-                                                src="/upload/product/quehan_huyndai.png"
-                                                alt="Bo 3525 có biến trở chỉnh"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-3525-co-bien-tro-chinh.html">
-                                            <h3>Que hàn Huyndai</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(193);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="clear"></div>
-                </div> <!-- khung -->
-                <div class="khung">
-                    <div class="thanh_title"><a href="san-pham/bo-mach-may-han" title="">
-                            <h2>BO MẠCH MÁY HÀN</h2>
-                        </a></div>
-
-                    <div class="content_main">
-
-                        <div class="owl-demo">
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-tv-101-khien-may-mig.html">
-                                            <img
-                                                src="/upload/product/phu_kien_may_han_tig.png"
-                                                alt="Bo TV 101 Khiển Máy Mig"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-tv-101-khien-may-mig.html">
-                                            <h3>Phụ kiện máy hàn TIG</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(210);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-tv-101-khien-may-mig.html">
-                                            <img
-                                                src="/upload/product/phu_kien_may_han_tig2.png"
-                                                alt="Bo TV 101 Khiển Máy Mig"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-tv-101-khien-may-mig.html">
-                                            <h3>Phụ kiện máy hàn TIG 2</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(210);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-tv-101-khien-may-mig.html">
-                                            <img
-                                                src="/upload/product/phu_kien_may_han_co2.png"
-                                                alt="Bo TV 101 Khiển Máy Mig"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-tv-101-khien-may-mig.html">
-                                            <h3>Phụ kiện máy hàn CO2</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(210);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-tv-101-khien-may-mig.html">
-                                            <img
-                                                src="/upload/product/phu_kien_may_han_co2_2.png"
-                                                alt="Bo TV 101 Khiển Máy Mig"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-tv-101-khien-may-mig.html">
-                                            <h3>Phụ kiện máy hàn CO2 2</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(210);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-tv-101-khien-may-mig.html">
-                                            <img
-                                                src="/upload/product/may_han_co2.png"
-                                                alt="Bo TV 101 Khiển Máy Mig"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-tv-101-khien-may-mig.html">
-                                            <h3>Máy hàn CO2</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(210);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="clear"></div>
-                </div> <!-- khung -->
-                <div class="khung">
-                    <div class="thanh_title"><a href="san-pham/bo-nguon-may-han" title="">
-                            <h2>BO NGUỒN MÁY HÀN</h2>
-                        </a></div>
-
-                    <div class="content_main">
-
-                        <div class="owl-demo">
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-3843-dung.html">
-                                            <img
-                                                src="/upload/product/may_han_tig.png"
-                                                alt="BO 3843 đứng"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-3843-dung.html">
-                                            <h3>Máy hàn TIG</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên Hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(195);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-3843-dung.html">
-                                            <img
-                                                src="/upload/product/may_cat_mai_makita.png"
-                                                alt="BO 3843 đứng"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-3843-dung.html">
-                                            <h3>Máy cắt mài Makita</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên Hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(195);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-3843-dung.html">
-                                            <img
-                                                src="/upload/product/may_cat_mai_bosh.png"
-                                                alt="BO 3843 đứng"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-3843-dung.html">
-                                            <h3>Máy cắt mài Bosch</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên Hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(195);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-3843-dung.html">
-                                            <img
-                                                src="/upload/product/cuon_pe.png"
-                                                alt="BO 3843 đứng"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-3843-dung.html">
-                                            <h3>Cuộn PE</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên Hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(195);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-3843-dung.html">
-                                            <img
-                                                src="/upload/product/cuon_pe_2.png"
-                                                alt="BO 3843 đứng"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-3843-dung.html">
-                                            <h3>Cuộn PE2</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên Hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(195);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="clear"></div>
-                </div> <!-- khung -->
-
-                <div class="khung">
-                    <div class="thanh_title"><a href="san-pham/bo-nguon-may-han" title="">
-                            <h2>BĂNG KEO</h2>
-                        </a></div>
-
-                    <div class="content_main">
-
-                        <div class="owl-demo">
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-3843-dung.html">
-                                            <img
-                                                src="/upload/product/cuon_keo_giay.png"
-                                                alt="BO 3843 đứng"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-3843-dung.html">
-                                            <h3>Cuộn băng keo giấy</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên Hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(195);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-3843-dung.html">
-                                            <img
-                                                src="/upload/product/cuon_keo_giay2.png"
-                                                alt="BO 3843 đứng"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-3843-dung.html">
-                                            <h3>Cuộn keo giấy 2</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên Hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(195);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-3843-dung.html">
-                                            <img
-                                                src="/upload/product/cuon_keo_trong.png"
-                                                alt="BO 3843 đứng"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-3843-dung.html">
-                                            <h3>Cuộn keo trong</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên Hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(195);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <div class="product_img">
-                                        <a href="san-pham/bo-3843-dung.html">
-                                            <img
-                                                src="/upload/product/cuon_keo_trong_2.png"
-                                                alt="BO 3843 đứng"/>
-                                        </a>
-                                    </div>
-                                    <div class="product_info">
-                                        <a href="san-pham/bo-3843-dung.html">
-                                            <h3>Cuộn keo trong 2</h3>
-                                        </a>
-                                        <div class="boxchitiet">
-                                            <p class="giaban">
-                                                <b>Giá :</b> <span>Liên Hệ</span>
-                                            </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(195);"
-                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="clear"></div>
-                </div> <!-- khung -->
-            </div>
-        </div>
-
-        <div id="info">
-            <div id="sanpham">
+                        </div> <!-- khung -->
+                    @endif
+                @endforeach
 
             </div>
         </div>
-
-
         <script>
             $(document).ready(function () {
                 $(".owl-demo").owlCarousel({

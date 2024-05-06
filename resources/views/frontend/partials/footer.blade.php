@@ -108,10 +108,10 @@
             <div class="bottom">
 
                 <div class="thongtin_bt">
-                    <h2>CÔNG TY TNHH XNK MẶT TRỜI VIỆT</h2>
+                    <h2>CÔNG TY TNHH XUẤT NHẬP KHẨU TM HTS</h2>
                     <ul>
-                        <li> <img src="{{ asset('images/tt1.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Địa chỉ : Vĩnh Lộc A, H. Bình Chánh, TP.HCM</li>
-                        <li> <img src="{{ asset('images/tt2.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Hotline : 07 74 74 74 33 - 0908 064 315</li>
+                        <li> <img src="{{ asset('images/tt1.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Địa chỉ : 655/44 Phùng Hưng, Tổ 33, KP.Long Đức 1, Tam Phước, Biên Hòa, Đồng Nai</li>
+                        <li> <img src="{{ asset('images/tt2.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Hotline : 0976400078  - 0914860432</li>
                         <li> <img src="{{ asset('images/tt3.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Email : hoa@htsvn.com.vn</li>
                         <li> <img src="{{ asset('images/tt4.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Website : htsvn.com.vn</li>
                     </ul>
@@ -121,9 +121,9 @@
                     <div class="sp_tieubieu">
                         <h4>Về chúng tôi</h4>
                         <ul>
-                            <li><a href="trang-chu.html">Trang chủ</a></li>
-                            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
-                            <li><a href="san-pham.html">Sản phẩm</a></li>
+                            <li><a href="/">Trang chủ</a></li>
+                            <li><a href="/gioi-thieu.html">Giới thiệu</a></li>
+                            <li><a href="/san-pham.html">Sản phẩm</a></li>
                             <li><a href="tin-tuc.html">Tin tức</a></li>
                             <li><a href="lien-he.html">Liên hệ</a></li>
                         </ul>
