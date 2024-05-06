@@ -26,13 +26,13 @@ class FrontendService
     public function getCategory()
     {
         $categoryData = $this->categoryRepository->getAll();
-        return $categoryData->where('is_show',1)->toArray();
+        return $categoryData->where('is_show',1)->sortBy('position')->toArray();
     }
 
     public function getProduct()
     {
         $productData = $this->productRepository->getAll();
-        return $productData->where('is_show',1)->toArray();
+        return $productData->where('is_show',1)->sortBy('position')->toArray();
     }
 
     public function getProductGroupCategory()
