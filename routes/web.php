@@ -42,6 +42,10 @@ Route::get('/admin1', function () {
     return view('admin/index');
 });
 
+Route::get('/sanpham/{slug}', function () {
+    dd(1);
+})->name('product_of_category');
+
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';

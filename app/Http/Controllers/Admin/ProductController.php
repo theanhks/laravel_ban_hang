@@ -55,7 +55,7 @@ class ProductController extends Controller
             // Lưu trữ tệp tin trong thư mục public/images và lấy đường dẫn của nó
             $file = $request->file('image');
             $name = $file->getClientOriginalName();
-            $path = $file->storeAs('images', $name, 'public');
+            $path = $file->storeAs('images/product', $name, 'public');
 
             // Lấy URL của hình ảnh
             return ('/storage/' . $path);
