@@ -38,7 +38,6 @@
     <!-- END wrapper -->
 
     <!-- Right Sidebar -->
-    @include('admin.layouts.customizer')
     <!-- END Right Sidebar -->
 
     @include('admin.layouts.vendor-scripts')

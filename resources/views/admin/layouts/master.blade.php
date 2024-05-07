@@ -38,8 +38,6 @@
     </div>
     <!-- END layout-wrapper -->
 
-    @include('admin.layouts.customizer')
-
     <!-- JAVASCRIPT -->
     @include('admin.layouts.vendor-scripts')
 </body>
