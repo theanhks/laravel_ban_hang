@@ -35,3 +35,19 @@ p {
 .white-color {
 	color: white !important;
 }
+
+.img-bus {
+	border: 6px solid #c80c3b;
+    border-radius: 45px;
+    position: absolute;
+}
+.img-bus img {
+	border-radius: 45px;
+}
+.img-left {
+	top: 550px;
+	z-index: 999;
+}
+.img-right {
+	left: 660px;
+}
