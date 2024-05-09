@@ -7,4 +7,16 @@ if (!function_exists('getCategory')) {
         $category = $service->getCategory();
         return $category;
     }
+
+}
+
+if (!function_exists('getCategoryLeftMenu')) {
+    function getCategoryLeftMenu()
+    {
+        $service = app(\App\Services\FrontendService::class);
+        $category = $service->getCategoryLeftMenu();
+        return $category;
+    }
+
+
 }

@@ -29,6 +29,12 @@ class FrontendService
         return $categoryData->where('is_show',1)->sortBy('position')->toArray();
     }
 
+    public function getCategoryLeftMenu()
+    {
+        $categoryData = $this->categoryRepository->getAll();
+        return $categoryData->where('is_show',1)->where('is_show_left_menu',1)->sortBy('position')->toArray();
+    }
+
     public function getProduct()
     {
         $productData = $this->productRepository->getAll();
