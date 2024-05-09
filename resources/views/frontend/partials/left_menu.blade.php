@@ -1,7 +1,7 @@
 <div id="left">
     <div class="danhmuc">
         <div class="thanh">Danh mục sản phẩm</div>
-        @php $categoryData = getCategory() @endphp
+        @php $categoryData = getCategoryLeftMenu() @endphp
         <div class="left dmsp">
             <ul>
                 <li>

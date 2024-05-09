@@ -16,6 +16,7 @@ class ProductCategory extends Model
         'slug',
         'image',
         'is_show',
+        'is_show_left_menu',
         'position',
     ];
 }

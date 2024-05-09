@@ -36,6 +36,7 @@ class ProductCategoryController extends Controller
          $data = $request->except('_token');
          $data['image'] = $this->upload($request);
          $data['is_show'] = !empty($data['is_show']) ? 1 : 0;
+         $data['is_show_left_menu'] = !empty($data['is_show_left_menu']) ? 1 : 0;
          $data = $this->productCategoryService->insert($data);
          if($data){
              return redirect()->route('admin.category')->with('success', __('Bạn đã thêm danh mục thành công'));
@@ -79,6 +80,7 @@ class ProductCategoryController extends Controller
              unset($data['image']);
          }
          $data['is_show'] = !empty($data['is_show']) ? 1 : 0;
+         $data['is_show_left_menu'] = !empty($data['is_show_left_menu']) ? 1 : 0;
          $data = $this->productCategoryService->update($id,$data);
          if($data){
              return redirect()->route('admin.category')->with('success', __('Bạn đã cập nhật danh mục thành công'));

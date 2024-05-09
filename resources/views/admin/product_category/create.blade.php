@@ -54,6 +54,14 @@
                                 </div>
                             </div>
 
+                            <div class="col-xxl-6 col-md-6 mx-auto mt-3 mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input mb-3" type="checkbox" role="switch" value="1"
+                                           id="is_show" checked name="is_show_left_menu">
+                                    <label class="form-check-label" for="is_show">Is Show Left Menu</label>
+                                </div>
+                            </div>
+
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <div>
                                     <div>
