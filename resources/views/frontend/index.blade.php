@@ -220,7 +220,7 @@
         <style>
             .product_img {
                 display: flex;
-                height: 220px;
+                height: 285px;
                 align-items: center;
             }
             .list_img {
