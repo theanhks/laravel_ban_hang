@@ -54,8 +54,12 @@ class ProductCategoryService
         try {
             return $this->productCategoryRepository->update($id,$data);
         } catch (\Exception $ex) {
-            dd($ex->getMessage());
             return false;
         }
+    }
+
+    public function destroy($id = 0)
+    {
+        return $this->productCategoryRepository->destroy($id);
     }
 }

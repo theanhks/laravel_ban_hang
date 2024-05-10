@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class ProductCategory extends Model
+class ProductCategory extends BaseModel
 {
     use HasFactory;
     use SoftDeletes;
-
+    protected $primaryKey = 'category_id';
     protected $fillable = [
         'category_name',
         'slug',
@@ -19,4 +19,11 @@ class ProductCategory extends Model
         'is_show_left_menu',
         'position',
     ];
+    public function __construct(array $attributes = [])
+    {
+        parent::__construct($attributes);
+        $this->slugSourceField = 'category_name'; // Chỉ định trường dùng để tạo slug
+        $this->columnKey = 'category_id'; // Chỉ định trường để loại trừ khi update
+    }
+
 }

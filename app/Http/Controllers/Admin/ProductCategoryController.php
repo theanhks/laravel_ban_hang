@@ -88,4 +88,17 @@ class ProductCategoryController extends Controller
              return redirect()->route('admin.category')->with('errors', __('Có lỗi hệ thống vui lòng nhập lại danh mục'));
          }
     }
+
+    public function destroy(int $id = 0)
+    {
+        $product = $this->productCategoryService->getById($id);
+        if(!$product){
+            return redirect()->route('admin.category')->with('errors', __('Không tìm thấy sản phẩm'));
+        }
+        $product = $this->productCategoryService->destroy($id);
+        if ($product) {
+            return redirect()->route('admin.category')->with('success', __('Xóa danh mục thành công'));
+        }
+        return redirect()->route('admin.category')->with('errors', __('Xóa danh mục thất bại'));
+    }
 }
