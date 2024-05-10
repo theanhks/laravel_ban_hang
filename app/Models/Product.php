@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Product extends Model
+class Product extends BaseModel
 {
     use HasFactory;
     use SoftDeletes;
@@ -24,4 +24,11 @@ class Product extends Model
         'image',
         'position',
     ];
+
+    public function __construct(array $attributes = [])
+    {
+        parent::__construct($attributes);
+//        $this->slugSourceField = 'category_name'; // Chỉ định trường dùng để tạo slug
+//        $this->columnKey = 'category_id'; // Chỉ định trường để loại trừ khi update
+    }
 }

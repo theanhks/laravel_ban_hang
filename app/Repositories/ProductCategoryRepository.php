@@ -49,6 +49,14 @@ class ProductCategoryRepository extends BaseRepository
 
     public function update($id,$data = [])
     {
-        return $this->model->where('category_id', $id)->update($data);
+        $model = ProductCategory::where('category_id', $id)->first();
+        $model->fill($data);
+        return  $model->save();
+        //return $this->model->where('category_id', $id)->update($data);
+    }
+
+    public function destroy($id): bool
+    {
+        return $this->model->where('category_id',$id)->delete();
     }
 }
