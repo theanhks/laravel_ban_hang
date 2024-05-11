@@ -38,6 +38,18 @@ Route::get('/gioi-thieu.html', function () {
     return view('frontend/company-info');
 });
 
+Route::get('/gia-tot-nhat.html', function () {
+    return view('frontend/best-price');
+});
+
+Route::get('/giao-hang-tan-noi.html', function () {
+    return view('frontend/home-delivery');
+});
+
+Route::get('/san-pham-chinh-hang.html', function () {
+    return view('frontend/authentic-product');
+});
+
 Route::get('/admin1', function () {
     return view('admin/index');
 });
