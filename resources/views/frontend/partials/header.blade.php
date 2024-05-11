@@ -613,30 +613,30 @@
                             <div>
                                 <div class="row_dv">
                                     <div class="row_dv_img">
-                                        <a href="dich-vu/gia-tot-nhat.html" title="Giá Tốt Nhất"> <img src="upload/baiviet/dv4-593_27x27.png" alt="Giá Tốt Nhất"> </a>
+                                        <a href="gia-tot-nhat.html" title="Giá Tốt Nhất"> <img src="upload/baiviet/dv4-593_27x27.png" alt="Giá Tốt Nhất"> </a>
                                     </div>
                                     <div class="row_dv_info">
-                                        <a href="dich-vu/gia-tot-nhat.html" title="Giá Tốt Nhất">Giá Tốt Nhất</a>
+                                        <a href="gia-tot-nhat.html" title="Giá Tốt Nhất">Giá Tốt Nhất</a>
                                     </div>
                                 </div>
                             </div>
                             <div>
                                 <div class="row_dv">
                                     <div class="row_dv_img">
-                                        <a href="dich-vu/giao-hang-tan-noi.html" title="giao hàng tận nơi"> <img src="upload/baiviet/dv2-1855_27x27.png" alt="giao hàng tận nơi"> </a>
+                                        <a href="giao-hang-tan-noi.html" title="giao hàng tận nơi"> <img src="upload/baiviet/dv2-1855_27x27.png" alt="giao hàng tận nơi"> </a>
                                     </div>
                                     <div class="row_dv_info">
-                                        <a href="dich-vu/giao-hang-tan-noi.html" title="giao hàng tận nơi">giao hàng tận nơi</a>
+                                        <a href="giao-hang-tan-noi.html" title="giao hàng tận nơi">giao hàng tận nơi</a>
                                     </div>
                                 </div>
                             </div>
                             <div>
                                 <div class="row_dv">
                                     <div class="row_dv_img">
-                                        <a href="dich-vu/san-pham-chinh-hang.html" title="sản phẩm chính hãng"> <img src="upload/baiviet/dv1-8876_27x27.png" alt="sản phẩm chính hãng"> </a>
+                                        <a href="san-pham-chinh-hang.html" title="sản phẩm chính hãng"> <img src="upload/baiviet/dv1-8876_27x27.png" alt="sản phẩm chính hãng"> </a>
                                     </div>
                                     <div class="row_dv_info">
-                                        <a href="dich-vu/san-pham-chinh-hang.html" title="sản phẩm chính hãng">sản phẩm chính hãng</a>
+                                        <a href="san-pham-chinh-hang.html" title="sản phẩm chính hãng">sản phẩm chính hãng</a>
                                     </div>
                                 </div>
                             </div>
