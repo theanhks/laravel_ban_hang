@@ -59,7 +59,7 @@
                             </div>
                             <div class="selectors">
                                 <script type="text/javascript" language="javascript"
-                                        src="{{asset('/js/jquery.carouFredSel-6.2.0-packed.js')}}"></script>
+                                        src="/js/jquery.carouFredSel-6.2.0-packed.js"></script>
                                 <script type="text/javascript" language="javascript">
                                     $(function () {
                                         $('#foo3').carouFredSel({
@@ -242,7 +242,7 @@
                                 <div class="masp">
                                     <p>MSP</p>
                                 </div>
-                                <div class="product_img">
+                                <div class="product_img height-standard">
                                     <a href="{{route('product',$product->slug)}}">
                                         <img src="{{$product->image}}"
                                              alt="{{$product->name}}"/>
