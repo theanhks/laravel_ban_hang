@@ -61,6 +61,10 @@ class FrontendService
         return $this->categoryRepository->getBySlug($slug);
     }
 
+    public function getProductBySlug($slug)
+    {
+        return $this->productRepository->getBySlug($slug);
+    }
     public function getProductByCategoryId($category_id = 0)
     {
         $productData = $this->productRepository->getByCategoryId($category_id);
