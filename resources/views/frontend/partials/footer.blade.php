@@ -54,42 +54,42 @@
             <div>
                 <div class="doitac">
                     <a href="sdsd" target="_bank" >
-                        <img src="upload/hinhanh/368460835687333_200x100.jpg" alt="hianh 2" />
+                        <img src="/upload/hinhanh/368460835687333_200x100.jpg" alt="hianh 2" />
                     </a>
                 </div>
             </div>
             <div>
                 <div class="doitac">
                     <a href="" target="_bank" >
-                        <img src="upload/hinhanh/582320003187759_200x100.jpg" alt="MITSUBISHI" />
+                        <img src="/upload/hinhanh/582320003187759_200x100.jpg" alt="MITSUBISHI" />
                     </a>
                 </div>
             </div>
             <div>
                 <div class="doitac">
                     <a href="" target="_bank" >
-                        <img src="upload/hinhanh/102684769078350_200x100.png" alt="MAGNACHIP" />
+                        <img src="/upload/hinhanh/102684769078350_200x100.png" alt="MAGNACHIP" />
                     </a>
                 </div>
             </div>
             <div>
                 <div class="doitac">
                     <a href="" target="_bank" >
-                        <img src="upload/hinhanh/245137166135381_200x100.jpg" alt="VIETNAM POST" />
+                        <img src="/upload/hinhanh/245137166135381_200x100.jpg" alt="VIETNAM POST" />
                     </a>
                 </div>
             </div>
             <div>
                 <div class="doitac">
                     <a href="" target="_bank" >
-                        <img src="upload/hinhanh/519927168291321_200x100.jpeg" alt="VIETTEL POST" />
+                        <img src="/upload/hinhanh/519927168291321_200x100.jpeg" alt="VIETTEL POST" />
                     </a>
                 </div>
             </div>
             <div>
                 <div class="doitac">
                     <a href="" target="_bank" >
-                        <img src="upload/hinhanh/769741856857480_200x100.jpg" alt="abc" />
+                        <img src="/upload/hinhanh/769741856857480_200x100.jpg" alt="abc" />
                     </a>
                 </div>
             </div>

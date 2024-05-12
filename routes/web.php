@@ -13,11 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\CategoryController;
 //Route::get('/', function () {
 //    return view('frontend/index');
 //});
 Route::get('/', [IndexController::class, 'index'])
-    ->name('admin.index');
+    ->name('index');
 Route::get('/test', function () {
     return view('frontend/index2');
 });
@@ -68,8 +69,10 @@ Route::get('/admin1', function () {
 
 Route::get('/sanpham/{slug}', function () {
     dd(1);
-})->name('product_of_category');
+})->name('product');
 
+Route::get('/danhmuc/{slug}', [CategoryController::class, 'index'])
+    ->name('category');
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';
