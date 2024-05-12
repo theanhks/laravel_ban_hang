@@ -51,3 +51,11 @@ p {
 .img-right {
 	left: 660px;
 }
+.product_img {
+    display: flex;
+    height: 285px;
+    align-items: center;
+}
+.product_img.height-standard {
+    height: 200px;
+}
