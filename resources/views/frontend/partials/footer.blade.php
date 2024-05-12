@@ -133,11 +133,11 @@
                     <div class="sp_tieubieu">
                         <h4>Quy định chính sách</h4>
                         <ul>
-                            <li><a href="quy-dinh-chinh-sach/hinh-thuc-thanh-toan.html">Hình thức thanh toán</a>
+                            <li><a href="/hinh-thuc-thanh-toan.html">Hình thức thanh toán</a>
                             </li>
-                            <li><a href="quy-dinh-chinh-sach/chinh-sach-bao-hanh.html">Chính sách bảo hành</a>
+                            <li><a href="/chinh-sach-bao-hanh.html">Chính sách bảo hành</a>
                             </li>
-                            <li><a href="quy-dinh-chinh-sach/huong-dan-mua-hang.html">Hướng dẫn mua hàng</a>
+                            <li><a href="/huong-dan-mua-hang.html">Hướng dẫn mua hàng</a>
                             </li>
                         </ul>
 

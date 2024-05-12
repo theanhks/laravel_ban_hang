@@ -218,11 +218,6 @@
             });
         </script>
         <style>
-            .product_img {
-                display: flex;
-                height: 285px;
-                align-items: center;
-            }
             .list_img {
                 height: 150px;
             }
