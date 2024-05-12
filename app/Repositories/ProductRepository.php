@@ -28,6 +28,11 @@ class ProductRepository extends BaseRepository
         return $this->model->all();
     }
 
+    public function getByCategoryId($category_id = 0)
+    {
+        return $this->model->where('category_id',$category_id)->get();
+    }
+
     public function insert($data = [])
     {
         $newProduct = $this->model->create($data);

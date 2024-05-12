@@ -137,7 +137,7 @@
                                     <div>
                                         <div class="item ">
                                             <div class="list_img">
-                                                <a href="#">
+                                                <a href="{{route('product',$product['slug'])}}">
                                                     <img src="{{$product['image']}}">
                                                 </a>
                                             </div>
@@ -175,14 +175,14 @@
                                         <div>
                                             <div class="item">
                                                 <div class="product_img">
-                                                    <a href="#">
+                                                    <a href="{{route('product',$product['slug'])}}">
                                                         <img
                                                             src="{{$product['image']}}"
                                                             alt="{{$product['name']}}"/>
                                                     </a>
                                                 </div>
                                                 <div class="product_info">
-                                                    <a href="#">
+                                                    <a href="{{route('product',$product['slug'])}}">
                                                         <h3>{{$product['name']}}</h3>
                                                     </a>
                                                     <div class="boxchitiet">

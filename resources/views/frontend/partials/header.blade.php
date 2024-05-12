@@ -594,18 +594,18 @@
         <div id="banner">
             <div class="margin_auto">
                 <div id="logo">
-                    <a href=""> <img src="upload/hinhanh/logo_banner.jpg" width='100%' alt="Banner"> </a>
+                    <a href=""> <img src="/upload/hinhanh/logo_banner.jpg" width='100%' alt="Banner"> </a>
                 </div>
-                <div class="banner"> <img src="upload/hinhanh/company_nam_banner.png" alt="Banner"> </div>
+                <div class="banner"> <img src="/upload/hinhanh/company_nam_banner.png" alt="Banner"> </div>
                 <div class="banner_right">
 
                     <div class="lienket">
                         <!-- <h4>Mạng xã hội:</h4> -->
-                        <a href="https://www.facebook.com/" target="_blank"><img src="upload/hinhanh/fa1-3856.png" alt="" />  </a>
-                        <a href="https://www.google.com/?gws_rd=ssl" target="_blank"><img src="upload/hinhanh/fa2-8306.png" alt="" />  </a>
-                        <a href="https://twitter.com/" target="_blank"><img src="upload/hinhanh/fa3-4336.png" alt="" />  </a>
-                        <a href="https://www.instagram.com/" target="_blank"><img src="upload/hinhanh/fa4-2233.png" alt="" />  </a>
-                        <a href="https://www.youtube.com/" target="_blank"><img src="upload/hinhanh/fa5-1962.png" alt="" />  </a>
+                        <a href="https://www.facebook.com/" target="_blank"><img src="/upload/hinhanh/fa1-3856.png" alt="" />  </a>
+                        <a href="https://www.google.com/?gws_rd=ssl" target="_blank"><img src="/upload/hinhanh/fa2-8306.png" alt="" />  </a>
+                        <a href="https://twitter.com/" target="_blank"><img src="/upload/hinhanh/fa3-4336.png" alt="" />  </a>
+                        <a href="https://www.instagram.com/" target="_blank"><img src="/upload/hinhanh/fa4-2233.png" alt="" />  </a>
+                        <a href="https://www.youtube.com/" target="_blank"><img src="/upload/hinhanh/fa5-1962.png" alt="" />  </a>
                     </div>
                     <div class="clear"></div>
                     <div class="giaohang">
@@ -613,7 +613,7 @@
                             <div>
                                 <div class="row_dv">
                                     <div class="row_dv_img">
-                                        <a href="gia-tot-nhat.html" title="Giá Tốt Nhất"> <img src="upload/baiviet/dv4-593_27x27.png" alt="Giá Tốt Nhất"> </a>
+                                        <a href="gia-tot-nhat.html" title="Giá Tốt Nhất"> <img src="/upload/baiviet/dv4-593_27x27.png" alt="Giá Tốt Nhất"> </a>
                                     </div>
                                     <div class="row_dv_info">
                                         <a href="gia-tot-nhat.html" title="Giá Tốt Nhất">Giá Tốt Nhất</a>
@@ -623,7 +623,7 @@
                             <div>
                                 <div class="row_dv">
                                     <div class="row_dv_img">
-                                        <a href="giao-hang-tan-noi.html" title="giao hàng tận nơi"> <img src="upload/baiviet/dv2-1855_27x27.png" alt="giao hàng tận nơi"> </a>
+                                        <a href="giao-hang-tan-noi.html" title="giao hàng tận nơi"> <img src="/upload/baiviet/dv2-1855_27x27.png" alt="giao hàng tận nơi"> </a>
                                     </div>
                                     <div class="row_dv_info">
                                         <a href="giao-hang-tan-noi.html" title="giao hàng tận nơi">giao hàng tận nơi</a>
@@ -633,7 +633,7 @@
                             <div>
                                 <div class="row_dv">
                                     <div class="row_dv_img">
-                                        <a href="san-pham-chinh-hang.html" title="sản phẩm chính hãng"> <img src="upload/baiviet/dv1-8876_27x27.png" alt="sản phẩm chính hãng"> </a>
+                                        <a href="san-pham-chinh-hang.html" title="sản phẩm chính hãng"> <img src="/upload/baiviet/dv1-8876_27x27.png" alt="sản phẩm chính hãng"> </a>
                                     </div>
                                     <div class="row_dv_info">
                                         <a href="san-pham-chinh-hang.html" title="sản phẩm chính hãng">sản phẩm chính hãng</a>

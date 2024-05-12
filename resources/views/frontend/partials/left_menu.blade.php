@@ -8,7 +8,7 @@
                     <a href="#">TẤT CẢ SẢN PHẨM</a>
                 </li>
                 @foreach($categoryData as $category)
-                    <li><a href="{{route('product_of_category',$category['category_name'])}}">
+                    <li><a href="{{route('category',$category['slug'])}}">
                             <img src="{{$category['image']}}" alt="{{$category['category_name']}}">
                             <span class="text-uppercase">{{$category['category_name']}}</span>
                         </a>

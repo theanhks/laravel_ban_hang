@@ -56,4 +56,15 @@ class FrontendService
         return $data;
     }
 
+    public function getCategoryBySlug($slug = '')
+    {
+        return $this->categoryRepository->getBySlug($slug);
+    }
+
+    public function getProductByCategoryId($category_id = 0)
+    {
+        $productData = $this->productRepository->getByCategoryId($category_id);
+        return $productData->where('is_show',1);
+    }
+
 }
