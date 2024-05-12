@@ -166,7 +166,7 @@
 
     <div class="copy">
         <div class="margin_auto">
-            <div class="copyright">Copyright © 2017 Công Ty TNHH XNK Mặt Trời Việt. Design by <a href="http://nina.vn/">nina.vn</a></div>
+            <div class="copyright">Copyright © 2017 Công Ty TNHH Xuất Nhập Khẩu TM HTS. Design by <a href="javascript:void(0)">Ks</a></div>
             <div class="slogan">
                 Chuyên Cung Cấp Linh, Phụ Kiện Máy Hàn Điện ,Phụ Kiện Thay Thế    </div>
             <div class="clear"></div>

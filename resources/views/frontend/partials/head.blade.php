@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link id="favicon" rel="shortcut icon" href="upload/hinhanh/logovietsun7893100x44-2880_40x40.png" type="image/x-icon" />
 
-    <title>linh kiện máy hàn</title>
+    <title>HTS VIET NAM</title>
     <meta name="description" content="linh kiện máy hàn
 bo mạch máy hàn
 phụ kiện hàn

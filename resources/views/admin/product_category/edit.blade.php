@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('title')
-    @lang('translation.basic-elements')
+    @lang('Category')
 @endsection
 @section('content')
     @component('admin.components.breadcrumb')
@@ -39,8 +39,20 @@
                     <div class="card-body">
                         <div class="live-preview flex-column">
                             <div class="col-xxl-6 col-md-6 mx-auto">
-                                <label for="name" class="form-label">Product Name</label>
+                                <label for="name" class="form-label">Name</label>
                                 <input type="text" class="form-control mb-3" id="category_name" name="category_name" value="{{ $category->category_name }}">
+                            </div>
+                            <div class="col-xxl-6 col-md-6 mx-auto">
+                                <label for="formSizeSmall" class="form-label">Parent Category</label>
+                                <select class="form-select mb-3" aria-label="Default select example"
+                                        name="parent">
+                                    <option selected value="0">Category</option>
+                                    @foreach($productCategoryData as $productCategory)
+                                        <option {{$category->parent == $productCategory['category_id'] ? 'selected' : ''}}
+                                                value="{{$productCategory['category_id']}}">{{$productCategory['category_name']}}</option>
+                                    @endforeach
+
+                                </select>
                             </div>
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <label for="position" class="form-label">Position</label>

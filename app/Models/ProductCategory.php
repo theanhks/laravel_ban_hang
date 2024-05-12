@@ -18,6 +18,7 @@ class ProductCategory extends BaseModel
         'is_show',
         'is_show_left_menu',
         'position',
+        'parent'
     ];
     public function __construct(array $attributes = [])
     {

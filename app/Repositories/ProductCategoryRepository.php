@@ -63,4 +63,9 @@ class ProductCategoryRepository extends BaseRepository
     {
         return $this->model->where('category_id',$id)->delete();
     }
+
+    public function getByParentId($parent_id =0)
+    {
+        return $this->model->where('parent', $parent_id)->get();
+    }
 }

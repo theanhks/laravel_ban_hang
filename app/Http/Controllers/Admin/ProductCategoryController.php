@@ -27,8 +27,8 @@ class ProductCategoryController extends Controller
 
     public function create()
     {
-        // $productCategoryData = $this->productCategoryService->getAll()->toArray();
-         return view('admin.product_category.create',);
+        $productCategoryData = $this->productCategoryService->getAll()->toArray();
+        return view('admin.product_category.create',compact('productCategoryData'));
     }
 
     public function store(ProductCategoryRequest $request)
@@ -66,10 +66,11 @@ class ProductCategoryController extends Controller
     public function edit($id)
     {
          $category = $this->productCategoryService->getById($id);
+         $productCategoryData = $this->productCategoryService->getAll()->toArray();
          if(!$category){
              return redirect()->route('admin.category')->with('errors', __('Không tìm thấy danh mục'));
          }
-         return view('admin.product_category.edit',['category'=>$category]);
+         return view('admin.product_category.edit',['category'=>$category,'productCategoryData'=>$productCategoryData]);
     }
 
     public function update(ProductCategoryRequest $request, $id = 0)

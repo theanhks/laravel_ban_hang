@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('title')
-    @lang('translation.list-js')
+    @lang('Product')
 @endsection
 @section('css')
     <link href="{{asset('/admin/assets/libs/sweetalert2/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />

@@ -17,6 +17,22 @@ if (!function_exists('getCategoryLeftMenu')) {
         $category = $service->getCategoryLeftMenu();
         return $category;
     }
+}
 
+if (!function_exists('getParentCategoryLeftMenu')) {
+    function getParentCategoryLeftMenu()
+    {
+        $service = app(\App\Services\FrontendService::class);
+        $category = $service->getParentCategoryLeftMenu();
+        return $category;
+    }
+}
 
+if (!function_exists('getCategoryByParentId')) {
+    function getCategoryByParentId($parent_id = -1)
+    {
+        $service = app(\App\Services\FrontendService::class);
+        $category = $service->getCategoryByParentId($parent_id);
+        return $category;
+    }
 }
