@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('title')
-    @lang('translation.basic-elements')
+    @lang('Product')
 @endsection
 @section('content')
     @component('admin.components.breadcrumb')
@@ -41,10 +41,10 @@
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <label for="formSizeSmall" class="form-label">Category</label>
                                 <select class="form-select mb-3" aria-label="Default select example"
-                                        name="category_id">
+                                        name="parent">
                                     <option selected>Category</option>
                                     @foreach($productCategoryData as $productCategory)
-                                        <option {{old('category_id') == $productCategory['category_id'] ? 'selected' : ''}}
+                                        <option {{old('parent') == $productCategory['category_id'] ? 'selected' : ''}}
                                             value="{{$productCategory['category_id']}}">{{$productCategory['category_name']}}</option>
                                     @endforeach
 

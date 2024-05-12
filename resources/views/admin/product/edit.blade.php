@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('title')
-    @lang('translation.basic-elements')
+    @lang('Product')
 @endsection
 @section('content')
     @component('admin.components.breadcrumb')
