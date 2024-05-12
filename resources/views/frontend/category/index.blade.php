@@ -23,7 +23,7 @@
                         <div class="box">
                             @foreach($productData as $product)
                                 <div class="item1">
-                                    <div class="product_img">
+                                    <div class="product_img height-standard">
                                         <a href="{{route('product',$product->slug)}}">
                                             <img src="{{$product->image}}"
                                                  alt="{{$product->name}}"/>
