@@ -50,6 +50,18 @@ Route::get('/san-pham-chinh-hang.html', function () {
     return view('frontend/authentic-product');
 });
 
+Route::get('/hinh-thuc-thanh-toan.html', function () {
+    return view('frontend/payment-method');
+});
+
+Route::get('/chinh-sach-bao-hanh.html', function () {
+    return view('frontend/warranty-policy');
+});
+
+Route::get('/huong-dan-mua-hang.html', function () {
+    return view('frontend/purchase-guide');
+});
+
 Route::get('/admin1', function () {
     return view('admin/index');
 });
