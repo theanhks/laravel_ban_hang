@@ -59,7 +59,7 @@
                             </div>
                             <div class="selectors">
                                 <script type="text/javascript" language="javascript"
-                                        src="js/jquery.carouFredSel-6.2.0-packed.js"></script>
+                                        src="/js/jquery.carouFredSel-6.2.0-packed.js"></script>
                                 <script type="text/javascript" language="javascript">
                                     $(function () {
                                         $('#foo3').carouFredSel({
