@@ -27,7 +27,7 @@ class ProductSerivce
      */
     public function getAll(array $filter = [], bool $paginate = true)
     {
-        return $this->productCategoryRepository->getAll($filter, $paginate);
+        return $this->productRepository->getAll($filter, $paginate);
     }
 
     public function insert($data)
