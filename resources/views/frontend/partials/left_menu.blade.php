@@ -1,23 +1,30 @@
 <div id="left">
     <div class="danhmuc">
-        <div class="thanh">Danh mục sản phẩm</div>
-        @php $categoryData = getCategoryLeftMenu() @endphp
-        <div class="left dmsp">
-            <ul>
-                <li>
-                    <a href="#">TẤT CẢ SẢN PHẨM</a>
-                </li>
-                @foreach($categoryData as $category)
-                    <li><a href="{{route('category',$category['slug'])}}">
-                            <img src="{{$category['image']}}" alt="{{$category['category_name']}}">
-                            <span class="text-uppercase">{{$category['category_name']}}</span>
-                        </a>
-                        <ul>
-                        </ul>
+        <div class="thanh">Danh Mục Phụ Kiện</div>
+        @php $categoryParent = getParentCategoryLeftMenu() @endphp
+        @foreach($categoryParent as $parent)
+            <div class="left dmsp">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)"><span class="text-uppercase">{{$parent['category_name']}}</span></a>
                     </li>
-                @endforeach
-            </ul>
-        </div>
+                    @php
+                    $categoryData = getCategoryByParentId($parent['category_id']);
+                    @endphp
+                    @foreach($categoryData as $category)
+                        <li><a href="{{route('category',$category['slug'])}}">
+                                <img src="{{$category['image']}}" alt="{{$category['category_name']}}">
+                                <span class="text-uppercase">{{$category['category_name']}}</span>
+                            </a>
+                            <ul>
+                            </ul>
+                        </li>
+                    @endforeach
+
+                </ul>
+            </div>
+        @endforeach
+
     </div>
 
     <div class="danhmuc">

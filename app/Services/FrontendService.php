@@ -71,4 +71,22 @@ class FrontendService
         return $productData->where('is_show',1);
     }
 
+    public function getParentCategoryLeftMenu()
+    {
+        $categoryData = $this->categoryRepository->getAll();
+        $parentId = [];
+        foreach ($categoryData as $category){
+            if($category->parent > 0){
+                $parentId[] =  $category->parent;
+            }
+        }
+        return $categoryData->where('is_show',1)->where('is_show_left_menu',1)->whereIn('category_id',$parentId)->sortBy('position')->toArray();
+    }
+
+    public function getCategoryByParentId($parent_id = -1)
+    {
+        $categoryData = $this->categoryRepository->getByParentId($parent_id);
+        return $categoryData->where('is_show',1)->sortBy('position')->toArray();
+    }
+
 }

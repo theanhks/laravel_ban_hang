@@ -30,7 +30,7 @@ class ProductRepository extends BaseRepository
 
     public function getByCategoryId($category_id = 0)
     {
-        return $this->model->where('category_id',$category_id)->get();
+        return $this->model->where('category_id', $category_id)->get();
     }
 
     public function insert($data = [])
