@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 //Route::get('/', function () {
 //    return view('frontend/index');
 //});
@@ -55,9 +56,8 @@ Route::get('/admin1', function () {
     return view('admin/index');
 });
 
-Route::get('/sanpham/{slug}', function () {
-    dd(1);
-})->name('product');
+Route::get('/sanpham/{slug}', [ProductController::class, 'index'])
+->name('product');
 
 Route::get('/danhmuc/{slug}', [CategoryController::class, 'index'])
     ->name('category');

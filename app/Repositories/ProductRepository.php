@@ -56,4 +56,9 @@ class ProductRepository extends BaseRepository
         return $product;
     }
 
+    public function getBySlug($slug = '')
+    {
+        return $this->model->where('slug', $slug)->get()->first();
+    }
+
 }
