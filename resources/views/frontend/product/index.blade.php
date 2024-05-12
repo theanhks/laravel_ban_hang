@@ -242,7 +242,7 @@
                                 <div class="masp">
                                     <p>MSP</p>
                                 </div>
-                                <div class="product_img">
+                                <div class="product_img height-standard">
                                     <a href="{{route('product',$product->slug)}}">
                                         <img src="{{$product->image}}"
                                              alt="{{$product->name}}"/>
