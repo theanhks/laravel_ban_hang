@@ -144,19 +144,19 @@
                         <a href="index.php?com=thietbi&thietbi=dienthoai" style="background: #fb0202;display: inline-block;color: #fff;text-align: center;border-radius: 10px;padding: 5px;font-size: 14px;">Xem bằng Giao diện Mobile</a>
                     </div>
                 </div>
+{{--facebook--}}
+{{--                <div class="fanpage_facebook">--}}
+{{--                    <div id="fb-root"></div>--}}
+{{--                    <script>(function(d, s, id) {--}}
+{{--                            var js, fjs = d.getElementsByTagName(s)[0];--}}
+{{--                            if (d.getElementById(id)) return;--}}
+{{--                            js = d.createElement(s); js.id = id;--}}
+{{--                            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.6";--}}
+{{--                            fjs.parentNode.insertBefore(js, fjs);--}}
+{{--                        }(document, 'script', 'facebook-jssdk'));</script>--}}
+{{--                    <div class="fb-page" data-href="https://www.facebook.com/linhkienmayhandientu" data-tabs="timeline" data-width="355" data-height="185" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/linhkienmayhandientu"><a href="https://www.facebook.com/linhkienmayhandientu">Facebook</a></blockquote></div></div>--}}
 
-                <div class="fanpage_facebook">
-                    <div id="fb-root"></div>
-                    <script>(function(d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0];
-                            if (d.getElementById(id)) return;
-                            js = d.createElement(s); js.id = id;
-                            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.6";
-                            fjs.parentNode.insertBefore(js, fjs);
-                        }(document, 'script', 'facebook-jssdk'));</script>
-                    <div class="fb-page" data-href="https://www.facebook.com/linhkienmayhandientu" data-tabs="timeline" data-width="355" data-height="185" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/linhkienmayhandientu"><a href="https://www.facebook.com/linhkienmayhandientu">Facebook</a></blockquote></div></div>
-
-                </div>
+{{--                </div>--}}
 
                 <div class="clear"></div>
             </div>
