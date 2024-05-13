@@ -3,14 +3,14 @@
 <div id="right_ok">
    <div id="info">
      <div id="sanpham">
-        
+
        <div class="khung">
 
          <div class="thanh_title"><h2>Quy định chính sách</h2></div>
 
          <h1 class="tieude"> Hình thức thanh toán</h1>
          <div class="noidung">
-           <p>công ty TNHH XNK MẶT TRỜI VIỆT xin thông báo với quý khách hàng về hình thức thanh toán đơn hàng cụ thể như sau :</p>
+           <p>CÔNG TY TNHH XUẤT NHẬP KHẨU TM HST xin thông báo với quý khách hàng về hình thức thanh toán đơn hàng cụ thể như sau :</p>
 
    <p>- khách hàng có thể đến trực tiếp địa chỉ của công ty tại F11/2K ấp 6 ,vĩnh lộc A, bình chánh tp hcm. để mua hàng. ( xem bản đồ trên web )</p>
 
@@ -45,7 +45,7 @@
 
                <div style="padding-left:10px; height:auto;"><a href="/huong-dan-mua-hang.html" style="text-decoration:none;"><img src="images/sao.png" border="0">&nbsp;&nbsp;<span style="font-size:14px; color:#666;">Hướng dẫn mua hàng</span></a></div>
 
-             </div>      
+             </div>
 
      </div>
    </div>

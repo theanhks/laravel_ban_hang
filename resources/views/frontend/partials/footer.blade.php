@@ -110,10 +110,10 @@
                 <div class="thongtin_bt">
                     <h2>CÔNG TY TNHH XUẤT NHẬP KHẨU TM HTS</h2>
                     <ul>
-                        <li> <img src="{{ asset('images/tt1.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Địa chỉ : 655/44 Phùng Hưng, Tổ 33, KP.Long Đức 1, Tam Phước, Biên Hòa, Đồng Nai</li>
-                        <li> <img src="{{ asset('images/tt2.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Hotline : 0976400078  - 0914860432</li>
-                        <li> <img src="{{ asset('images/tt3.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Email : hoa@htsvn.com.vn</li>
-                        <li> <img src="{{ asset('images/tt4.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Website : htsvn.com.vn</li>
+                        <li> <img src="{{ asset('images/tt1.png')}}" alt="CÔNG TY TNHH XUẤT NHẬP KHẨU TM HST"> Địa chỉ : 655/44 Phùng Hưng, Tổ 33, KP.Long Đức 1, Tam Phước, Biên Hòa, Đồng Nai</li>
+                        <li> <img src="{{ asset('images/tt2.png')}}" alt="CÔNG TY TNHH XUẤT NHẬP KHẨU TM HST"> Hotline : 0976400078  - 0914860432</li>
+                        <li> <img src="{{ asset('images/tt3.png')}}" alt="CÔNG TY TNHH XUẤT NHẬP KHẨU TM HST"> Email : hoa@htsvn.com.vn</li>
+                        <li> <img src="{{ asset('images/tt4.png')}}" alt="CÔNG TY TNHH XUẤT NHẬP KHẨU TM HST"> Website : htsvn.com.vn</li>
                     </ul>
                 </div>
 
