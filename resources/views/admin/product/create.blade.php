@@ -41,7 +41,7 @@
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <label for="formSizeSmall" class="form-label">Category</label>
                                 <select class="form-select mb-3" aria-label="Default select example"
-                                        name="parent">
+                                        name="category_id">
                                     <option selected>Category</option>
                                     @foreach($productCategoryData as $productCategory)
                                         <option {{old('parent') == $productCategory['category_id'] ? 'selected' : ''}}
