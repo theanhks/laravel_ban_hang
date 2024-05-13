@@ -89,4 +89,10 @@ class FrontendService
         return $categoryData->where('is_show',1)->sortBy('position')->toArray();
     }
 
+
+    public function getProductLeftMenu()
+    {
+        $productData = $this->productRepository->getAll();
+        return $productData->where('is_show',1)->where('is_show_left_menu')->sortBy('position')->toArray();
+    }
 }

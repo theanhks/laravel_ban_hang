@@ -17,6 +17,7 @@ class ProductCategory extends BaseModel
         'image',
         'is_show',
         'is_show_left_menu',
+        'is_show_home',
         'position',
         'parent'
     ];
