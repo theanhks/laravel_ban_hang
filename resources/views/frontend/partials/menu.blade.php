@@ -7,8 +7,8 @@
 
         <nav id="smoothmenu1" class="ddsmoothmenu">
             <ul>
-                <li class="icon active"><a href="trang-chu.html">Trang Chủ</a></li>
-                <li class="icon "><a href="phu-kien-han-cat.html">Phụ kiện hàn cắt</a></li>
+                <li class="icon active"><a href="/">Trang Chủ</a></li>
+{{--                <li class="icon "><a href="phu-kien-han-cat.html">Phụ kiện hàn cắt</a></li>--}}
                 <li class=""><a href="lien-he.html">Liên hệ</a></li>
                 <div class="Box__User">
                     <div class="user-header">

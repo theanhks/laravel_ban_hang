@@ -2,7 +2,7 @@
 @section('title', 'Trang chủ')
 @section('content')
     <div id="right_ok">
-        <h1 class="visit_hidden">CÔNG TY TNHH XNK MẶT TRỜI VIỆT</h1>
+        <h1 class="visit_hidden">CÔNG TY TNHH XUẤT NHẬP KHẨU TM HST</h1>
 
         <script language="javascript">
             function addtocart(pid) {

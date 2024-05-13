@@ -23,7 +23,7 @@
         </form>
 
         @php
-        /* Tạm ẩn
+            /* Tạm ẩn
         @endphp
         <div id="slide_show">
             <style>
@@ -146,9 +146,11 @@
                                                 <h3>{{$product['name']}}</h3>
                                             </a>
                                             <p class="giaban">
-                                                <b>Giá :</b> <span>{{$product['price'] > 0 ? $product['price'] : 'Liên hệ'}}</span>
+                                                <b>Giá :</b>
+                                                <span>{{$product['price'] > 0 ? $product['price'] : 'Liên hệ'}}</span>
                                             </p>
-                                            <div class="dathang"><a href="javascript:void(0)" onclick="addtocart({{$product['id']}});"
+                                            <div class="dathang"><a href="javascript:void(0)"
+                                                                    onclick="addtocart({{$product['id']}});"
                                                                     title="Giỏ Hàng">Đặt hàng</a></div>
                                         </div>
                                     </div>
@@ -163,44 +165,48 @@
         <div id="info">
             <div id="sanpham">
                 @foreach($categoryData as $category)
-                    @if(isset($productGroupCategory[$category['category_id']]) && count($productGroupCategory[$category['category_id']]) >0)
-                        <div class="khung">
-                            <div class="thanh_title"><a href="san-pham/bo-tao-xung-may-han" title="">
-                                    <h2>{{$category['category_name']}}</h2>
-                                </a></div>
+                    @if($category['is_show_home'] ==1)
+                        @if(isset($productGroupCategory[$category['category_id']]) && count($productGroupCategory[$category['category_id']]) >0)
+                            <div class="khung">
+                                <div class="thanh_title"><a href="san-pham/bo-tao-xung-may-han" title="">
+                                        <h2>{{$category['category_name']}}</h2>
+                                    </a></div>
 
-                            <div class="content_main">
-                                <div class="owl-demo">
-                                    @foreach($productGroupCategory[$category['category_id']] as $product)
-                                        <div>
-                                            <div class="item">
-                                                <div class="product_img">
-                                                    <a href="{{route('product',$product['slug'])}}">
-                                                        <img
-                                                            src="{{$product['image']}}"
-                                                            alt="{{$product['name']}}"/>
-                                                    </a>
-                                                </div>
-                                                <div class="product_info">
-                                                    <a href="{{route('product',$product['slug'])}}">
-                                                        <h3>{{$product['name']}}</h3>
-                                                    </a>
-                                                    <div class="boxchitiet">
-                                                        <p class="giaban">
-                                                            <b>Giá :</b> <span>{{$product['price'] > 0 ? $product['price'] : 'Liên hệ'}}</span>
-                                                        </p>
-                                                        <div class="dathang"><a href="javascript:void(0)" onclick="addtocart(193);"
-                                                                                title="Giỏ Hàng">Đặt hàng</a></div>
+                                <div class="content_main">
+                                    <div class="owl-demo">
+                                        @foreach($productGroupCategory[$category['category_id']] as $product)
+                                            <div>
+                                                <div class="item">
+                                                    <div class="product_img">
+                                                        <a href="{{route('product',$product['slug'])}}">
+                                                            <img
+                                                                src="{{$product['image']}}"
+                                                                alt="{{$product['name']}}"/>
+                                                        </a>
+                                                    </div>
+                                                    <div class="product_info">
+                                                        <a href="{{route('product',$product['slug'])}}">
+                                                            <h3>{{$product['name']}}</h3>
+                                                        </a>
+                                                        <div class="boxchitiet">
+                                                            <p class="giaban">
+                                                                <b>Giá :</b>
+                                                                <span>{{$product['price'] > 0 ? $product['price'] : 'Liên hệ'}}</span>
+                                                            </p>
+                                                            <div class="dathang"><a href="javascript:void(0)"
+                                                                                    onclick="addtocart(193);"
+                                                                                    title="Giỏ Hàng">Đặt hàng</a></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    @endforeach
+                                        @endforeach
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="clear"></div>
-                        </div> <!-- khung -->
+                                <div class="clear"></div>
+                            </div> <!-- khung -->
+                        @endif
                     @endif
                 @endforeach
 

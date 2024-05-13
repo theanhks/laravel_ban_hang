@@ -36,3 +36,12 @@ if (!function_exists('getCategoryByParentId')) {
         return $category;
     }
 }
+
+if (!function_exists('getProductLeftMenu')) {
+    function getProductLeftMenu()
+    {
+        $service = app(\App\Services\FrontendService::class);
+        $product = $service->getProductLeftMenu();
+        return $product;
+    }
+}

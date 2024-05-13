@@ -9,7 +9,7 @@
             </div>
             <h1 class="tieude"> giao hàng tận nơi</h1>
             <div class="noidung">
-               <p>công ty TNHH XNK MẶT TRỜI VIỆT &nbsp;xin thông báo :</p>
+               <p>CÔNG TY TNHH XUẤT NHẬP KHẨU TM HST &nbsp;xin thông báo :</p>
                <p>đối với những đơn hàng tại khu vực tp HCM công ty chúng tôi sẽ giao hàng tận nơi cho quý khách.</p>
                <p>đối với những đơn hàng tại các khu vực khác công ty chúng tôi sẽ giao hàng ra bến xe hoặc chành xe, hoặc bưu điện cho khách hàng. bảo đảm khách hàng sẽ được nhận hàng tại nhà hoặc đúng địa điểm khách hàng yêu cầu.</p>
                <p>XIN CẢM ƠN SỰ HỢP TÁC CỦA QUÝ KHÁCH.</p>

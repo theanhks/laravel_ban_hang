@@ -23,6 +23,8 @@ class Product extends BaseModel
         'content',
         'image',
         'position',
+        'is_show_left_menu',
+        'is_featured'
     ];
 
     public function __construct(array $attributes = [])
