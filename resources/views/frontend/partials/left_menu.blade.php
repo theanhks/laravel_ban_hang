@@ -1,5 +1,6 @@
 <div id="left">
     <div class="danhmuc">
+        <div class="thanh">TẤT SẢN CẢ PHẨM</div>
         <div class="thanh">Danh Mục Phụ Kiện</div>
         @php $categoryParent = getParentCategoryLeftMenu() @endphp
         @foreach($categoryParent as $parent)
