@@ -86,7 +86,7 @@ class FrontendService
     public function getCategoryByParentId($parent_id = -1)
     {
         $categoryData = $this->categoryRepository->getByParentId($parent_id);
-        return $categoryData->where('is_show',1)->sortBy('position')->toArray();
+        return $categoryData->where('is_show',1)->where('is_show_left_menu',1)->sortBy('position')->toArray();
     }
 
 
