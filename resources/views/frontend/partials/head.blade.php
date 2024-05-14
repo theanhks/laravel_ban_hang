@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link id="favicon" rel="shortcut icon" href="upload/hinhanh/logovietsun7893100x44-2880_40x40.png" type="image/x-icon" />
+    <link id="favicon" rel="shortcut icon" href="https://htsvn.com.vn/upload/hinhanh/logo_banner.jpg" type="image/x-icon" />
 
     <title>HTS VIET NAM</title>
     <meta name="description" content="linh kiện máy hàn
@@ -21,14 +21,14 @@ phụ kiện ngành hàn
     <meta name="author" content="CÔNG TY TNHH XUẤT NHẬP KHẨU TM HST">
 
 
-    <meta property="og:url" content="https://linhkienmayhan.vn:443/" /><meta property="og:type" content="website" /><meta property="og:title" content="CÔNG TY TNHH XUẤT NHẬP KHẨU TM HST" /><meta property="og:description" content="linh kiện máy hàn
+    <meta property="og:url" content="https://htsvn.com.vn:443/" /><meta property="og:type" content="website" /><meta property="og:title" content="CÔNG TY TNHH XUẤT NHẬP KHẨU TM HST" /><meta property="og:description" content="linh kiện máy hàn
 bo mạch máy hàn
 phụ kiện hàn
 phụ kiện ngành hàn
-" /><meta property="og:image" content="https://linhkienmayhan.vn/upload/hinhanh/logovietsun7893100x44-2880_40x40.png" />    <!-- Dublin Core-->
+" /><meta property="og:image" content="https://htsvn.com.vn/upload/hinhanh/logo_banner.jpg" />    <!-- Dublin Core-->
     <link rel="schema.DC" href="https://purl.org/dc/elements/1.1/">
     <meta name="DC.title" content="linh kiện máy hàn">
-    <meta name="DC.identifier" content="https://linhkienmayhan.vn/">
+    <meta name="DC.identifier" content="https://htsvn.com.vn/">
     <meta name="DC.description" content="linh kiện máy hàn
 bo mạch máy hàn
 phụ kiện hàn
@@ -53,7 +53,7 @@ phụ kiện hàn
 phụ kiện ngành hàn
 " />
     <!-- Thẻ Canonical -->
-    <link rel="canonical" href="https://linhkienmayhan.vn:443/" />
+    <link rel="canonical" href="https://htsvn.com.vn:443/" />
 
     <meta name="viewport" content="width=1300">
     <script language="javascript" type="text/javascript" src="{{ asset('js/jquery-2.1.4.js') }}"></script>
@@ -80,7 +80,7 @@ phụ kiện ngành hàn
         window.fbAsyncInit = function() {
             FB.init({
                 appId: '523010816023969', // Set YOUR APP ID
-                channelUrl: 'https://linhkienmayhan.vn/xuly_login.php', // Channel File
+                channelUrl: 'https://htsvn.com.vn/xuly_login.php', // Channel File
                 status: true, // check login status
                 cookie: true, // enable cookies to allow the server to access the session
                 xfbml: true // parse XFBML
@@ -104,7 +104,7 @@ phụ kiện ngành hàn
             FB.api('/me?fields=id,name,email,gender,picture{url}', function(response) {
                 response.type = "submit";
                 $.post("xuly_login.php", response, function(data) {
-                    window.location.href = 'https://linhkienmayhan.vn';
+                    window.location.href = 'https://htsvn.com.vn';
                 });
             });
         }
@@ -154,10 +154,10 @@ phụ kiện ngành hàn
                     'img': $gg_img,
                     'email': $gg_email
                 },
-                url: 'https://linhkienmayhan.vn/xuly_login.php',
+                url: 'https://htsvn.com.vn/xuly_login.php',
                 success: function(msg) {
 
-                    window.location.href = 'https://linhkienmayhan.vn';
+                    window.location.href = 'https://htsvn.com.vn';
                     return false;
 
                     // if(msg.error== 1){
