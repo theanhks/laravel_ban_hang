@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link id="favicon" rel="shortcut icon" href="https://htsvn.com.vn/upload/hinhanh/logo_banner.jpg" type="image/x-icon" />
+    <link id="favicon" rel="shortcut icon" href="https://htsvn.com.vn/upload/hinhanh/logo_banner_thumb.png" type="image/x-icon" />
 
     <title>HTS VIET NAM</title>
     <meta name="description" content="linh kiện máy hàn
@@ -25,7 +25,7 @@ phụ kiện ngành hàn
 bo mạch máy hàn
 phụ kiện hàn
 phụ kiện ngành hàn
-" /><meta property="og:image" content="https://htsvn.com.vn/upload/hinhanh/logo_banner.jpg" />    <!-- Dublin Core-->
+" /><meta property="og:image" content="https://htsvn.com.vn/upload/hinhanh/logo_banner_thumb.png" />    <!-- Dublin Core-->
     <link rel="schema.DC" href="https://purl.org/dc/elements/1.1/">
     <meta name="DC.title" content="linh kiện máy hàn">
     <meta name="DC.identifier" content="https://htsvn.com.vn/">
