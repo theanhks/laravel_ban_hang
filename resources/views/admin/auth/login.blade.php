@@ -1,6 +1,6 @@
 @extends('admin.layouts.master-without-nav')
 @section('title')
-    @lang('translation.signin')
+    @lang('Login')
 @endsection
 @section('content')
 

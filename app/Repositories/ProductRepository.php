@@ -43,7 +43,7 @@ class ProductRepository extends BaseRepository
     {
         $product = $this->model->latest();
         if (!empty($filter['category_id'])) {
-            $category_id = trim($filter['name']);
+            $category_id = trim($filter['category_id']);
             $product->where('category_id', $category_id);
 
         }

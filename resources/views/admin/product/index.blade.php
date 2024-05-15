@@ -21,7 +21,39 @@
                 <div class="card-header">
                     <h4 class="card-title mb-0">Add& Remove</h4>
                 </div><!-- end card header -->
+                <div class="card-body border border-dashed border-end-0 border-start-0  mb-3">
+                    <form method="GET" action="" id="formSearch">
+                        <div class="row g-3">
+                            <div class="col-xxl-2 col-sm-4">
+                                <select class="form-select"
+                                        name="category_id" id="category_id">
+                                    <option value="0" selected>Category</option>
+                                    @foreach($productCategoryData as $category)
+                                        <option value="{{$category['category_id']}}" @if(request()->input('category_id')==$category['category_id'])selected
+                                            @endif> {{$category['category_name']}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="col-xxl-2 col-sm-4">
+                                <div class="search-box">
+                                    <input type="text" class="form-control search" name="name"
+                                           value="{{request('name')}}"
+                                           placeholder="Product name">
+                                </div>
+                            </div>
+                            <div class="col-xxl-2 col-sm-4">
+                                <div>
+                                    <button type="submit" class="btn btn-primary w-100" id="search"><i
+                                            class="ri-equalizer-fill me-1 align-bottom"></i>
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
 
+
+                    </form>
+                </div>
                 <div class="card-body">
                     <div id="customerList">
                         <div class="row g-4 mb-3">
@@ -54,6 +86,7 @@
                                     </th>
                                     <th>Category</th>
                                     <th>Product Name</th>
+                                    <th>Image</th>
                                     <th>Price</th>
                                     <th>Quantity</th>
                                     <th>Status</th>
@@ -70,8 +103,9 @@
                                                 </div>
                                             </th>
                                             <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
-                                            <td class="customer_name">{{$product->category_id}}</td>
+                                            <td class="customer_name">{{$product->category->category_name}}</td>
                                             <td class="email">{{$product->name}}</td>
+                                            <td class="email"><img src="{{$product->image}}" alt="" style="width: 100px; height: 100px"></td>
                                             <td class="phone">{{$product->price}}</td>
                                             <td class="date">{{$product->quantiry}}</td>
                                             <td class="status"><span class="badge badge-soft-success text-uppercase">{{$product->is_show ? 'Show' : 'Hidden'}}</span></td>

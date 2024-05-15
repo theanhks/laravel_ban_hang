@@ -21,8 +21,30 @@
                 <div class="card-header">
                     <h4 class="card-title mb-0">Add& Remove</h4>
                 </div><!-- end card header -->
+                <div class="card-body border border-dashed border-end-0 border-start-0  mb-3">
+                    <form method="GET" action="" id="formSearch">
+                        <div class="row g-3">
+                            <div class="col-xxl-2 col-sm-4">
+                                <div class="search-box">
+                                    <input type="text" class="form-control search" name="category_name"
+                                           value="{{request('category_name')}}"
+                                           placeholder="Category name">
+                                </div>
+                            </div>
+                            <div class="col-xxl-2 col-sm-4">
+                                <div>
+                                    <button type="submit" class="btn btn-primary w-100" id="search"><i
+                                            class="ri-equalizer-fill me-1 align-bottom"></i>
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="card-body">
+
+                    </form>
+
+                    <div class="card-body">
                     <div id="customerList">
                         <div class="row g-4 mb-3">
                             <div class="col-sm-auto">
@@ -57,6 +79,7 @@
 {{--                                    <th>Price</th>--}}
 {{--                                    <th>Quantity</th>--}}
                                     <th>Image</th>
+                                    <th>Position</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -72,7 +95,8 @@
                                             <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
                                             <td class="customer_name">{{$category->category_id}}</td>
                                             <td class="email">{{$category->category_name}}</td>
-                                            <td class="phone">{{$category->image}}</td>
+                                            <td class="email">@if($category->image)<img src="{{$category->image}}" alt="" style="width: 100px; height: 100px">@endif</td>
+                                            <td>{{$category->position}}</td>
                                             <td>
                                                 <div class="d-flex gap-2">
                                                     <div class="edit">
