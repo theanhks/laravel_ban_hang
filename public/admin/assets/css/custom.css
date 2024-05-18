@@ -1,0 +1,11 @@
+.select2-container--default .select2-selection--single {
+    height: 37.5px !important;
+    align-items: center;
+    display: flex;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 34px;
+}
+.select2.select2-container {
+    margin-bottom: 1rem;
+}

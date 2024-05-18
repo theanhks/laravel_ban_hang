@@ -4,7 +4,11 @@
 @endsection
 @section('css')
     <link href="{{asset('/admin/assets/libs/sweetalert2/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
-
+    <style>
+        .select2.select2-container {
+            margin-bottom: unset !important;
+        }
+    </style>
 @endsection
 @section('content')
     @component('admin.components.breadcrumb')
@@ -190,34 +194,4 @@
 
     <script src="{{asset('/admin/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
     <script src="{{asset('/admin//assets/js/app.min.js') }}"></script>
-    <script>
-        $(".remove-item-btn").click(function() {
-            // alert($(this).data('item-id'));
-            // $.ajax({url: "demo_test.txt", success: function(result){
-            //     $("#div1").html(result);
-            // }});
-        });
-
-        $('.js-ajax-select2').select2({
-          ajax: {
-            url: '/manage/product/getProductCategory',
-            dataType: 'json',
-            // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
-            processResults: function (data) {
-                return {
-                    results: $.map(data, function (item) {
-                      return {
-                        id: item.category_id,
-                        text: item.category_name
-                      };
-                    })
-                };
-            },
-            // placeholder: 'Search for a repository',
-            minimumInputLength: 1,
-            // templateResult: formatRepo,
-            // templateSelection: formatRepoSelection
-          }
-        });
-    </script>
 @endsection
