@@ -19,6 +19,11 @@ class ProductCategoryRepository extends BaseRepository
         return $this->model->where('category_id', $id)->get()->first();
     }
 
+    public function searchByName($q)
+    {
+        return $this->model->where('category_name', 'like', '%'.$q.'%')->get();
+    }
+
     public function getBySlug($slug = '')
     {
         return $this->model->where('slug', $slug)->get()->first();

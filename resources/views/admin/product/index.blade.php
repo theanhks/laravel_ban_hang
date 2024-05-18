@@ -4,7 +4,11 @@
 @endsection
 @section('css')
     <link href="{{asset('/admin/assets/libs/sweetalert2/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
-
+    <style>
+        .select2.select2-container {
+            margin-bottom: unset !important;
+        }
+    </style>
 @endsection
 @section('content')
     @component('admin.components.breadcrumb')
@@ -25,7 +29,7 @@
                     <form method="GET" action="" id="formSearch">
                         <div class="row g-3">
                             <div class="col-xxl-2 col-sm-4">
-                                <select class="form-select"
+                                <select class="form-select js-ajax-select2"
                                         name="category_id" id="category_id">
                                     <option value="0" selected>Category</option>
                                     @foreach($productCategoryData as $category)
@@ -190,12 +194,4 @@
 
     <script src="{{asset('/admin/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
     <script src="{{asset('/admin//assets/js/app.min.js') }}"></script>
-    <script>
-        $(".remove-item-btn").click(function() {
-            // alert($(this).data('item-id'));
-            // $.ajax({url: "demo_test.txt", success: function(result){
-            //     $("#div1").html(result);
-            // }});
-        });
-    </script>
 @endsection

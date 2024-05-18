@@ -44,7 +44,7 @@
                             </div>
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <label for="formSizeSmall" class="form-label">Parent Category</label>
-                                <select class="form-select mb-3" aria-label="Default select example"
+                                <select class="form-select js-ajax-select2 mb-3" aria-label="Default select example"
                                         name="parent">
                                     <option selected value="0">Category</option>
                                     @foreach($productCategoryData as $productCategory)
