@@ -49,6 +49,11 @@ class ProductCategoryService
         return $this->productCategoryRepository->getById($id);
     }
 
+    public function searchByName($q)
+    {
+        return $this->productCategoryRepository->searchByName($q);
+    }
+
     public function update($id = 0 , $data = [])
     {
         try {

@@ -28,6 +28,14 @@ class ProductController extends Controller
             'productData' => $productData
         ]);
     }
+
+    public function getProductCategory(Request $request)
+    {
+        $productCategoryData = $this->productCategoryService->searchByName($request->q);
+
+        return response()->json($productCategoryData);
+    }
+
     public function create()
     {
         $productCategoryData = $this->productCategoryService->getAll()->toArray();

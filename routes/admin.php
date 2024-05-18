@@ -34,6 +34,8 @@ Route::prefix('manage')->middleware('auth')->group(function () {
             ->name('admin.product.update');
         Route::delete('/delete/{id}', [ProductController::class, 'destroy'])
             ->name('admin.product.destroy');
+        Route::get('/getProductCategory', [ProductController::class, 'getProductCategory'])
+            ->name('admin.product.get_product_category');
     });
 
     Route::prefix('/category')->group(function () {

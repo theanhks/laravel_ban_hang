@@ -25,7 +25,7 @@
                     <form method="GET" action="" id="formSearch">
                         <div class="row g-3">
                             <div class="col-xxl-2 col-sm-4">
-                                <select class="form-select"
+                                <select class="form-select js-ajax-select2"
                                         name="category_id" id="category_id">
                                     <option value="0" selected>Category</option>
                                     @foreach($productCategoryData as $category)
@@ -196,6 +196,28 @@
             // $.ajax({url: "demo_test.txt", success: function(result){
             //     $("#div1").html(result);
             // }});
+        });
+
+        $('.js-ajax-select2').select2({
+          ajax: {
+            url: '/manage/product/getProductCategory',
+            dataType: 'json',
+            // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
+            processResults: function (data) {
+                return {
+                    results: $.map(data, function (item) {
+                      return {
+                        id: item.category_id,
+                        text: item.category_name
+                      };
+                    })
+                };
+            },
+            // placeholder: 'Search for a repository',
+            minimumInputLength: 1,
+            // templateResult: formatRepo,
+            // templateSelection: formatRepoSelection
+          }
         });
     </script>
 @endsection
