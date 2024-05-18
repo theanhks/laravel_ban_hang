@@ -114,6 +114,18 @@
     <script src="{{ asset('/admin/assets/js/pages/form-editor.init.js') }}"></script>
     <script src="{{ asset('/admin/assets/js/app.min.js') }}"></script>
     <script src="{{ asset('/admin/assets/js/product.js') }}"></script>
+    <script>
+        var dataProCat = {!! json_encode($productCategoryData) !!};
+        var convertDataProCat = $.map(dataProCat, function (item) {
+          return {
+            id: item.category_id,
+            text: item.category_name
+          };
+        });
+        $('.js-ajax-select2').select2({
+          data: convertDataProCat
+        });
+    </script>
 @endsection
 @section('css')
     <link href="{{ URL::asset('assets/libs/quill/quill.min.css') }}" rel="stylesheet" type="text/css" />
