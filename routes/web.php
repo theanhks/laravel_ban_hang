@@ -74,5 +74,8 @@ Route::get('/sanpham/{slug}', [ProductController::class, 'index'])
 Route::get('/danhmuc/{slug}', [CategoryController::class, 'index'])
     ->name('category');
 
+Route::get('/tim-kiem.html', [IndexController::class, 'search'])
+    ->name('search');
+
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';

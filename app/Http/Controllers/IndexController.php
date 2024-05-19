@@ -25,4 +25,11 @@ class IndexController extends Controller
         $categoryData = $this->frontendService->getCategory();
         return view('frontend/index',compact('productGroupCategory','categoryData'));
     }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->get('keyword');
+        $productData = $this->frontendService->getProductByKeyWord($keyword);
+        return view('frontend/search',compact('productData'));
+    }
 }
