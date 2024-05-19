@@ -41,6 +41,11 @@ class FrontendService
         return $productData->where('is_show',1)->sortBy('position')->toArray();
     }
 
+    public function getProductByKeyWord($keyword = '')
+    {
+        $productData = $this->productRepository->getProductByKeyWord($keyword);
+        return $productData->where('is_show',1)->sortBy('position');
+    }
     public function getProductGroupCategory()
     {
         $categoryData = $this->getCategory();

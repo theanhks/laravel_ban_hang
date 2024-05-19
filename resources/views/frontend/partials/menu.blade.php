@@ -25,7 +25,7 @@
                             if(!timkiem){
                                 alert('Bạn chưa nhập từ khóa . ');
                             } else {
-                                window.location.href="tim-kiem.html&keywords="+timkiem;
+                                window.location.href="tim-kiem.html?keywords="+timkiem;
                             }
                             return false;
                         })

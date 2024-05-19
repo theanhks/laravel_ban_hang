@@ -61,4 +61,9 @@ class ProductRepository extends BaseRepository
         return $this->model->where('slug', $slug)->get()->first();
     }
 
+    public function getProductByKeyWord($keyword = '')
+    {
+        return $this->model->where('name','like','%'.$keyword.'%')->get();
+    }
+
 }
