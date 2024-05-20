@@ -74,6 +74,14 @@
                                 </div>
                             </div>
 
+                            <div class="col-xxl-6 col-md-6 mx-auto mt-3 mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input mb-3" type="checkbox" role="switch" value="1"
+                                           id="is_show_home"  name="is_show_home">
+                                    <label class="form-check-label" for="is_show_home">Is Show Home</label>
+                                </div>
+                            </div>
+
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <div>
                                     <div>
@@ -106,6 +114,18 @@
     <script src="{{ asset('/admin/assets/js/pages/form-editor.init.js') }}"></script>
     <script src="{{ asset('/admin/assets/js/app.min.js') }}"></script>
     <script src="{{ asset('/admin/assets/js/product.js') }}"></script>
+    <script>
+        var dataProCat = {!! json_encode($productCategoryData) !!};
+        var convertDataProCat = $.map(dataProCat, function (item) {
+          return {
+            id: item.category_id,
+            text: item.category_name
+          };
+        });
+        $('.js-ajax-select2').select2({
+          data: convertDataProCat
+        });
+    </script>
 @endsection
 @section('css')
 <link href="{{ URL::asset('assets/libs/quill/quill.min.css') }}" rel="stylesheet" type="text/css" />

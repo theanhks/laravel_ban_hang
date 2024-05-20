@@ -7,16 +7,46 @@
 
         <nav id="smoothmenu1" class="ddsmoothmenu">
             <ul>
-                <li class="icon active"><a href="trang-chu.html">Trang Chủ</a></li>
-                <li class="icon "><a href="phu-kien-han-cat.html">Phụ kiện hàn cắt</a></li>
+                <li class="icon active"><a href="/">Trang Chủ</a></li>
+{{--                <li class="icon "><a href="phu-kien-han-cat.html">Phụ kiện hàn cắt</a></li>--}}
                 <li class=""><a href="lien-he.html">Liên hệ</a></li>
                 <div class="Box__User">
+                    @if (!auth()->check())
                     <div class="user-header">
-                        <a data-bs-toggle="modal" data-bs-target="#popup-login" data-dismiss="modal" class="mr-3">
+                        <a href="{{ route('login') }}" class="mr-3">
                             <i class="fa fa-sign-in-alt"></i>
                             <span>Đăng nhập</span>
                         </a>
                     </div>
+                    @else
+                    <div class="user-header user-cart">
+                        <span><i class="fa fa-user align-middle me-1"></i> Tài khoản</span>
+                        <div class="sub_login">
+                            <div class="main_content_sub_login">
+                                <span class="arrow_sub_login"></span>
+                                <a href="account/lich-su-mua-hang.html">
+                                    <i class="fa fa-shopping-cart me-1"></i>
+                                    <span>Lịch sử mua hàng</span>
+                                </a>
+                                <a data-bs-toggle="modal" data-bs-target="#popup-change" data-dismiss="modal">
+                                    <i class="fa fa-info-circle me-1"></i>
+                                    <span>Thông tin</span>
+                                </a>
+                                                                <a href="javacript:;" data-bs-toggle="modal" data-bs-target="#popup-change-password" data-dismiss="modal">
+                                        <i class="fa fa-key me-1"></i>
+                                        <span>Đổi mật khẩu</span>
+                                    </a>
+                                <form method="post" action="{{ route('auth.logout') }}">
+                                    @csrf
+                                        <a href="javacript:;">
+                                            <i class="fa fa-sign-out-alt"></i>
+                                            <span class="logout">Đăng xuất</span>
+                                        </a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    @endif
                 </div>
                 <script type="text/javascript">
                     $(document).ready(function() {
@@ -25,9 +55,14 @@
                             if(!timkiem){
                                 alert('Bạn chưa nhập từ khóa . ');
                             } else {
-                                window.location.href="tim-kiem.html&keywords="+timkiem;
+                                window.location.href="tim-kiem.html?keyword="+timkiem;
                             }
                             return false;
+                        })
+                        $('.logout').click(function(e) {
+                            e.preventDefault(); // Prevent default anchor tag behavior
+                            // Submit the form using its submit() method
+                            $(this).closest('form').submit();
                         })
                     });
                 </script>

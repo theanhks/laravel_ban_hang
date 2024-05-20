@@ -108,12 +108,12 @@
             <div class="bottom">
 
                 <div class="thongtin_bt">
-                    <h2>CÔNG TY TNHH XUẤT NHẬP KHẨU TM HTS</h2>
+                    <h2>CÔNG TY TNHH XNK & TM HTS</h2>
                     <ul>
-                        <li> <img src="{{ asset('images/tt1.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Địa chỉ : 655/44 Phùng Hưng, Tổ 33, KP.Long Đức 1, Tam Phước, Biên Hòa, Đồng Nai</li>
-                        <li> <img src="{{ asset('images/tt2.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Hotline : 0976400078  - 0914860432</li>
-                        <li> <img src="{{ asset('images/tt3.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Email : hoa@htsvn.com.vn</li>
-                        <li> <img src="{{ asset('images/tt4.png')}}" alt="CÔNG TY TNHH XNK MẶT TRỜI VIỆT"> Website : htsvn.com.vn</li>
+                        <li> <img src="{{ asset('images/tt1.png')}}" alt="CÔNG TY TNHH XUẤT NHẬP KHẨU TM HST"> Địa chỉ : 655/44 Phùng Hưng, Tổ 33, KP.Long Đức 1, Tam Phước, Biên Hòa, Đồng Nai</li>
+                        <li> <img src="{{ asset('images/tt2.png')}}" alt="CÔNG TY TNHH XUẤT NHẬP KHẨU TM HST"> Hotline : 0976400078  - 0914860432</li>
+                        <li> <img src="{{ asset('images/tt3.png')}}" alt="CÔNG TY TNHH XUẤT NHẬP KHẨU TM HST"> Email : hoa@htsvn.com.vn</li>
+                        <li> <img src="{{ asset('images/tt4.png')}}" alt="CÔNG TY TNHH XUẤT NHẬP KHẨU TM HST"> Website : htsvn.com.vn</li>
                     </ul>
                 </div>
 
@@ -144,19 +144,19 @@
                         <a href="index.php?com=thietbi&thietbi=dienthoai" style="background: #fb0202;display: inline-block;color: #fff;text-align: center;border-radius: 10px;padding: 5px;font-size: 14px;">Xem bằng Giao diện Mobile</a>
                     </div>
                 </div>
+{{--facebook--}}
+{{--                <div class="fanpage_facebook">--}}
+{{--                    <div id="fb-root"></div>--}}
+{{--                    <script>(function(d, s, id) {--}}
+{{--                            var js, fjs = d.getElementsByTagName(s)[0];--}}
+{{--                            if (d.getElementById(id)) return;--}}
+{{--                            js = d.createElement(s); js.id = id;--}}
+{{--                            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.6";--}}
+{{--                            fjs.parentNode.insertBefore(js, fjs);--}}
+{{--                        }(document, 'script', 'facebook-jssdk'));</script>--}}
+{{--                    <div class="fb-page" data-href="https://www.facebook.com/linhkienmayhandientu" data-tabs="timeline" data-width="355" data-height="185" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/linhkienmayhandientu"><a href="https://www.facebook.com/linhkienmayhandientu">Facebook</a></blockquote></div></div>--}}
 
-                <div class="fanpage_facebook">
-                    <div id="fb-root"></div>
-                    <script>(function(d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0];
-                            if (d.getElementById(id)) return;
-                            js = d.createElement(s); js.id = id;
-                            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.6";
-                            fjs.parentNode.insertBefore(js, fjs);
-                        }(document, 'script', 'facebook-jssdk'));</script>
-                    <div class="fb-page" data-href="https://www.facebook.com/linhkienmayhandientu" data-tabs="timeline" data-width="355" data-height="185" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/linhkienmayhandientu"><a href="https://www.facebook.com/linhkienmayhandientu">Facebook</a></blockquote></div></div>
-
-                </div>
+{{--                </div>--}}
 
                 <div class="clear"></div>
             </div>
@@ -260,7 +260,7 @@
         </div>
     </div>
 </div>    <!-- Đăng ký đăng nhập -->
-<div class="modal fade popupforn-account" aria-labelledby="register-label" id="popup-register" tabindex="-1" role="dialog" aria-hidden="true">
+{{-- <div class="modal fade popupforn-account" aria-labelledby="register-label" id="popup-register" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-md" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -388,7 +388,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 
 

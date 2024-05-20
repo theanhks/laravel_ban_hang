@@ -36,8 +36,8 @@ class ProductCategoryRepository extends BaseRepository
     public function getAllPaging($filter = [])
     {
         $category = $this->model->latest();
-        if (!empty($filter['name'])) {
-            $name = trim($filter['name']);
+        if (!empty($filter['category_name'])) {
+            $name = trim($filter['category_name']);
             $category->where('category_name', 'like', '%' . $name . '%');
 
         }

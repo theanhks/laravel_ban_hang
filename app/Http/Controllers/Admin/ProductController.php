@@ -28,6 +28,7 @@ class ProductController extends Controller
             'productData' => $productData
         ]);
     }
+
     public function create()
     {
         $productCategoryData = $this->productCategoryService->getAll()->toArray();

@@ -75,26 +75,24 @@ Route::get('/sanpham/{slug}', [ProductController::class, 'index'])
 Route::get('/danhmuc/{slug}', [CategoryController::class, 'index'])
     ->name('category');
 
-Route::group([
-    // 'middleware' => ['api'],
-    'prefix' => 'user'
-], function ($router) {
-    Route::get('login', function () {
-        return view('frontend.user.login');
-    });
-    Route::post('login', [AuthController::class, 'login'])->name('auth.login');
-    
-    Route::get('register', function () {
-        return view('frontend.user.register');
-    });
-    
-    // Route::post('logout', [AuthController::class, 'logout'])->name('auth.logout');
-    // Route::post('refresh', [AuthController::class, 'refresh'])->name('auth.refresh');
-    // Route::post('me', [AuthController::class, 'me'])->name('auth.me');
+Route::get('register', [AuthController::class, 'register'])->name('register');
+Route::post('register', [AuthController::class, 'store'])->name('user.register');
+Route::get('login', [AuthController::class, 'login'])->name('login');
+Route::post('login', [AuthController::class, 'postLogin'])->name('user.login');
 
+Route::group([
+    'middleware' => ['auth'],
+], function ($router) {
+    
+    // Route::post('refresh', [AuthController::class, 'refresh'])->name('auth.refresh');
+    Route::post('logout', [AuthController::class, 'logout'])->name('auth.logout');
+    Route::get('me', [AuthController::class, 'me'])->name('auth.me');
     // Route::post('reset-password', [ForgotPasswordController::class, 'confirm'])->name('forget-password.confirm');
     // Route::post('reset-password/{token}', [ForgotPasswordController::class, 'reset'])->name('forget-password.reset');
 });
+
+Route::get('/tim-kiem.html', [IndexController::class, 'search'])
+    ->name('search');
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';

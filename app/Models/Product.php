@@ -23,6 +23,8 @@ class Product extends BaseModel
         'content',
         'image',
         'position',
+        'is_show_left_menu',
+        'is_featured'
     ];
 
     public function __construct(array $attributes = [])
@@ -30,5 +32,10 @@ class Product extends BaseModel
         parent::__construct($attributes);
 //        $this->slugSourceField = 'category_name'; // Chỉ định trường dùng để tạo slug
 //        $this->columnKey = 'category_id'; // Chỉ định trường để loại trừ khi update
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(ProductCategory::class,'category_id','category_id');
     }
 }

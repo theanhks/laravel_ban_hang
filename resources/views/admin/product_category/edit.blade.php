@@ -44,7 +44,7 @@
                             </div>
                             <div class="col-xxl-6 col-md-6 mx-auto">
                                 <label for="formSizeSmall" class="form-label">Parent Category</label>
-                                <select class="form-select mb-3" aria-label="Default select example"
+                                <select class="form-select js-ajax-select2 mb-3" aria-label="Default select example"
                                         name="parent">
                                     <option selected value="0">Category</option>
                                     @foreach($productCategoryData as $productCategory)
@@ -71,6 +71,14 @@
                                     <input class="form-check-input mb-3" type="checkbox" role="switch" value="1"
                                            id="is_show" {{$category->is_show_left_menu ? 'checked' : ''}} name="is_show_left_menu">
                                     <label class="form-check-label" for="is_show">Is Show Left Menu</label>
+                                </div>
+                            </div>
+
+                            <div class="col-xxl-6 col-md-6 mx-auto mt-3 mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input mb-3" type="checkbox" role="switch" value="1"
+                                           id="is_show_home" {{$category->is_show_home ? 'checked' : ''}} name="is_show_home">
+                                    <label class="form-check-label" for="is_show_home">Is Show Home</label>
                                 </div>
                             </div>
                             <div class="col-xxl-6 col-md-6 mx-auto">
@@ -106,6 +114,18 @@
     <script src="{{ asset('/admin/assets/js/pages/form-editor.init.js') }}"></script>
     <script src="{{ asset('/admin/assets/js/app.min.js') }}"></script>
     <script src="{{ asset('/admin/assets/js/product.js') }}"></script>
+    <script>
+        var dataProCat = {!! json_encode($productCategoryData) !!};
+        var convertDataProCat = $.map(dataProCat, function (item) {
+          return {
+            id: item.category_id,
+            text: item.category_name
+          };
+        });
+        $('.js-ajax-select2').select2({
+          data: convertDataProCat
+        });
+    </script>
 @endsection
 @section('css')
     <link href="{{ URL::asset('assets/libs/quill/quill.min.css') }}" rel="stylesheet" type="text/css" />

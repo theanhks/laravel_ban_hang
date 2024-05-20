@@ -7,7 +7,8 @@
               <p class="modal-title">Đăng nhập</p>
           </div>
           <div class="modal-body">
-              <form class="form-user-popup" method="post" action="account/dang-nhap.html" enctype="multipart/form-data">
+              <form class="form-user-popup" method="post" action="{{ route('user.login') }}">
+                  @csrf
                   <div class="input-group input-user">
                       <div class="input-group-text"><i class="fa fa-user"></i></div>
                       <input type="text" class="form-control text-sm" name="username" placeholder="Nhập tài khoản" required="">
@@ -30,7 +31,7 @@
                   </div>
                   <div class="note-user">
                       <span>Bạn chưa có tài khoản ! </span>
-                      <a data-bs-target="#popup-register" data-bs-toggle="modal" data-bs-dismiss="modal" class="cursor-pointer" title="Đăng ký tại đây">Đăng ký tại đây</a>
+                      <a href="{{ route('register') }}" class="cursor-pointer" title="Đăng ký tại đây">Đăng ký tại đây</a>
 
                   </div>
               </form>
