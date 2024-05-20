@@ -45,3 +45,12 @@ if (!function_exists('getProductLeftMenu')) {
         return $product;
     }
 }
+
+if (!function_exists('cart_total')) {
+    function cart_total()
+    {
+        $cart = session()->get('cart', []);
+        return count($cart);
+    }
+
+}

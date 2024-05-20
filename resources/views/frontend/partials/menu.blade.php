@@ -42,9 +42,9 @@
         </nav>
 
         <div class="giohang_top">
-            <a href="gio-hang.html">
+            <a href="{{route('cart.index')}}">
                 <p> Giỏ hàng</p>
-                <p><span>(0) </span> sp</p>
+                <p><span>({{cart_total()}}) </span> sp</p>
             </a>
         </div>
 
