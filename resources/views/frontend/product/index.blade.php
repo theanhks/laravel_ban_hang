@@ -233,7 +233,7 @@
                                     <div class="boxchitiet">
                                         <p class="giaban">Giá: {{$product->price >0 ? $product->price : 'Liên hệ'}}</p>
                                         <div class="giohang"><a href="javascript:void(0)" alt="giỏ hàng"
-                                                                onclick="addtocart(1199);">Giỏ hàng</a></div>
+                                                                onclick="addtocart({{$product->id}});">Giỏ hàng</a></div>
                                         <div class="clear"></div>
                                     </div>
                                 </div>
