@@ -218,7 +218,18 @@
         });
     });
 </script>
-
+<script language="javascript">
+    function addtocart(pid, soluong = 1) {
+        document.form_giohang.product_id.value = pid;
+        document.form_giohang.quantity.value = soluong;
+        document.form_giohang.submit();
+    }
+</script>
+<form name="form_giohang" action="{{route('cart.add')}}" method="post">
+    @csrf
+    <input type="hidden" name="product_id"/>
+    <input type="hidden" name="quantity"/>
+</form>
 <div class="hotro_right">
     <div id="img" class="active"></div>
     <div style="display: none;" class="noidung_20">

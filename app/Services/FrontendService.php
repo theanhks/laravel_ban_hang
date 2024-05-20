@@ -100,4 +100,10 @@ class FrontendService
         $productData = $this->productRepository->getAll();
         return $productData->where('is_show',1)->where('is_show_left_menu')->sortBy('position')->toArray();
     }
+
+    public function getProductByIds($product_ids = [])
+    {
+        $productData = $this->productRepository->getAll();
+        return $productData->whereIn('id',$product_ids)->keyBy('id')->toArray();
+    }
 }

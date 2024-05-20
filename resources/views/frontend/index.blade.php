@@ -10,18 +10,6 @@
     <div id="right_ok">
         <h1 class="visit_hidden">CÔNG TY TNHH XUẤT NHẬP KHẨU TM HTS</h1>
 
-        <script language="javascript">
-            function addtocart(pid) {
-                document.form_giohang.productid.value = pid;
-                document.form_giohang.command.value = 'add';
-                document.form_giohang.submit();
-            }
-        </script>
-        <form name="form_giohang" action="index.php" method="post">
-            <input type="hidden" name="productid"/>
-            <input type="hidden" name="command"/>
-        </form>
-
         @php
             /* Tạm ẩn
         @endphp
