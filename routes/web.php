@@ -80,10 +80,7 @@ Route::post('register', [AuthController::class, 'store'])->name('user.register')
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'postLogin'])->name('user.login');
 
-Route::group([
-    'middleware' => ['auth'],
-], function ($router) {
-    
+Route::middleware('auth.check')->group(function ($router) {
     // Route::post('refresh', [AuthController::class, 'refresh'])->name('auth.refresh');
     Route::post('logout', [AuthController::class, 'logout'])->name('auth.logout');
     Route::get('me', [AuthController::class, 'me'])->name('auth.me');

@@ -18,9 +18,6 @@ class Authenticate extends Middleware
             if (!auth()->guard('admin')->check()) {
                 return route('admin.login');
             }
-            if (!auth()->check()) {
-                return route('login');
-            }
         }
     }
 }
