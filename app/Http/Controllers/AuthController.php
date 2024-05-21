@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\Auth\RegisterRequest;
-use App\Http\Requests\Auth\UpdateRequest;
 use App\Http\Requests\Auth\LoginUserRequest;
 use App\Services\UserSerivce;
 use Illuminate\Support\Facades\Hash;
@@ -39,7 +37,7 @@ class AuthController extends Controller
     	return view('frontend.user.register');
     }
 
-    public function store(RegisterRequest $request)
+    public function store(Request $request)
     {
     	$validator = Validator::make($request->all(), [
             'name'     => ['required', 'max:255'],
