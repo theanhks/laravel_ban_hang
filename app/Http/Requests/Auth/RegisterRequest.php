@@ -48,7 +48,6 @@ class RegisterRequest extends FormRequest
      */
     protected function failedValidation(Validator $validator)
     {
-        $errors = $validator->errors();
-        dd(request()->all(), $errors);
+        return view('frontend.user.validate');
     }
 }

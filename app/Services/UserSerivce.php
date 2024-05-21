@@ -43,7 +43,7 @@ class UserSerivce
     public function update($id = 0, $data = [])
     {
         try {
-            return $this->userRepository->update($id,$data);
+            return $this->userRepository->update($id, $data);
         } catch (\Exception $ex) {
             return false;
         }

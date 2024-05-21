@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\Auth\RegisterRequest;
+use App\Http\Requests\Auth\UpdateRequest;
 use App\Http\Requests\Auth\LoginUserRequest;
 use App\Services\UserSerivce;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
@@ -27,7 +29,7 @@ class AuthController extends Controller
 	{
 		$data = $request->except('_token');
 		if (! Auth::attempt($request->only('username', 'password'))) {
-			return redirect()->route('index');
+			return view('frontend.user.validate');
         }
         return redirect()->route('index');
 	}
@@ -39,6 +41,19 @@ class AuthController extends Controller
 
     public function store(RegisterRequest $request)
     {
+    	$validator = Validator::make($request->all(), [
+            'name'     => ['required', 'max:255'],
+            'username'  => ['required', 'max:255'],
+            'phone'  => ['required', 'max:20'],
+            'email' => ['nullable', 'email', 'max:255'],
+            'gender'  => ['required'],
+            'password' => ['required', 'confirmed:password_confirmation'],
+            'password_confirmation' => ['required'],
+        ]);
+        if ($validator->fails()) {
+		    // Access validation errors using $request->errors()
+		    return view('frontend.user.validate');
+		}
     	$data = $request->except('_token');
     	$data['password'] = Hash::make($data['password']);
     	$data['email_verified_at'] = now();
@@ -46,7 +61,36 @@ class AuthController extends Controller
         if ($data) {
             return redirect()->route('index');
         } else {
+            return view('frontend.user.validate');
+        }
+    }
+
+    public function mypage()
+    {
+    	$user = auth()->user();
+    	return view('frontend.user.mypage', ['user' => $user]);
+    }
+
+    public function editStore(Request $request)
+    {
+    	$validator = Validator::make($request->all(), [
+    		'name'     => ['required', 'max:255'],
+            'username' => ['required', 'string'],
+            'phone' => ['required', 'max:20'],
+            'email' => ['nullable', 'email', 'max:255'],
+            'gender' => ['required'],
+        ]);
+    	if ($validator->fails()) {
+		    // Access validation errors using $request->errors()
+		    return view('frontend.user.validate');
+		}
+    	$data = $request->except(['_token', 'info-user']);
+    	$id = auth()->id();
+        $data = $this->userService->update($id, $data);
+        if ($data) {
             return redirect()->route('index');
+        } else {
+            return view('frontend.user.validate');
         }
     }
 
@@ -59,10 +103,6 @@ class AuthController extends Controller
     public function me()
     {
     	dd(auth()->user());
-        // if (! $user = auth()->user()) {
-        //     throw new TokenInvalidException();
-        // }
-        // return response()->jsonShow(transform_item($user, new \App\Transformers\User\AuthTransformer()));
     }
 
     /**

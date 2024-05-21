@@ -23,4 +23,10 @@ class UserRepository extends BaseRepository
         $newUser = $this->model->create($data);
         return $newUser;
     }
+
+    public function update($id, $data = [])
+    {
+        $updateUser = $this->model->where('id', $id)->update($data);
+        return $updateUser;
+    }
 }

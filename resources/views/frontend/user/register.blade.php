@@ -1,5 +1,5 @@
 @extends('frontend.layout')
-@section('title', 'Trang chủ')
+@section('title', 'Đăng ký')
 @section('content')
   <div id="right_ok">
      <div class="modal-content">

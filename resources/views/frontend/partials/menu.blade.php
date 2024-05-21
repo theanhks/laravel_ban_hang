@@ -28,20 +28,20 @@
                                     <i class="fa fa-shopping-cart me-1"></i>
                                     <span>Lịch sử mua hàng</span>
                                 </a>
-                                <a data-bs-toggle="modal" data-bs-target="#popup-change" data-dismiss="modal">
+                                <a href="{{ route('auth.mypage') }}">
                                     <i class="fa fa-info-circle me-1"></i>
                                     <span>Thông tin</span>
                                 </a>
-                                                                <a href="javacript:;" data-bs-toggle="modal" data-bs-target="#popup-change-password" data-dismiss="modal">
-                                        <i class="fa fa-key me-1"></i>
-                                        <span>Đổi mật khẩu</span>
-                                    </a>
+                                <a href="javacript:;" data-bs-toggle="modal" data-bs-target="#popup-change-password" data-dismiss="modal">
+                                    <i class="fa fa-key me-1"></i>
+                                    <span>Đổi mật khẩu</span>
+                                </a>
                                 <form method="post" action="{{ route('auth.logout') }}">
                                     @csrf
-                                        <a href="javacript:;">
-                                            <i class="fa fa-sign-out-alt"></i>
-                                            <span class="logout">Đăng xuất</span>
-                                        </a>
+                                    <a href="javacript:;">
+                                        <i class="fa fa-sign-out-alt"></i>
+                                        <span class="logout">Đăng xuất</span>
+                                    </a>
                                 </form>
                             </div>
                         </div>
