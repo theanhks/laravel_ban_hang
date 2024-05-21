@@ -15,33 +15,11 @@
                         return false;
                     }
 
-                    $.ajax({
-                        type: "POST",
-                        url: "ajax/add_giohang.php",
-                        data: {pid:pid,soluong:soluong},
-                        success: function(string){
-                            var getData = $.parseJSON(string);
-                            var result = getData.result_giohang;
-                            var count = getData.count;
-
-                            if(result > 0) {
-                                alert('Bạn đã thêm thành công sản phẩm này vào giỏ hàng');
-                                window.location.href="gio-hang.html";
-                            }
-                            else if (result == -1)alert('Sản phẩm này không tồn tại');
-                            else if (result == 0)
-                            { alert('Sản phẩm này đã có trong giỏ hàng'); window.location.href="thanh-toan.html";
-                            }
-                        }
-                    });
+                    addtocart(pid,soluong);
                 });
 
             });
         </script>
-        <form name="form_giohang" action="index.php" method="post">
-            <input type="hidden" name="productid"/>
-            <input type="hidden" name="command"/>
-        </form>
         <div id="info">
             <div id="sanpham">
                 <div class="khung">
@@ -207,9 +185,9 @@
                                 <!-- Go to www.addthis.com/dashboard to customize your tools -->
                                 <div class="addthis_inline_share_toolbox_5yd7"></div>
                             </li>
-                            <li class="masp">Số lượng : <input type="text" size="1" class="soluong_12" value="1"/></li>
+                            <li class="masp">Số lượng : <input type="text" name="detail_quantity" size="1" class="soluong_12" value="1"/></li>
                             <li class="dathang_detail">
-                                <div class="thanhtoannhanh" data-id="1200">Đặt hàng ngay</div>
+                                <div class="thanhtoannhanh" data-id="{{$product->id}}">Đặt hàng ngay</div>
                             </li>
                             <!--             <li class="huongdan_detail"><a href="huong-dan-mua-hang.html" class="huongdan">Hướng dẫn mua hàng online</a></li>
                                -->
@@ -255,7 +233,7 @@
                                     <div class="boxchitiet">
                                         <p class="giaban">Giá: {{$product->price >0 ? $product->price : 'Liên hệ'}}</p>
                                         <div class="giohang"><a href="javascript:void(0)" alt="giỏ hàng"
-                                                                onclick="addtocart(1199);">Giỏ hàng</a></div>
+                                                                onclick="addtocart({{$product->id}});">Giỏ hàng</a></div>
                                         <div class="clear"></div>
                                     </div>
                                 </div>

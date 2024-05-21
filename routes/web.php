@@ -16,6 +16,8 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CartController;
+
 //Route::get('/', function () {
 //    return view('frontend/index');
 //});
@@ -90,6 +92,13 @@ Route::middleware('auth.check')->group(function ($router) {
 
 Route::get('/tim-kiem.html', [IndexController::class, 'search'])
     ->name('search');
+
+Route::get('/thanh-toan.html', [CartController::class, 'index'])
+    ->name('cart.index');
+
+//Route::get('/cart', 'CartController@index')->name('cart.index');
+Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
+Route::post('/cart/remove', [CartController::class, 'remove'])->name('cart.remove');
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';
