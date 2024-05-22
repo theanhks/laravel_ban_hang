@@ -43,24 +43,33 @@ class AuthController extends Controller
             'name'     => ['required', 'max:255'],
             'username'  => ['required', 'max:255'],
             'phone'  => ['required', 'max:20'],
-            'email' => ['nullable', 'email', 'max:255'],
+            'email' => ['nullable', 'email', 'unique:users,email', 'max:255'],
             'gender'  => ['required'],
             'password' => ['required', 'confirmed:password_confirmation'],
             'password_confirmation' => ['required'],
         ]);
         if ($validator->fails()) {
 		    // Access validation errors using $request->errors()
+            if ($validator->errors()) {
+                foreach ($validator->errors()->all() as $error) {
+                    if ($error == 'The email has already been taken.') {
+                        return view('frontend.user.validate', ['message' => 'Địa chỉ email đã tồn tại !']);
+                    }
+                }
+            }
 		    return view('frontend.user.validate');
 		}
     	$data = $request->except('_token');
+        $password = $data['password'];
     	$data['password'] = Hash::make($data['password']);
     	$data['email_verified_at'] = now();
         $data = $this->userService->insert($data);
-        if ($data) {
-            return redirect()->route('index');
-        } else {
-            return view('frontend.user.validate');
+        if (Auth::attempt(['email' => $data['email'], 'password' => $password])) {
+            $request->session()->regenerate();
+ 
+            return view('frontend.user.validate', ['message' => 'Đăng ký thành viên thành công ! Bạn sẽ được tự động <br> đăng nhập']);
         }
+        return view('frontend.user.validate');
     }
 
     public function mypage()

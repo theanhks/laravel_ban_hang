@@ -24,7 +24,7 @@
                         <div class="sub_login">
                             <div class="main_content_sub_login">
                                 <span class="arrow_sub_login"></span>
-                                <a href="account/lich-su-mua-hang.html">
+                                <a href="javacript:;">
                                     <i class="fa fa-shopping-cart me-1"></i>
                                     <span>Lịch sử mua hàng</span>
                                 </a>

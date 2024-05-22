@@ -10,7 +10,13 @@
     <div id="alert">
         <img width="64px" src="images/icon/success.png">
         <div class="title">Thông báo</div>
-        <div class="message">Tên đăng nhập hoặc mật khẩu không chính xác <br> Hoặc tài khoản của bạn chưa được xác nhận từ Quản trị website !</div>
+        <div class="message">
+            @if (isset($message))
+                {!! $message !!} 
+            @else 
+                Tên đăng nhập hoặc mật khẩu không chính xác <br> Hoặc tài khoản của bạn chưa được xác nhận từ Quản trị website !
+            @endif
+        </div>
         <div class="rlink" style="font-size: 18px;">(<a href="{{ route('index') }}" style=" color: #015364; text-decoration: none;">Click vào đây nếu không muốn đợi lâu</a>)</div>
         <img src="images/icon/progress_bar.gif" alt="">
     </div>
