@@ -108,10 +108,10 @@
         <div class="left hotro">
             <div class="clear"></div>
             <ul class="thongke">
-                <li> Đang online : <span>4</span></li>
-                <li> Truy cập Tuần : <span>1407</span></li>
-                <li> Truy cập Tháng : <span>1407</span></li>
-                <li> Tổng truy cập : <span>932684</span></li>
+                <li> Đang online : <span>{{ getCurrentlyOnline() }}</span></li>
+                <li> Truy cập Tuần : <span>{{ getWeeklyVisits() }}</span></li>
+                <li> Truy cập Tháng : <span>{{ getMonthlyVisits() }}</span></li>
+                <li> Tổng truy cập : <span>{{ getTotallyVisits() }}</span></li>
             </ul>
         </div>
     </div>
