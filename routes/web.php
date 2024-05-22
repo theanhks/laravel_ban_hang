@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
+
 //Route::get('/', function () {
 //    return view('frontend/index');
 //});
@@ -74,6 +76,21 @@ Route::get('/sanpham/{slug}', [ProductController::class, 'index'])
 
 Route::get('/danhmuc/{slug}', [CategoryController::class, 'index'])
     ->name('category');
+
+Route::get('register', [AuthController::class, 'register'])->name('register');
+Route::post('register', [AuthController::class, 'store'])->name('user.register');
+Route::get('login', [AuthController::class, 'login'])->name('login');
+Route::post('login', [AuthController::class, 'postLogin'])->name('user.login');
+
+Route::middleware('auth.check')->group(function ($router) {
+    // Route::post('refresh', [AuthController::class, 'refresh'])->name('auth.refresh');
+    Route::post('logout', [AuthController::class, 'logout'])->name('auth.logout');
+    Route::get('me', [AuthController::class, 'me'])->name('auth.me');
+    Route::get('mypage', [AuthController::class, 'mypage'])->name('auth.mypage');
+    Route::post('mypage', [AuthController::class, 'editStore'])->name('auth.update');
+    // Route::post('reset-password', [ForgotPasswordController::class, 'confirm'])->name('forget-password.confirm');
+    // Route::post('reset-password/{token}', [ForgotPasswordController::class, 'reset'])->name('forget-password.reset');
+});
 
 Route::get('/tim-kiem.html', [IndexController::class, 'search'])
     ->name('search');

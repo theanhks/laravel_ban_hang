@@ -271,7 +271,7 @@
         </div>
     </div>
 </div>    <!-- Đăng ký đăng nhập -->
-<div class="modal fade popupforn-account" aria-labelledby="register-label" id="popup-register" tabindex="-1" role="dialog" aria-hidden="true">
+{{-- <div class="modal fade popupforn-account" aria-labelledby="register-label" id="popup-register" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-md" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -399,7 +399,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 
 

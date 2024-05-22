@@ -17,7 +17,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create()
     {
-        if(Auth::check()){
+        if(Auth::guard('admin')->check()){
             return redirect()->route('admin.index');
         }
         return view('admin.auth.login');
@@ -42,7 +42,7 @@ class AuthenticatedSessionController extends Controller
 
         $language = session()->get('language');
 
-        Auth::guard('web')->logout();
+        Auth::guard('admin')->logout();
 
         $request->session()->invalidate();
 

@@ -17,7 +17,7 @@ use App\Http\Controllers\Admin\ProductCategoryController;
 
 
 
-Route::prefix('manage')->middleware('auth')->group(function () {
+Route::prefix('manage')->middleware('auth:admin')->group(function () {
     Route::get('/', [IndexController::class, 'index'])
         ->name('admin.index');
 

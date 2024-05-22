@@ -1,5 +1,6 @@
 <?php
 use App\Services\FrontendService;
+use App\Models\UserActivity;
 if (!function_exists('getCategory')) {
     function getCategory()
     {
@@ -52,5 +53,36 @@ if (!function_exists('cart_total')) {
         $cart = session()->get('cart', []);
         return count($cart);
     }
+}
 
+if (!function_exists('getCurrentlyOnline')) {
+    function getCurrentlyOnline()
+    {
+        $userActivity = app(UserActivity::class);
+        return $userActivity->getCurrentlyOnline();
+    }
+}
+
+if (!function_exists('getWeeklyVisits')) {
+    function getWeeklyVisits()
+    {
+        $userActivity = app(UserActivity::class);
+        return $userActivity->getWeeklyVisits();
+    }
+}
+
+if (!function_exists('getMonthlyVisits')) {
+    function getMonthlyVisits()
+    {
+        $userActivity = app(UserActivity::class);
+        return $userActivity->getMonthlyVisits();
+    }
+}
+
+if (!function_exists('getTotallyVisits')) {
+    function getTotallyVisits()
+    {
+        $userActivity = app(UserActivity::class);
+        return $userActivity->getTotallyVisits();
+    }
 }
