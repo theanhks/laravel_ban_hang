@@ -95,8 +95,14 @@ Route::middleware('auth.check')->group(function ($router) {
 Route::get('/tim-kiem.html', [IndexController::class, 'search'])
     ->name('search');
 
-Route::get('/thanh-toan.html', [CartController::class, 'index'])
+Route::get('/gio-hang.html', [CartController::class, 'index'])
     ->name('cart.index');
+
+Route::get('/thanh-toan.html', [CartController::class, 'checkout'])
+    ->name('cart.confirm');
+
+Route::post('/thanh-toan.html', [CartController::class, 'save'])
+    ->name('cart.checkout');
 
 //Route::get('/cart', 'CartController@index')->name('cart.index');
 Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
