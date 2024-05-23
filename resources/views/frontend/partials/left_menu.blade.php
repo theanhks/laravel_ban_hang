@@ -60,7 +60,7 @@
                     <p><i class="fas fa-envelope"></i>htsvn.com.vn</p>
                 </div>
                 <div class="item_ht">
-                    <p class="phong">Nhân Viên Kĩ Thuật</p>
+                    <p class="phong">Tư Vấn Kĩ Thuật</p>
                     <p><i class="fas fa-phone-volume"></i>0914.860.432(Mr Kĩ Thuật)</p>
                     <p><i class="fas fa-envelope"></i>htsvn.com.vn</p>
                 </div>

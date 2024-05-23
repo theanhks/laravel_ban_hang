@@ -69,4 +69,19 @@ class CartController extends Controller
         return redirect()->route('cart.index');
     }
 
+    public function checkout()
+    {
+        $cart = session()->get('cart', []);
+        $product_ids = [];
+        foreach ($cart as $key => $value){
+            $product_ids[] = $key;
+        }
+        $productData = $this->frontendService->getProductByIds($product_ids);
+        return view('frontend.card.checkout',compact('cart','productData'));
+    }
+
+    public function save(Request $request)
+    {
+        dd(1);
+    }
 }

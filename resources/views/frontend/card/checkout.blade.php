@@ -48,7 +48,7 @@
                     <h2>Giỏ hàng</h2>
                 </div>
                 <div class="khung">
-                    <form name="form1" method="post" action="{{route('cart.remove')}}">
+                    <form name="form1" method="post" action="{{route('cart.checkout')}}">
                         @csrf
                         <input type="hidden" name="product_id"/>
                         <input type="hidden" name="command"/>
@@ -102,11 +102,28 @@
                                 <td><b class="capnhat_full">{{$tongtien}}&nbsp;đ</b></td>
                             </tr>
                         </table>
-                        <input type="button" value="Mua tiếp" onclick="window.location='{{route('index')}}'"
-                               class="g_muatiep">
-                        <input type="button" value="Xóa tất cả" onclick="clear_cart()" class="g_muatiep">
-                        <input type="button" value="Xác nhận đặt hàng" onclick="window.location='{{route('cart.confirm')}}'"
-                               class="g_muatiep">
+                        <div class="col-md-6 col-sm-6 col-xx-12 col-xs-12">
+                            <div class="col-md-12 col-sm-12 col-xx-12 col-xs-12 cl_input">
+                                <label><img src="images/icon/accuont.png" alt=""> Họ tên <span class="alert">*</span></label>
+                                <input name="ten" id="ten" class="formsubmit" value="">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xx-12 col-xs-12 cl_input">
+                                <label><img src="images/icon/phone.png" alt=""> Điện thoại <span class="alert">*</span></label>
+                                <input name="dienthoai" id="dienthoai" class="formsubmit" value="">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xx-12 col-xs-12 cl_input">
+                                <label><img src="images/icon/house.png" alt=""> Địa chỉ <span class="alert">*</span></label>
+                                <input name="diachi" id="diachi" class="formsubmit" value="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xx-12 col-xs-12 cl_area">
+                            <label><img src="images/icon/thutuc.png" alt=""> Ghi chú đơn hàng </label>
+                            <textarea name="noidung"></textarea>
+                        </div>
+                        <div class="icon_thanh">
+                            <p class="limit_checkout" style="color: #f00; font-style: italic;"></p>
+                            <input id="submit_thanhtoan" type="submit" name="next" value="Xác nhận đặt hàng" class="g_muatiep">
+                        </div>
                     </form>
                 </div>
             </div>
