@@ -56,7 +56,7 @@
                 <div class="hotline_l"></div>
                 <div class="item_ht">
                     <p class="phong">Nhân Viên Kinh Doanh</p>
-                    <p><i class="fas fa-phone-volume"></i>0976.400.078 (Nhân viên kinh doanh)</p>
+                    <p><i class="fas fa-phone-volume"></i>0914.860.432 (Nhân viên kinh doanh)</p>
                     <p><i class="fas fa-envelope"></i>htsvn.com.vn</p>
                 </div>
                 <div class="item_ht">
