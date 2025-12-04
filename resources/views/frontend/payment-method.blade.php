@@ -10,7 +10,7 @@
 
          <h1 class="tieude"> Hình thức thanh toán</h1>
          <div class="noidung">
-           <p>CÔNG TY TNHH XUẤT NHẬP KHẨU TM HST xin thông báo với quý khách hàng về hình thức thanh toán đơn hàng cụ thể như sau :</p>
+           <p>CÔNG TY TNHH XUẤT NHẬP KHẨU TM HTS xin thông báo với quý khách hàng về hình thức thanh toán đơn hàng cụ thể như sau :</p>
 
    <p>- khách hàng có thể đến trực tiếp địa chỉ của công ty tại F11/2K ấp 6 ,vĩnh lộc A, bình chánh tp hcm. để mua hàng. ( xem bản đồ trên web )</p>
 

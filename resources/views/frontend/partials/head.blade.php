@@ -18,10 +18,10 @@ phụ kiện ngành hàn
     <meta name="ICBM" content="">
     <meta name="geo.position" content="">
     <meta name="geo.placename" content="Vĩnh Lộc A, H. Bình Chánh, TP.HCM">
-    <meta name="author" content="CÔNG TY TNHH XUẤT NHẬP KHẨU TM HST">
+    <meta name="author" content="CÔNG TY TNHH XUẤT NHẬP KHẨU TM HTS">
 
 
-    <meta property="og:url" content="https://htsvn.com.vn:443/" /><meta property="og:type" content="website" /><meta property="og:title" content="CÔNG TY TNHH XUẤT NHẬP KHẨU TM HST" /><meta property="og:description" content="linh kiện máy hàn
+    <meta property="og:url" content="https://htsvn.com.vn:443/" /><meta property="og:type" content="website" /><meta property="og:title" content="CÔNG TY TNHH XUẤT NHẬP KHẨU TM HTS" /><meta property="og:description" content="linh kiện máy hàn
 bo mạch máy hàn
 phụ kiện hàn
 phụ kiện ngành hàn
@@ -213,7 +213,7 @@ phụ kiện ngành hàn
         }
     </style>
     <address class="vcard" style='display: none'>
-        <span class="org">CÔNG TY TNHH XUẤT NHẬP KHẨU TM HST</span>,
+        <span class="org">CÔNG TY TNHH XUẤT NHẬP KHẨU TM HTS</span>,
         <span class="adr">Vĩnh Lộc A, H. Bình Chánh, TP.HCM</span>
         <span class="street-address">Vĩnh Lộc A, H. Bình Chánh, TP.HCM</span>,
         <span class="locality"></span>,
